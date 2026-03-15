@@ -469,16 +469,22 @@ def main() -> int:
     }
 
     # ads
-    log("Fetching ads feed")
-    ads_text = http_get_text(BLOCKLIST_ADS_URL)
-    categories["ads"]["domains"].update(iter_domains_from_text_blocklist(ads_text))
-    stats["sources"]["ads"] = [BLOCKLIST_ADS_URL]
+    try:
+        log("Fetching ads feed")
+        ads_text = http_get_text(BLOCKLIST_ADS_URL)
+        categories["ads"]["domains"].update(iter_domains_from_text_blocklist(ads_text))
+        stats["sources"]["ads"] = [BLOCKLIST_ADS_URL]
+    except Exception as exc:
+        log(f"Ads feed failed, continue: {exc}")
 
     # privacy
-    log("Fetching privacy feed")
-    tracking_text = http_get_text(BLOCKLIST_TRACKING_URL)
-    categories["privacy"]["domains"].update(iter_domains_from_text_blocklist(tracking_text))
-    stats["sources"]["privacy"] = [BLOCKLIST_TRACKING_URL]
+    try:
+        log("Fetching privacy feed")
+        tracking_text = http_get_text(BLOCKLIST_TRACKING_URL)
+        categories["privacy"]["domains"].update(iter_domains_from_text_blocklist(tracking_text))
+        stats["sources"]["privacy"] = [BLOCKLIST_TRACKING_URL]
+    except Exception as exc:
+        log(f"Privacy feed failed, continue: {exc}")
 
     # pua
     pua_sources = []
@@ -501,20 +507,29 @@ def main() -> int:
     stats["sources"]["pua"] = pua_sources
 
     # URLhaus
-    log("Fetching URLhaus hostfile")
-    urlhaus_hostfile = http_get_text(URLHAUS_HOSTFILE_URL)
-    urlhaus_domains = set(iter_domains_from_text_blocklist(urlhaus_hostfile))
-    categories["malware"]["domains"].update(urlhaus_domains)
+    malware_sources: list[str] = []
+    try:
+        log("Fetching URLhaus hostfile")
+        urlhaus_hostfile = http_get_text(URLHAUS_HOSTFILE_URL)
+        urlhaus_domains = set(iter_domains_from_text_blocklist(urlhaus_hostfile))
+        categories["malware"]["domains"].update(urlhaus_domains)
+        malware_sources.append(URLHAUS_HOSTFILE_URL)
+    except Exception as exc:
+        log(f"URLhaus hostfile failed, continue: {exc}")
 
-    log("Fetching URLhaus URLs")
-    urlhaus_urls_text = http_get_text(URLHAUS_TEXT_URL)
-    for url in iter_urls_from_urlhaus_text(urlhaus_urls_text):
-        d, i, u = extract_url_artifacts(url)
-        categories["malware"]["domains"].update(d)
-        categories["malware"]["ips"].update(i)
-        categories["malware"]["urls"].update(u)
+    try:
+        log("Fetching URLhaus URLs")
+        urlhaus_urls_text = http_get_text(URLHAUS_TEXT_URL)
+        for url in iter_urls_from_urlhaus_text(urlhaus_urls_text):
+            d, i, u = extract_url_artifacts(url)
+            categories["malware"]["domains"].update(d)
+            categories["malware"]["ips"].update(i)
+            categories["malware"]["urls"].update(u)
+        malware_sources.append(URLHAUS_TEXT_URL)
+    except Exception as exc:
+        log(f"URLhaus URLs failed, continue: {exc}")
 
-    stats["sources"]["malware"] = [URLHAUS_HOSTFILE_URL, URLHAUS_TEXT_URL, THREATFOX_API_URL]
+    stats["sources"]["malware"] = malware_sources
 
     # ThreatFox recent
     try:
@@ -532,6 +547,7 @@ def main() -> int:
                 categories["stealer"]["domains"].update(d)
                 categories["stealer"]["ips"].update(i)
                 categories["stealer"]["urls"].update(u)
+        malware_sources.append(THREATFOX_API_URL)
     except Exception as exc:
         log(f"ThreatFox recent fetch failed, continue: {exc}")
 
@@ -565,14 +581,17 @@ def main() -> int:
     # Optional VT confirmation hook
     # Only confirm a subset of stealer IOCs to avoid exhausting public API quota
     if VT_API_KEY:
-        log("Running optional VT enrichment for stealer")
-        vt_domains, vt_ips = enrich_with_vt(
-            set(categories["stealer"]["domains"]),
-            set(categories["stealer"]["ips"]),
-        )
-        categories["stealer"]["domains"].update(vt_domains)
-        categories["stealer"]["ips"].update(vt_ips)
-        stats["sources"]["stealer"].append("VirusTotal optional enrichment")
+        try:
+            log("Running optional VT enrichment for stealer")
+            vt_domains, vt_ips = enrich_with_vt(
+                set(categories["stealer"]["domains"]),
+                set(categories["stealer"]["ips"]),
+            )
+            categories["stealer"]["domains"].update(vt_domains)
+            categories["stealer"]["ips"].update(vt_ips)
+            stats["sources"]["stealer"].append("VirusTotal optional enrichment")
+        except Exception as exc:
+            log(f"VT enrichment failed, continue: {exc}")
 
     # MalwareBazaar recent hashes sidecar
     try:
