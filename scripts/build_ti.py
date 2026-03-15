@@ -99,6 +99,8 @@ def http_post_json(url: str, payload: dict, headers: dict[str, str] | None = Non
     req = urllib.request.Request(url, data=data, headers=req_headers, method="POST")
     with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as resp:
         text = resp.read().decode("utf-8", errors="replace")
+    if not text.strip():
+        raise ValueError(f"Empty HTTP response body received from POST request to {url}")
     return json.loads(text)
 
 
@@ -482,20 +484,23 @@ def main() -> int:
     stats["sources"]["malware"] = [URLHAUS_HOSTFILE_URL, URLHAUS_TEXT_URL, THREATFOX_API_URL]
 
     # ThreatFox recent
-    log("Fetching ThreatFox recent")
-    tf_rows = fetch_threatfox_recent()
-    for row in tf_rows:
-        if score_threatfox_item(row) < THREATFOX_CONFIDENCE:
-            continue
-        d, i, u = extract_ioc_artifacts(str(row.get("ioc") or ""), str(row.get("ioc_type") or ""))
-        categories["malware"]["domains"].update(d)
-        categories["malware"]["ips"].update(i)
-        categories["malware"]["urls"].update(u)
+    try:
+        log("Fetching ThreatFox recent")
+        tf_rows = fetch_threatfox_recent()
+        for row in tf_rows:
+            if score_threatfox_item(row) < THREATFOX_CONFIDENCE:
+                continue
+            d, i, u = extract_ioc_artifacts(str(row.get("ioc") or ""), str(row.get("ioc_type") or ""))
+            categories["malware"]["domains"].update(d)
+            categories["malware"]["ips"].update(i)
+            categories["malware"]["urls"].update(u)
 
-        if row_has_stealer_signal(row):
-            categories["stealer"]["domains"].update(d)
-            categories["stealer"]["ips"].update(i)
-            categories["stealer"]["urls"].update(u)
+            if row_has_stealer_signal(row):
+                categories["stealer"]["domains"].update(d)
+                categories["stealer"]["ips"].update(i)
+                categories["stealer"]["urls"].update(u)
+    except Exception as exc:
+        log(f"ThreatFox recent fetch failed, continue: {exc}")
 
     # ThreatFox stealer-focused family enrichment
     stealer_sources = [THREATFOX_API_URL]
