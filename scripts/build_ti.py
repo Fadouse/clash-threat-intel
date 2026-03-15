@@ -262,7 +262,16 @@ def extract_ioc_artifacts(ioc_value: str, ioc_type: str) -> tuple[set[str], set[
 
 def fetch_threatfox_recent() -> list[dict]:
     payload = {"query": "get_iocs", "days": THREATFOX_DAYS}
-    data = http_post_json(THREATFOX_API_URL, payload)
+    try:
+        data = http_post_json(THREATFOX_API_URL, payload)
+    except Exception as exc:
+        log(f"ThreatFox recent request failed, continue: {exc}")
+        return []
+
+    if not isinstance(data, dict):
+        log("ThreatFox recent response had unexpected shape, continue")
+        return []
+
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
@@ -271,7 +280,16 @@ def fetch_threatfox_recent() -> list[dict]:
 
 def fetch_threatfox_family(family: str, limit: int = 200) -> list[dict]:
     payload = {"query": "malwareinfo", "malware": family, "limit": limit}
-    data = http_post_json(THREATFOX_API_URL, payload)
+    try:
+        data = http_post_json(THREATFOX_API_URL, payload)
+    except Exception as exc:
+        log(f"ThreatFox family request failed for {family}, continue: {exc}")
+        return []
+
+    if not isinstance(data, dict):
+        log(f"ThreatFox family response had unexpected shape for {family}, continue")
+        return []
+
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
