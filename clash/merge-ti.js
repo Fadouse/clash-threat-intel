@@ -11,7 +11,10 @@ function main(config) {
     "https://raw.githubusercontent.com/Fadouse/clash-threat-intel/main/clash/generated";
   const LEGACY_MASTER_GROUP = "Threat intelligence IOC";
 
-  const categories = [
+  // Toggle: set to true to include all granular threat categories in proxy groups
+  const ENABLE_ALL_CATEGORIES = false;
+
+  const extendedCategories = [
     { key: "stealer", group: "TI stealer", file: "stealer.txt" },
     { key: "ransomware", group: "TI ransomware", file: "ransomware.txt" },
     { key: "c2", group: "TI c2", file: "c2.txt" },
@@ -25,12 +28,19 @@ function main(config) {
     { key: "rootkit", group: "TI rootkit", file: "rootkit.txt" },
     { key: "worm", group: "TI worm", file: "worm.txt" },
     { key: "exploit", group: "TI exploit", file: "exploit.txt" },
-    { key: "phishing", group: "TI phishing", file: "phishing.txt" },
+    { key: "phishing", group: "TI phishing", file: "phishing.txt" }
+  ];
+
+  const defaultCategories = [
     { key: "malware", group: "TI malware", file: "malware.txt" },
     { key: "pua", group: "TI pua", file: "pua.txt" },
     { key: "privacy", group: "TI privacy", file: "privacy.txt" },
     { key: "ads", group: "TI ads", file: "ads.txt" }
   ];
+
+  const categories = ENABLE_ALL_CATEGORIES
+    ? extendedCategories.concat(defaultCategories)
+    : defaultCategories;
 
   function ensureRuleProvider(name, url) {
     config["rule-providers"][name] = {
@@ -98,7 +108,8 @@ function main(config) {
   }
 
   function removeLegacyMasterGroup() {
-    const legacyMembers = new Set(categories.map(item => item.group).concat(["REJECT", "DIRECT"]));
+    const allGroups = extendedCategories.concat(defaultCategories);
+    const legacyMembers = new Set(allGroups.map(item => item.group).concat(["REJECT", "DIRECT"]));
     config["proxy-groups"] = config["proxy-groups"].filter(group => {
       if (!group || group.name !== LEGACY_MASTER_GROUP) return true;
       const proxies = Array.isArray(group.proxies) ? group.proxies : [];

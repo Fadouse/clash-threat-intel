@@ -80,7 +80,7 @@ jobs:
       - name: Build feeds
         env:
           THREATFOX_DAYS: "3"
-          THREATFOX_CONFIDENCE: "50"
+          THREATFOX_CONFIDENCE: "90"
           VT_API_KEY: ${{ secrets.VT_API_KEY }}
           THREATFOX_AUTH_KEY: ${{ secrets.THREATFOX_AUTH_KEY }}
           VT_ENRICH_LIMIT: "20"
