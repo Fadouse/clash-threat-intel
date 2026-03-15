@@ -25,6 +25,56 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Debug secret injected
+        env:
+          THREATFOX_AUTH_KEY: ${{ secrets.THREATFOX_AUTH_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          v = os.getenv("THREATFOX_AUTH_KEY", "")
+          print("THREATFOX_AUTH_KEY present =", bool(v))
+          print("THREATFOX_AUTH_KEY length =", len(v))
+          PY
+
+      - name: Debug ThreatFox direct request
+        env:
+          THREATFOX_AUTH_KEY: ${{ secrets.THREATFOX_AUTH_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+          import urllib.error
+
+          key = os.getenv("THREATFOX_AUTH_KEY", "")
+          req = urllib.request.Request(
+              "https://threatfox-api.abuse.ch/api/v1/",
+              data=json.dumps({"query": "get_iocs", "days": 1}).encode(),
+              headers={
+                  "User-Agent": "fadouse-ti-builder/diag",
+                  "Content-Type": "application/json",
+                  "Accept": "application/json",
+                  "Auth-Key": key,
+              },
+              method="POST",
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  body = resp.read().decode("utf-8", errors="replace")
+                  print("status =", resp.status)
+                  print("content-type =", resp.headers.get("Content-Type", ""))
+                  print("body preview =", repr(body[:500]))
+          except urllib.error.HTTPError as e:
+              body = e.read().decode("utf-8", errors="replace")
+              print("HTTPError =", e.code)
+              print("body preview =", repr(body[:500]))
+              raise
+          except Exception as e:
+              print("Exception =", repr(e))
+              raise
+          PY
+
       - name: Build feeds
         env:
           THREATFOX_DAYS: "3"
@@ -33,7 +83,6 @@ jobs:
           THREATFOX_AUTH_KEY: ${{ secrets.THREATFOX_AUTH_KEY }}
           VT_ENRICH_LIMIT: "20"
           VT_MIN_SCORE: "5"
-          # This upstream is unstable; the script continues even if it fails
           PUP_FILTER_URL: "https://raw.githubusercontent.com/curbengh/pup-filter/main/dist/pup-filter-dnscrypt-blocked-names.txt"
         run: |
           python scripts/build_ti.py
