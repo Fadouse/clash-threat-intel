@@ -2,9 +2,3 @@
 __pycache__/
 *.py[cod]
 *.pyo
-
-# Generated output directories (populated at runtime by the workflow)
-clash/generated/
-yara/
-intel/
-meta/
