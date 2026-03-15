@@ -6,12 +6,13 @@ import json
 import os
 import pathlib
 import re
-import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import ssl
+from collections.abc import Iterable, Mapping
 from datetime import datetime, timezone
-from typing import Iterable
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 INPUTS = ROOT / "inputs"
@@ -25,6 +26,8 @@ for p in (INPUTS, CLASH_DIR, YARA_DIR, INTEL_DIR, META_DIR):
 
 HTTP_TIMEOUT = 45
 USER_AGENT = "fadouse-ti-builder/1.0"
+THREATFOX_MAX_RETRIES = 2
+THREATFOX_RETRY_DELAY_SECONDS = 2
 
 THREATFOX_DAYS = int(os.getenv("THREATFOX_DAYS", "3"))
 THREATFOX_CONFIDENCE = int(os.getenv("THREATFOX_CONFIDENCE", "50"))
@@ -63,6 +66,28 @@ DOMAIN_RE = re.compile(
 )
 SHA256_RE = re.compile(r"^[A-Fa-f0-9]{64}$")
 
+RETRYABLE_HTTP_STATUS_CODES = {408, 429, 500, 502, 503, 504}
+JsonObject = dict[str, object]
+ThreatFoxRow = dict[str, object]
+CategoryPayload = dict[str, set[str]]
+StatsCounts = dict[str, int | dict[str, int]]
+
+
+class UpstreamResponseError(RuntimeError):
+    def __init__(self, message: str, *, retryable: bool = False):
+        super().__init__(message)
+        self.retryable: bool = retryable
+
+
+def is_retryable_url_error(reason: object) -> bool:
+    if isinstance(reason, ssl.SSLError):
+        return False
+    if isinstance(reason, TimeoutError):
+        return True
+    if isinstance(reason, OSError):
+        return True
+    return False
+
 
 def log(msg: str) -> None:
     print(msg, flush=True)
@@ -70,7 +95,7 @@ def log(msg: str) -> None:
 
 def read_lines(path: pathlib.Path) -> list[str]:
     if not path.exists():
-        path.write_text("", encoding="utf-8")
+        _ = path.write_text("", encoding="utf-8")
         return []
     return [line.strip() for line in path.read_text(encoding="utf-8", errors="replace").splitlines()]
 
@@ -84,11 +109,14 @@ def http_get_text(url: str, headers: dict[str, str] | None = None) -> str:
         return resp.read().decode("utf-8", errors="replace")
 
 
-def http_get_json(url: str, headers: dict[str, str] | None = None) -> dict:
-    return json.loads(http_get_text(url, headers=headers))
+def http_get_json(url: str, headers: dict[str, str] | None = None) -> JsonObject:
+    data = json.loads(http_get_text(url, headers=headers))
+    if not isinstance(data, dict):
+        raise RuntimeError(f"Unexpected JSON root from {url}. Root type={type(data).__name__}")
+    return data
 
 
-def http_post_json(url: str, payload: dict, headers: dict[str, str] | None = None) -> dict:
+def http_post_json(url: str, payload: Mapping[str, object], headers: dict[str, str] | None = None) -> JsonObject:
     req_headers = {
         "User-Agent": USER_AGENT,
         "Content-Type": "application/json",
@@ -107,22 +135,45 @@ def http_post_json(url: str, payload: dict, headers: dict[str, str] | None = Non
             content_type = resp.headers.get("Content-Type", "")
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
-        raise RuntimeError(
-            f"HTTP {e.code} from {url}. Body preview: {body[:400]!r}"
+        raise UpstreamResponseError(
+            f"HTTP {e.code} from {url}. Body preview: {body[:400]!r}",
+            retryable=e.code in RETRYABLE_HTTP_STATUS_CODES,
+        ) from e
+    except urllib.error.URLError as e:
+        raise UpstreamResponseError(
+            f"Network error from {url}: {e.reason}",
+            retryable=is_retryable_url_error(e.reason),
         ) from e
 
+    stripped = text.strip()
+    lowered = stripped[:200].lower()
+    if not stripped:
+        raise UpstreamResponseError(
+            f"Empty response from {url}. Content-Type={content_type!r}",
+            retryable=True,
+        )
+    if "html" in content_type.lower() or lowered.startswith("<!doctype html") or lowered.startswith("<html"):
+        raise UpstreamResponseError(
+            f"HTML response from {url}. Content-Type={content_type!r}. Body preview: {text[:400]!r}"
+        )
+
     try:
-        return json.loads(text)
+        data = json.loads(text)
     except json.JSONDecodeError as e:
-        raise RuntimeError(
-            f"Non-JSON response from {url}. Content-Type={content_type!r}. "
-            f"Body preview: {text[:400]!r}"
+        raise UpstreamResponseError(
+            f"Non-JSON response from {url}. Content-Type={content_type!r}. Body preview: {text[:400]!r}"
         ) from e
+
+    if not isinstance(data, dict):
+        raise UpstreamResponseError(
+            f"Unexpected JSON root from {url}. Root type={type(data).__name__}. Body preview: {text[:400]!r}"
+        )
+    return data
 
 
 def is_ip(value: str) -> bool:
     try:
-        ipaddress.ip_address(value)
+        _ = ipaddress.ip_address(value)
         return True
     except Exception:
         return False
@@ -282,36 +333,92 @@ def threatfox_headers() -> dict[str, str]:
     return {"Auth-Key": THREATFOX_AUTH_KEY}
 
 
-def fetch_threatfox_recent() -> list[dict]:
+def threatfox_query(payload: Mapping[str, object], *, label: str) -> JsonObject:
+    last_error: UpstreamResponseError | None = None
+    total_attempts = THREATFOX_MAX_RETRIES + 1
+    attempts_used = 0
+
+    for attempt in range(1, total_attempts + 1):
+        attempts_used = attempt
+        try:
+            data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
+        except UpstreamResponseError as exc:
+            last_error = exc
+            if not exc.retryable or attempt >= total_attempts:
+                break
+            delay = THREATFOX_RETRY_DELAY_SECONDS * attempt
+            log(
+                f"ThreatFox {label} attempt {attempt}/{total_attempts} failed, retrying in {delay}s: {exc}"
+            )
+            time.sleep(delay)
+            continue
+
+        query_status = str(data.get("query_status") or "").strip().lower()
+        if query_status == "ok":
+            rows = data.get("data")
+            if isinstance(rows, dict):
+                return {"query_status": query_status, "data": [rows]}
+            if isinstance(rows, list) and all(isinstance(row, dict) for row in rows):
+                return {"query_status": query_status, "data": rows}
+            raise RuntimeError(
+                f"ThreatFox {label} returned query_status='ok' with unexpected data payload type "
+                f"{type(rows).__name__}."
+            )
+
+        retryable_statuses = {"retry_after", "temporary_error", "rate_limit", "too_many_requests"}
+        if query_status in retryable_statuses:
+            last_error = UpstreamResponseError(
+                f"ThreatFox {label} temporary query_status={query_status!r}",
+                retryable=True,
+            )
+            if attempt >= total_attempts:
+                break
+            delay = THREATFOX_RETRY_DELAY_SECONDS * attempt
+            log(
+                f"ThreatFox {label} attempt {attempt}/{total_attempts} returned {query_status!r}, retrying in {delay}s"
+            )
+            time.sleep(delay)
+            continue
+        if query_status == "no_result":
+            return {"query_status": query_status, "data": []}
+
+        message = str(data.get("message") or data.get("error") or "").strip()
+        details = f" message={message!r}" if message else ""
+        raise RuntimeError(
+            f"ThreatFox {label} query failed with query_status={query_status or '<missing>'!r}.{details}"
+        )
+
+    raise RuntimeError(
+        f"ThreatFox {label} request failed after {attempts_used} attempt(s): {last_error}"
+    )
+
+
+def fetch_threatfox_recent() -> list[ThreatFoxRow]:
     if not THREATFOX_AUTH_KEY:
         log("THREATFOX_AUTH_KEY is missing, skipping ThreatFox recent")
         return []
 
     payload = {"query": "get_iocs", "days": THREATFOX_DAYS}
-    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
-    rows = data.get("data") or []
-    if isinstance(rows, dict):
-        rows = [rows]
-    if not isinstance(rows, list):
-        return []
-    return [r for r in rows if isinstance(r, dict)]
+    data = threatfox_query(payload, label="recent")
+    rows = data.get("data")
+    if isinstance(rows, list):
+        return rows
+    raise RuntimeError(f"ThreatFox recent data payload was not normalized to a list: {type(rows).__name__}")
 
 
-def fetch_threatfox_family(family: str, limit: int = 200) -> list[dict]:
+def fetch_threatfox_family(family: str, limit: int = 200) -> list[ThreatFoxRow]:
     if not THREATFOX_AUTH_KEY:
         return []
 
     payload = {"query": "malwareinfo", "malware": family, "limit": limit}
-    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
-    rows = data.get("data") or []
-    if isinstance(rows, dict):
-        rows = [rows]
-    if not isinstance(rows, list):
-        return []
-    return [r for r in rows if isinstance(r, dict)]
+    data = threatfox_query(payload, label=f"family:{family}")
+    rows = data.get("data")
+    if isinstance(rows, list):
+        return rows
+    raise RuntimeError(f"ThreatFox family data payload was not normalized to a list: {type(rows).__name__}")
 
 
-def score_threatfox_item(row: dict) -> int:
+def score_threatfox_item(row: ThreatFoxRow) -> int:
     value = row.get("confidence_level", 0)
     try:
         return int(str(value).strip())
@@ -319,8 +426,8 @@ def score_threatfox_item(row: dict) -> int:
         return 0
 
 
-def row_has_stealer_signal(row: dict) -> bool:
-    blob_parts = []
+def row_has_stealer_signal(row: ThreatFoxRow) -> bool:
+    blob_parts: list[str] = []
     for key in ("malware", "ioc", "ioc_type"):
         val = row.get(key)
         if isinstance(val, str):
@@ -332,6 +439,32 @@ def row_has_stealer_signal(row: dict) -> bool:
     return any(k in blob for k in STEALER_KEYWORDS)
 
 
+def nested_json_object(value: object, *keys: str) -> JsonObject:
+    current = value
+    for key in keys:
+        if not isinstance(current, dict):
+            return {}
+        current = current.get(key)
+    if isinstance(current, dict):
+        return current
+    return {}
+
+
+def json_int(value: object, default: int = 0) -> int:
+    if isinstance(value, bool):
+        return int(value)
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        try:
+            return int(value.strip())
+        except ValueError:
+            return default
+    return default
+
+
 def vt_score_domain(domain: str) -> int:
     if not VT_API_KEY:
         return 0
@@ -340,8 +473,8 @@ def vt_score_domain(domain: str) -> int:
             f"https://www.virustotal.com/api/v3/domains/{urllib.parse.quote(domain, safe='')}",
             headers={"x-apikey": VT_API_KEY},
         )
-        stats = (((data.get("data") or {}).get("attributes") or {}).get("last_analysis_stats") or {})
-        return int(stats.get("malicious", 0)) + int(stats.get("suspicious", 0))
+        stats = nested_json_object(data, "data", "attributes", "last_analysis_stats")
+        return json_int(stats.get("malicious", 0)) + json_int(stats.get("suspicious", 0))
     except Exception:
         return 0
 
@@ -355,8 +488,8 @@ def vt_score_ip(network_or_ip: str) -> int:
             f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ip_only, safe='')}",
             headers={"x-apikey": VT_API_KEY},
         )
-        stats = (((data.get("data") or {}).get("attributes") or {}).get("last_analysis_stats") or {})
-        return int(stats.get("malicious", 0)) + int(stats.get("suspicious", 0))
+        stats = nested_json_object(data, "data", "attributes", "last_analysis_stats")
+        return json_int(stats.get("malicious", 0)) + json_int(stats.get("suspicious", 0))
     except Exception:
         return 0
 
@@ -414,7 +547,7 @@ def chunked(seq: list[str], size: int) -> Iterable[list[str]]:
         yield seq[i:i + size]
 
 
-def write_yara(categories: dict[str, dict[str, set[str]]]) -> None:
+def write_yara(categories: dict[str, CategoryPayload]) -> None:
     out = []
     out.append("/* auto-generated from public TI feeds */")
     out.append("")
@@ -442,19 +575,19 @@ def write_yara(categories: dict[str, dict[str, set[str]]]) -> None:
             out.append("}")
             out.append("")
 
-    (YARA_DIR / "network_iocs_auto.yar").write_text("\n".join(out), encoding="utf-8")
+    _ = (YARA_DIR / "network_iocs_auto.yar").write_text("\n".join(out), encoding="utf-8")
 
 
 def write_text(path: pathlib.Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    _ = path.write_text(text, encoding="utf-8")
 
 
 def main() -> int:
     allow_domains = {d for d in map(normalize_domain, read_lines(INPUTS / "allowlist_domains.txt")) if d}
     allow_ips = {i for i in map(normalize_ip_or_cidr, read_lines(INPUTS / "allowlist_ips.txt")) if i}
 
-    categories: dict[str, dict[str, set[str]]] = {
+    categories: dict[str, CategoryPayload] = {
         "ads": {"domains": set(), "ips": set(), "urls": set()},
         "privacy": {"domains": set(), "ips": set(), "urls": set()},
         "pua": {"domains": set(), "ips": set(), "urls": set()},
@@ -462,10 +595,12 @@ def main() -> int:
         "stealer": {"domains": set(), "ips": set(), "urls": set()},
     }
 
+    stats_sources: dict[str, list[str]] = {}
+    stats_counts: StatsCounts = {}
     stats = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
-        "sources": {},
-        "counts": {},
+        "sources": stats_sources,
+        "counts": stats_counts,
     }
 
     # ads
@@ -473,7 +608,7 @@ def main() -> int:
         log("Fetching ads feed")
         ads_text = http_get_text(BLOCKLIST_ADS_URL)
         categories["ads"]["domains"].update(iter_domains_from_text_blocklist(ads_text))
-        stats["sources"]["ads"] = [BLOCKLIST_ADS_URL]
+        stats_sources["ads"] = [BLOCKLIST_ADS_URL]
     except Exception as exc:
         log(f"Ads feed failed, continue: {exc}")
 
@@ -482,7 +617,7 @@ def main() -> int:
         log("Fetching privacy feed")
         tracking_text = http_get_text(BLOCKLIST_TRACKING_URL)
         categories["privacy"]["domains"].update(iter_domains_from_text_blocklist(tracking_text))
-        stats["sources"]["privacy"] = [BLOCKLIST_TRACKING_URL]
+        stats_sources["privacy"] = [BLOCKLIST_TRACKING_URL]
     except Exception as exc:
         log(f"Privacy feed failed, continue: {exc}")
 
@@ -504,7 +639,7 @@ def main() -> int:
     if pua_manual_domains:
         categories["pua"]["domains"].update(pua_manual_domains)
         pua_sources.append(str(pua_manual.relative_to(ROOT)))
-    stats["sources"]["pua"] = pua_sources
+    stats_sources["pua"] = pua_sources
 
     # URLhaus
     malware_sources: list[str] = []
@@ -529,12 +664,15 @@ def main() -> int:
     except Exception as exc:
         log(f"URLhaus URLs failed, continue: {exc}")
 
-    stats["sources"]["malware"] = malware_sources
+    stats_sources["malware"] = malware_sources
+
+    threatfox_recent_ok = False
 
     # ThreatFox recent
     try:
         log("Fetching ThreatFox recent")
         tf_rows = fetch_threatfox_recent()
+        threatfox_recent_ok = True
         for row in tf_rows:
             if score_threatfox_item(row) < THREATFOX_CONFIDENCE:
                 continue
@@ -547,12 +685,15 @@ def main() -> int:
                 categories["stealer"]["domains"].update(d)
                 categories["stealer"]["ips"].update(i)
                 categories["stealer"]["urls"].update(u)
-        malware_sources.append(THREATFOX_API_URL)
     except Exception as exc:
         log(f"ThreatFox recent fetch failed, continue: {exc}")
 
+    if threatfox_recent_ok:
+        malware_sources.append(THREATFOX_API_URL)
+
     # ThreatFox stealer-focused family enrichment
-    stealer_sources = [THREATFOX_API_URL]
+    stealer_sources: list[str] = []
+    threatfox_family_ok = False
     family_seeds = [
         "RedLineStealer",
         "Lumma",
@@ -568,6 +709,7 @@ def main() -> int:
         try:
             log(f"Fetching ThreatFox family: {family}")
             rows = fetch_threatfox_family(family, limit=150)
+            threatfox_family_ok = True
             for row in rows:
                 d, i, u = extract_ioc_artifacts(str(row.get("ioc") or ""), str(row.get("ioc_type") or ""))
                 categories["stealer"]["domains"].update(d)
@@ -576,7 +718,10 @@ def main() -> int:
         except Exception as exc:
             log(f"ThreatFox family fetch failed for {family}: {exc}")
 
-    stats["sources"]["stealer"] = stealer_sources
+    if threatfox_family_ok:
+        stealer_sources.append(THREATFOX_API_URL)
+
+    stats_sources["stealer"] = stealer_sources
 
     # Optional VT confirmation hook
     # Only confirm a subset of stealer IOCs to avoid exhausting public API quota
@@ -589,7 +734,7 @@ def main() -> int:
             )
             categories["stealer"]["domains"].update(vt_domains)
             categories["stealer"]["ips"].update(vt_ips)
-            stats["sources"]["stealer"].append("VirusTotal optional enrichment")
+            stealer_sources.append("VirusTotal optional enrichment")
         except Exception as exc:
             log(f"VT enrichment failed, continue: {exc}")
 
@@ -606,8 +751,8 @@ def main() -> int:
             INTEL_DIR / "malwarebazaar_recent_sha256.txt",
             "\n".join(mb_hashes) + ("\n" if mb_hashes else ""),
         )
-        stats["sources"]["malwarebazaar_recent_sha256"] = [MALWAREBAZAAR_RECENT_SHA256_URL]
-        stats["counts"]["malwarebazaar_recent_sha256"] = len(mb_hashes)
+        stats_sources["malwarebazaar_recent_sha256"] = [MALWAREBAZAAR_RECENT_SHA256_URL]
+        stats_counts["malwarebazaar_recent_sha256"] = len(mb_hashes)
     except Exception as exc:
         log(f"MalwareBazaar export failed, continue: {exc}")
 
@@ -620,7 +765,7 @@ def main() -> int:
     for category, payload in categories.items():
         rules_text = to_classical_rules(payload["domains"], payload["ips"], f"TI {category}")
         write_text(CLASH_DIR / f"{category}.txt", rules_text)
-        stats["counts"][category] = {
+        stats_counts[category] = {
             "domains": len(payload["domains"]),
             "ips": len(payload["ips"]),
             "urls_for_yara": len(payload["urls"]),
