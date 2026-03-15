@@ -12,7 +12,7 @@ import urllib.parse
 import urllib.request
 import ssl
 from collections.abc import Iterable, Mapping
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 INPUTS = ROOT / "inputs"
@@ -20,6 +20,7 @@ CLASH_DIR = ROOT / "clash" / "generated"
 YARA_DIR = ROOT / "yara"
 INTEL_DIR = ROOT / "intel"
 META_DIR = ROOT / "meta"
+IOC_HISTORY_PATH = META_DIR / "ioc_history.json"
 
 for p in (INPUTS, CLASH_DIR, YARA_DIR, INTEL_DIR, META_DIR):
     p.mkdir(parents=True, exist_ok=True)
@@ -35,6 +36,7 @@ VT_API_KEY = os.getenv("VT_API_KEY", "").strip()
 VT_ENRICH_LIMIT = int(os.getenv("VT_ENRICH_LIMIT", "20"))
 VT_MIN_SCORE = int(os.getenv("VT_MIN_SCORE", "5"))
 PUP_FILTER_URL = os.getenv("PUP_FILTER_URL", "").strip()
+IOC_RETENTION_DAYS = int(os.getenv("IOC_RETENTION_DAYS", "360"))
 
 BLOCKLIST_ADS_URL = "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
 BLOCKLIST_TRACKING_URL = "https://raw.githubusercontent.com/blocklistproject/Lists/master/tracking.txt"
@@ -206,6 +208,9 @@ JsonObject = dict[str, object]
 ThreatFoxRow = dict[str, object]
 CategoryPayload = dict[str, set[str]]
 StatsCounts = dict[str, int | dict[str, int]]
+HistoryBucket = dict[str, str]
+HistoryCategory = dict[str, HistoryBucket]
+IocHistory = dict[str, HistoryCategory]
 
 
 class UpstreamResponseError(RuntimeError):
@@ -724,6 +729,105 @@ def write_text(path: pathlib.Path, text: str) -> None:
     _ = path.write_text(text, encoding="utf-8")
 
 
+def parse_iso_datetime(value: str) -> datetime | None:
+    raw = value.strip()
+    if not raw:
+        return None
+    normalized = raw.replace("Z", "+00:00")
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed
+
+
+def load_ioc_history() -> IocHistory:
+    if not IOC_HISTORY_PATH.exists():
+        return {}
+    try:
+        data = json.loads(IOC_HISTORY_PATH.read_text(encoding="utf-8", errors="replace"))
+    except Exception:
+        return {}
+    if not isinstance(data, dict):
+        return {}
+
+    normalized: IocHistory = {}
+    for category, payload in data.items():
+        if not isinstance(category, str) or not isinstance(payload, dict):
+            continue
+        cat_bucket: HistoryCategory = {"domains": {}, "ips": {}, "urls": {}}
+        for kind in ("domains", "ips", "urls"):
+            raw_bucket = payload.get(kind)
+            if not isinstance(raw_bucket, dict):
+                continue
+            for ioc, seen_at in raw_bucket.items():
+                if isinstance(ioc, str) and isinstance(seen_at, str):
+                    cat_bucket[kind][ioc] = seen_at
+        normalized[category] = cat_bucket
+    return normalized
+
+
+def apply_retention_window(
+    categories: dict[str, CategoryPayload],
+    *,
+    allow_domains: set[str],
+    allow_ips: set[str],
+) -> tuple[IocHistory, dict[str, dict[str, int]]]:
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=IOC_RETENTION_DAYS)
+    now_iso = now.isoformat()
+
+    previous = load_ioc_history()
+    merged: IocHistory = {}
+    retention_stats: dict[str, dict[str, int]] = {}
+
+    all_categories = set(previous) | set(categories)
+    for category in sorted(all_categories):
+        payload = categories.setdefault(category, {"domains": set(), "ips": set(), "urls": set()})
+        prev_payload = previous.get(category, {"domains": {}, "ips": {}, "urls": {}})
+        cat_merged: HistoryCategory = {"domains": {}, "ips": {}, "urls": {}}
+        cat_stats = {"retained_domains": 0, "retained_ips": 0, "retained_urls": 0}
+
+        for kind in ("domains", "ips", "urls"):
+            current_values = set(payload.get(kind, set()))
+            old_bucket = prev_payload.get(kind, {})
+            if not isinstance(old_bucket, dict):
+                old_bucket = {}
+
+            for ioc, last_seen_raw in old_bucket.items():
+                if not isinstance(ioc, str) or not isinstance(last_seen_raw, str):
+                    continue
+                last_seen = parse_iso_datetime(last_seen_raw)
+                if not last_seen or last_seen < cutoff:
+                    continue
+                if kind == "domains" and ioc in allow_domains:
+                    continue
+                if kind == "ips" and ioc in allow_ips:
+                    continue
+                if ioc in current_values:
+                    continue
+
+                current_values.add(ioc)
+                cat_stats[f"retained_{kind}"] += 1
+                cat_merged[kind][ioc] = last_seen.isoformat()
+
+            for ioc in current_values:
+                if kind == "domains" and ioc in allow_domains:
+                    continue
+                if kind == "ips" and ioc in allow_ips:
+                    continue
+                cat_merged[kind][ioc] = now_iso
+
+            payload[kind] = current_values
+
+        merged[category] = cat_merged
+        retention_stats[category] = cat_stats
+
+    return merged, retention_stats
+
+
 def main() -> int:
     allow_domains = {d for d in map(normalize_domain, read_lines(INPUTS / "allowlist_domains.txt")) if d}
     allow_ips = {i for i in map(normalize_ip_or_cidr, read_lines(INPUTS / "allowlist_ips.txt")) if i}
@@ -900,6 +1004,14 @@ def main() -> int:
         cat["domains"] = {d for d in cat["domains"] if d not in allow_domains}
         cat["ips"] = {i for i in cat["ips"] if i not in allow_ips}
 
+    # retention window: keep IOCs seen in the last N days to reduce feed jitter loss
+    history, retained_counts = apply_retention_window(
+        categories,
+        allow_domains=allow_domains,
+        allow_ips=allow_ips,
+    )
+    write_text(IOC_HISTORY_PATH, json.dumps(history, ensure_ascii=False, indent=2) + "\n")
+
     # write clash files
     for category, payload in categories.items():
         rules_text = to_classical_rules(payload["domains"], payload["ips"], f"TI {category}")
@@ -908,6 +1020,9 @@ def main() -> int:
             "domains": len(payload["domains"]),
             "ips": len(payload["ips"]),
             "urls_for_yara": len(payload["urls"]),
+            "retained_domains": retained_counts.get(category, {}).get("retained_domains", 0),
+            "retained_ips": retained_counts.get(category, {}).get("retained_ips", 0),
+            "retained_urls": retained_counts.get(category, {}).get("retained_urls", 0),
         }
 
     # write yara
