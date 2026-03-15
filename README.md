@@ -55,9 +55,9 @@ Enable by setting `ENABLE_ALL_CATEGORIES = true` in `clash/merge-ti.js`.
 
 ## Usage
 
-### Option 1 — Mihomo Party / Clash Meta (merge script)
+### Option 1 — Clash Party / Clash Meta (merge script)
 
-Copy the contents of [`clash/merge-ti.js`](clash/merge-ti.js) into the **Merge** script field of [Mihomo Party](https://github.com/mihomo-party-org/mihomo-party) or any Clash Meta frontend that supports merge scripts.
+Copy the contents of [`clash/merge-ti.js`](clash/merge-ti.js) into the **Merge** script field of [Clash Party](https://github.com/mihomo-party-org/mihomo-party) or any Clash Meta frontend that supports merge scripts.
 
 The script will:
 1. Register a `rule-provider` for each enabled category (auto-updated every 15 minutes).
