@@ -10,6 +10,7 @@ Automated threat-intelligence feed aggregator that generates Clash / Mihomo rule
 - **YARA rules** for network IOCs in `yara/`
 - **MalwareBazaar SHA-256 hashes** in `intel/`
 - Build statistics in `meta/stats.json`
+- IOC retention window (default 360 days) to prevent short-term feed dropouts from immediately removing active indicators
 - Automatic allowlisting via `inputs/allowlist_domains.txt` and `inputs/allowlist_ips.txt`
 - Optional manual PUA entries via `inputs/pua.manual.txt`
 - Optional VirusTotal enrichment for additional confidence scoring
@@ -125,6 +126,7 @@ The build pipeline is controlled by environment variables (set in the GitHub Act
 | `VT_ENRICH_LIMIT` | `20` | Maximum number of IOCs to enrich per run |
 | `VT_MIN_SCORE` | `5` | Minimum VirusTotal detection count to include an IOC |
 | `PUP_FILTER_URL` | *(empty)* | URL of a PUP/adware DNSCrypt block-list for the `pua` category |
+| `IOC_RETENTION_DAYS` | `360` | Keep IOCs seen within this many days; older items are purged |
 
 ---
 
@@ -157,6 +159,12 @@ Generated files are written to:
 - `yara/network_iocs_auto.yar` — YARA rule file
 - `intel/malwarebazaar_recent_sha256.txt` — MalwareBazaar SHA-256 hashes
 - `meta/stats.json` — Build statistics
+- `meta/ioc_history.json` — IOC last-seen cache used for retention / anti-flap behavior
+
+Retention behavior:
+- If an IOC is observed again, it remains and its `last_seen` timestamp is refreshed.
+- If an IOC temporarily disappears from upstream feeds, it is kept until it has not been seen for more than `IOC_RETENTION_DAYS`.
+- Duplicate entries are automatically deduplicated via set-based aggregation.
 
 ---
 
