@@ -32,10 +32,11 @@ jobs:
           THREATFOX_DAYS: "3"
           THREATFOX_CONFIDENCE: "50"
           VT_API_KEY: ${{ secrets.VT_API_KEY }}
+          THREATFOX_AUTH_KEY: ${{ secrets.THREATFOX_AUTH_KEY }}
           VT_ENRICH_LIMIT: "20"
           VT_MIN_SCORE: "5"
           # This upstream is unstable; the script continues even if it fails
-          PUP_FILTER_URL: "https://curben.gitlab.io/malware-filter/pup-filter-domains.txt"
+          PUP_FILTER_URL: "https://raw.githubusercontent.com/curbengh/pup-filter/main/dist/pup-filter-dnscrypt-blocked-names.txt"
         run: |
           python scripts/build_ti.py
 

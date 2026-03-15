@@ -37,7 +37,8 @@ BLOCKLIST_ADS_URL = "https://raw.githubusercontent.com/blocklistproject/Lists/ma
 BLOCKLIST_TRACKING_URL = "https://raw.githubusercontent.com/blocklistproject/Lists/master/tracking.txt"
 URLHAUS_HOSTFILE_URL = "https://urlhaus.abuse.ch/downloads/hostfile/"
 URLHAUS_TEXT_URL = "https://urlhaus.abuse.ch/downloads/text/"
-THREATFOX_API_URL = "https://threatfox.abuse.ch/api/"
+THREATFOX_API_URL = "https://threatfox-api.abuse.ch/api/v1/"
+THREATFOX_AUTH_KEY = os.getenv("THREATFOX_AUTH_KEY", "").strip()
 MALWAREBAZAAR_RECENT_SHA256_URL = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
 STEALER_KEYWORDS = {
@@ -95,13 +96,28 @@ def http_post_json(url: str, payload: dict, headers: dict[str, str] | None = Non
     }
     if headers:
         req_headers.update(headers)
+
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=req_headers, method="POST")
-    with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as resp:
-        text = resp.read().decode("utf-8", errors="replace")
-    if not text.strip():
-        raise ValueError(f"Empty HTTP response body received from POST request to {url}")
-    return json.loads(text)
+
+    try:
+        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as resp:
+            raw = resp.read()
+            text = raw.decode("utf-8", errors="replace")
+            content_type = resp.headers.get("Content-Type", "")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"HTTP {e.code} from {url}. Body preview: {body[:400]!r}"
+        ) from e
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(
+            f"Non-JSON response from {url}. Content-Type={content_type!r}. "
+            f"Body preview: {text[:400]!r}"
+        ) from e
 
 
 def is_ip(value: str) -> bool:
@@ -260,18 +276,15 @@ def extract_ioc_artifacts(ioc_value: str, ioc_type: str) -> tuple[set[str], set[
     return domains, ips, urls
 
 
+def threatfox_headers() -> dict[str, str]:
+    if not THREATFOX_AUTH_KEY:
+        raise RuntimeError("Missing THREATFOX_AUTH_KEY. Add it as a GitHub Actions secret.")
+    return {"Auth-Key": THREATFOX_AUTH_KEY}
+
+
 def fetch_threatfox_recent() -> list[dict]:
     payload = {"query": "get_iocs", "days": THREATFOX_DAYS}
-    try:
-        data = http_post_json(THREATFOX_API_URL, payload)
-    except Exception as exc:
-        log(f"ThreatFox recent request failed, continue: {exc}")
-        return []
-
-    if not isinstance(data, dict):
-        log("ThreatFox recent response had unexpected shape, continue")
-        return []
-
+    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
@@ -280,16 +293,7 @@ def fetch_threatfox_recent() -> list[dict]:
 
 def fetch_threatfox_family(family: str, limit: int = 200) -> list[dict]:
     payload = {"query": "malwareinfo", "malware": family, "limit": limit}
-    try:
-        data = http_post_json(THREATFOX_API_URL, payload)
-    except Exception as exc:
-        log(f"ThreatFox family request failed for {family}, continue: {exc}")
-        return []
-
-    if not isinstance(data, dict):
-        log(f"ThreatFox family response had unexpected shape for {family}, continue")
-        return []
-
+    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
