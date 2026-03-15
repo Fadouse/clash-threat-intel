@@ -283,20 +283,31 @@ def threatfox_headers() -> dict[str, str]:
 
 
 def fetch_threatfox_recent() -> list[dict]:
+    if not THREATFOX_AUTH_KEY:
+        log("THREATFOX_AUTH_KEY is missing, skipping ThreatFox recent")
+        return []
+
     payload = {"query": "get_iocs", "days": THREATFOX_DAYS}
     data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
+    if not isinstance(rows, list):
+        return []
     return [r for r in rows if isinstance(r, dict)]
 
 
 def fetch_threatfox_family(family: str, limit: int = 200) -> list[dict]:
+    if not THREATFOX_AUTH_KEY:
+        return []
+
     payload = {"query": "malwareinfo", "malware": family, "limit": limit}
     data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
     rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
+    if not isinstance(rows, list):
+        return []
     return [r for r in rows if isinstance(r, dict)]
 
 
