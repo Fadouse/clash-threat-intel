@@ -44,20 +44,155 @@ THREATFOX_API_URL = "https://threatfox-api.abuse.ch/api/v1/"
 THREATFOX_AUTH_KEY = os.getenv("THREATFOX_AUTH_KEY", "").strip()
 MALWAREBAZAAR_RECENT_SHA256_URL = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
-STEALER_KEYWORDS = {
-    "stealer",
-    "stealc",
-    "redline",
-    "redlinestealer",
-    "lumma",
-    "vidar",
-    "raccoon",
-    "raccoonstealer",
-    "deerstealer",
-    "dogestealer",
-    "atomic",
-    "amos",
-    "rhadamanthys",
+THREAT_CATEGORIES: dict[str, dict[str, object]] = {
+    "stealer": {
+        "keywords": {
+            "stealer", "stealc", "redline", "redlinestealer", "lumma",
+            "vidar", "raccoon", "raccoonstealer", "deerstealer",
+            "dogestealer", "atomic", "amos", "rhadamanthys",
+            "meta_stealer", "mystic_stealer", "aurora_stealer",
+            "risepro", "strigoi",
+        },
+        "families": [
+            "RedLineStealer", "Lumma", "Vidar", "StealC",
+            "RaccoonStealer", "Rhadamanthys", "DeerStealer",
+            "DogeStealer", "AtomicStealer", "MysticStealer",
+            "AuroraStealer", "RisePro", "MetaStealer",
+        ],
+    },
+    "ransomware": {
+        "keywords": {
+            "ransom", "ransomware", "lockbit", "blackcat", "alphv", "clop",
+            "ryuk", "conti", "revil", "sodinokibi", "hive_ransom",
+            "blackbasta", "royal_ransom", "akira", "play_ransom", "medusa_ransom",
+            "phobos", "dharma", "djvu", "wannacry", "maze", "ragnarlocker",
+            "avoslocker", "babuk", "karakurt", "bianlian", "cuba_ransom",
+            "rhysida", "8base", "nokoyawa", "trigona", "cactus_ransom",
+            "blacksuit", "inc_ransom",
+        },
+        "families": [
+            "LockBit", "BlackCat", "ALPHV", "Clop", "Ryuk", "Conti",
+            "REvil", "Sodinokibi", "Hive", "BlackBasta", "Royal",
+            "Akira", "Play", "Medusa", "Phobos", "Dharma", "STOP",
+            "Babuk", "BianLian", "Cuba", "Rhysida", "8Base",
+            "Nokoyawa", "Trigona", "Cactus", "BlackSuit",
+        ],
+    },
+    "c2": {
+        "keywords": {
+            "c2", "c&c", "command_and_control", "cobaltstrike", "cobalt_strike",
+            "metasploit", "meterpreter", "sliver", "bruteratel", "brute_ratel",
+            "havoc", "mythic", "poshc2", "empire", "covenant",
+            "nighthawk", "deimos", "botnet_cc",
+        },
+        "families": [
+            "CobaltStrike", "Metasploit", "Sliver", "BruteRatel",
+            "Havoc", "Mythic", "PoshC2",
+        ],
+    },
+    "rat": {
+        "keywords": {
+            "remote_access", "remcos", "asyncrat", "nanocore",
+            "darkcomet", "njrat", "quasarrat", "warzone", "netwire",
+            "orcusrat", "xworm", "dcrat", "venomrat", "limerat",
+            "parallaxrat", "plugx", "darkgate", "revengerat",
+        },
+        "families": [
+            "Remcos", "AsyncRAT", "NanoCore", "DarkComet",
+            "njRAT", "QuasarRAT", "WarzoneRAT", "NetWire",
+            "OrcusRAT", "XWorm", "DCRat", "VenomRAT",
+            "LimeRAT", "DarkGate", "PlugX",
+        ],
+    },
+    "botnet": {
+        "keywords": {
+            "botnet", "mirai", "emotet", "trickbot", "qakbot", "qbot",
+            "dridex", "icedid", "bumblebee", "pikabot", "amadey",
+            "smokeloader", "tofsee", "pushdo", "andromeda",
+            "phorpiex", "socks5systemz", "mylobot", "botnet_cc",
+        },
+        "families": [
+            "Emotet", "TrickBot", "QakBot", "Dridex",
+            "IcedID", "BumbleBee", "PikaBot", "Amadey",
+            "SmokeLoader", "Mirai", "Phorpiex",
+        ],
+    },
+    "backdoor": {
+        "keywords": {
+            "backdoor", "sunburst", "kazuar", "turla", "regin",
+            "uroburos", "winnti", "shadowpad", "bpfdoor", "deadglyph",
+        },
+        "families": [
+            "ShadowPad", "Winnti", "BPFDoor",
+        ],
+    },
+    "miner": {
+        "keywords": {
+            "miner", "cryptominer", "coinminer", "xmrig",
+            "cryptojacking", "coinhive",
+        },
+        "families": [
+            "XMRig", "CoinMiner",
+        ],
+    },
+    "loader": {
+        "keywords": {
+            "loader", "dropper", "guloader", "batloader",
+            "gootloader", "matanbuchus", "latrodectus",
+            "fakebat", "nitrogen", "payload_delivery",
+        },
+        "families": [
+            "GuLoader", "BatLoader", "GootLoader",
+            "Matanbuchus", "Latrodectus", "FakeBat", "Nitrogen",
+        ],
+    },
+    "banker": {
+        "keywords": {
+            "banker", "banking_trojan", "zloader", "zeus",
+            "danabot", "tinba", "carbanak", "grandoreiro", "mekotio",
+            "coper", "sharkbot",
+        },
+        "families": [
+            "ZLoader", "DanaBot", "Grandoreiro",
+            "Mekotio", "SharkBot", "TinyBanker",
+        ],
+    },
+    "keylogger": {
+        "keywords": {
+            "keylogger", "hawkeye", "agenttesla", "agent_tesla",
+            "formbook", "masslogger", "snakekeylogger", "404keylogger",
+        },
+        "families": [
+            "AgentTesla", "FormBook", "MassLogger",
+            "SnakeKeylogger", "HawkEye",
+        ],
+    },
+    "rootkit": {
+        "keywords": {
+            "rootkit", "bootkit",
+        },
+        "families": [],
+    },
+    "worm": {
+        "keywords": {
+            "worm", "raspberry_robin",
+        },
+        "families": [
+            "RaspberryRobin",
+        ],
+    },
+    "exploit": {
+        "keywords": {
+            "exploit", "exploitkit",
+        },
+        "families": [],
+    },
+    "phishing": {
+        "keywords": {
+            "phishing", "phish", "credential_harvesting",
+        },
+        "families": [],
+    },
 }
 
 DOMAIN_RE = re.compile(
@@ -426,9 +561,11 @@ def score_threatfox_item(row: ThreatFoxRow) -> int:
         return 0
 
 
-def row_has_stealer_signal(row: ThreatFoxRow) -> bool:
+def row_matches_category(row: ThreatFoxRow, keywords: set[str]) -> bool:
+    """Check if a ThreatFox IOC row matches any keyword for a threat category."""
     blob_parts: list[str] = []
-    for key in ("malware", "ioc", "ioc_type"):
+    for key in ("malware", "malware_printable", "ioc_type",
+                "threat_type", "threat_type_desc"):
         val = row.get(key)
         if isinstance(val, str):
             blob_parts.append(val.lower())
@@ -436,7 +573,7 @@ def row_has_stealer_signal(row: ThreatFoxRow) -> bool:
     if isinstance(tags, list):
         blob_parts.extend(str(t).lower() for t in tags)
     blob = " ".join(blob_parts)
-    return any(k in blob for k in STEALER_KEYWORDS)
+    return any(k in blob for k in keywords)
 
 
 def nested_json_object(value: object, *keys: str) -> JsonObject:
@@ -592,8 +729,9 @@ def main() -> int:
         "privacy": {"domains": set(), "ips": set(), "urls": set()},
         "pua": {"domains": set(), "ips": set(), "urls": set()},
         "malware": {"domains": set(), "ips": set(), "urls": set()},
-        "stealer": {"domains": set(), "ips": set(), "urls": set()},
     }
+    for tc_name in THREAT_CATEGORIES:
+        categories.setdefault(tc_name, {"domains": set(), "ips": set(), "urls": set()})
 
     stats_sources: dict[str, list[str]] = {}
     stats_counts: StatsCounts = {}
@@ -681,47 +819,42 @@ def main() -> int:
             categories["malware"]["ips"].update(i)
             categories["malware"]["urls"].update(u)
 
-            if row_has_stealer_signal(row):
-                categories["stealer"]["domains"].update(d)
-                categories["stealer"]["ips"].update(i)
-                categories["stealer"]["urls"].update(u)
+            for tc_name, tc_conf in THREAT_CATEGORIES.items():
+                if row_matches_category(row, tc_conf["keywords"]):
+                    categories[tc_name]["domains"].update(d)
+                    categories[tc_name]["ips"].update(i)
+                    categories[tc_name]["urls"].update(u)
     except Exception as exc:
         log(f"ThreatFox recent fetch failed, continue: {exc}")
 
     if threatfox_recent_ok:
         malware_sources.append(THREATFOX_API_URL)
 
-    # ThreatFox stealer-focused family enrichment
-    stealer_sources: list[str] = []
-    threatfox_family_ok = False
-    family_seeds = [
-        "RedLineStealer",
-        "Lumma",
-        "Vidar",
-        "StealC",
-        "RaccoonStealer",
-        "Rhadamanthys",
-        "DeerStealer",
-        "DogeStealer",
-        "AtomicStealer",
-    ]
-    for family in family_seeds:
-        try:
-            log(f"Fetching ThreatFox family: {family}")
-            rows = fetch_threatfox_family(family, limit=150)
-            threatfox_family_ok = True
-            for row in rows:
-                d, i, u = extract_ioc_artifacts(str(row.get("ioc") or ""), str(row.get("ioc_type") or ""))
-                categories["stealer"]["domains"].update(d)
-                categories["stealer"]["ips"].update(i)
-                categories["stealer"]["urls"].update(u)
-        except Exception as exc:
-            log(f"ThreatFox family fetch failed for {family}: {exc}")
+    # ThreatFox family enrichment for all threat categories
+    for tc_name, tc_conf in THREAT_CATEGORIES.items():
+        tc_sources: list[str] = []
+        tc_family_ok = False
+        families = tc_conf.get("families") or []
+        for family in families:
+            try:
+                log(f"Fetching ThreatFox family: {family} (category: {tc_name})")
+                rows = fetch_threatfox_family(family, limit=150)
+                tc_family_ok = True
+                for row in rows:
+                    d, i, u = extract_ioc_artifacts(str(row.get("ioc") or ""), str(row.get("ioc_type") or ""))
+                    categories[tc_name]["domains"].update(d)
+                    categories[tc_name]["ips"].update(i)
+                    categories[tc_name]["urls"].update(u)
+                    categories["malware"]["domains"].update(d)
+                    categories["malware"]["ips"].update(i)
+                    categories["malware"]["urls"].update(u)
+            except Exception as exc:
+                log(f"ThreatFox family fetch failed for {family} ({tc_name}): {exc}")
+            time.sleep(0.5)
 
-    if threatfox_family_ok:
-        stealer_sources.append(THREATFOX_API_URL)
-
-    stats_sources["stealer"] = stealer_sources
+        if tc_family_ok:
+            tc_sources.append(THREATFOX_API_URL)
+        stats_sources[tc_name] = tc_sources
 
     # Optional VT confirmation hook
     # Only confirm a subset of stealer IOCs to avoid exhausting public API quota
@@ -734,7 +867,9 @@ def main() -> int:
             )
             categories["stealer"]["domains"].update(vt_domains)
             categories["stealer"]["ips"].update(vt_ips)
-            stealer_sources.append("VirusTotal optional enrichment")
+            stealer_src = stats_sources.get("stealer", [])
+            stealer_src.append("VirusTotal optional enrichment")
+            stats_sources["stealer"] = stealer_src
         except Exception as exc:
             log(f"VT enrichment failed, continue: {exc}")
 
