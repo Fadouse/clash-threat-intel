@@ -529,7 +529,6 @@ def main() -> int:
     except Exception as exc:
         log(f"URLhaus URLs failed, continue: {exc}")
 
-    malware_sources.append(THREATFOX_API_URL)
     stats["sources"]["malware"] = malware_sources
 
     # ThreatFox recent
@@ -548,6 +547,7 @@ def main() -> int:
                 categories["stealer"]["domains"].update(d)
                 categories["stealer"]["ips"].update(i)
                 categories["stealer"]["urls"].update(u)
+        malware_sources.append(THREATFOX_API_URL)
     except Exception as exc:
         log(f"ThreatFox recent fetch failed, continue: {exc}")
 
