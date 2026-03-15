@@ -9,6 +9,7 @@ function main(config) {
 
   const RAW_BASE =
     "https://raw.githubusercontent.com/Fadouse/clash-threat-intel/main/clash/generated";
+  const LEGACY_MASTER_GROUP = "Threat intelligence IOC";
 
   const categories = [
     { key: "stealer", group: "TI stealer", file: "stealer.txt" },
@@ -75,26 +76,37 @@ function main(config) {
     }
   }
 
-  // Category-specific groups
+  function ensureManagedRule(providerName, targetGroup) {
+    const prefix = `RULE-SET,${providerName},`;
+    config.rules = config.rules.filter(
+      rule => !(typeof rule === "string" && rule.startsWith(prefix))
+    );
+    ensureRuleBeforeMatch(`${prefix}${targetGroup}`);
+  }
+
+  function removeLegacyMasterGroup() {
+    const legacyMembers = new Set(categories.map(item => item.group).concat(["REJECT", "DIRECT"]));
+    config["proxy-groups"] = config["proxy-groups"].filter(group => {
+      if (!group || group.name !== LEGACY_MASTER_GROUP) return true;
+      const proxies = Array.isArray(group.proxies) ? group.proxies : [];
+      const looksScriptManaged =
+        group.type === "select" &&
+        group["include-all-proxies"] === true &&
+        proxies.every(proxy => legacyMembers.has(proxy));
+      return !looksScriptManaged;
+    });
+  }
+
+  removeLegacyMasterGroup();
+
   for (const item of categories) {
     ensureRuleProvider(`ti-${item.key}`, `${RAW_BASE}/${item.file}`);
     ensureGroup(item.group, ["REJECT", "DIRECT"]);
   }
 
-  // Master group
-  ensureGroup("Threat intelligence IOC", [
-    "TI stealer",
-    "TI malware",
-    "TI pua",
-    "TI privacy",
-    "TI ads",
-    "REJECT",
-    "DIRECT"
-  ]);
-
   // Rule priority from most to least restrictive
   for (const item of categories) {
-    ensureRuleBeforeMatch(`RULE-SET,ti-${item.key},${item.group}`);
+    ensureManagedRule(`ti-${item.key}`, item.group);
   }
 
   return config;
