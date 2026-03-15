@@ -44,7 +44,7 @@ THREATFOX_API_URL = "https://threatfox-api.abuse.ch/api/v1/"
 THREATFOX_AUTH_KEY = os.getenv("THREATFOX_AUTH_KEY", "").strip()
 MALWAREBAZAAR_RECENT_SHA256_URL = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
-THREAT_CATEGORIES: dict[str, dict[str, object]] = {
+THREAT_CATEGORIES: dict[str, dict[str, set[str] | list[str]]] = {
     "stealer": {
         "keywords": {
             "stealer", "stealc", "redline", "redlinestealer", "lumma",
@@ -562,7 +562,11 @@ def score_threatfox_item(row: ThreatFoxRow) -> int:
 
 
 def row_matches_category(row: ThreatFoxRow, keywords: set[str]) -> bool:
-    """Check if a ThreatFox IOC row matches any keyword for a threat category."""
+    """Check if a ThreatFox IOC row matches any keyword for a threat category.
+
+    Inspects the malware, malware_printable, ioc_type, threat_type,
+    threat_type_desc, and tags fields of the row.
+    """
     blob_parts: list[str] = []
     for key in ("malware", "malware_printable", "ioc_type",
                 "threat_type", "threat_type_desc"):
