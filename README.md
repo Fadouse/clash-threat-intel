@@ -1,6 +1,7 @@
 # Clash Threat Intel
 
-IMPORTANT: This repo is fully vibe coded.
+***IMPORTANT: This repo is fully vibe coded.***
+
 Automated threat-intelligence feed aggregator that generates Clash / Mihomo rule-sets, YARA rules, and MalwareBazaar SHA-256 block-lists — updated automatically every 2 hours via GitHub Actions.
 
 ---
