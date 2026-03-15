@@ -278,7 +278,7 @@ def extract_ioc_artifacts(ioc_value: str, ioc_type: str) -> tuple[set[str], set[
 
 def threatfox_headers() -> dict[str, str]:
     if not THREATFOX_AUTH_KEY:
-        return {}
+        raise RuntimeError("Missing THREATFOX_AUTH_KEY. Add it as a GitHub Actions secret.")
     return {"Auth-Key": THREATFOX_AUTH_KEY}
 
 
@@ -288,13 +288,8 @@ def fetch_threatfox_recent() -> list[dict]:
         return []
 
     payload = {"query": "get_iocs", "days": THREATFOX_DAYS}
-    try:
-        data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
-    except Exception as exc:
-        log(f"ThreatFox recent fetch failed, continue: {exc}")
-        return []
-
-    rows = data.get("data") if isinstance(data, dict) else []
+    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
+    rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
     if not isinstance(rows, list):
@@ -307,13 +302,8 @@ def fetch_threatfox_family(family: str, limit: int = 200) -> list[dict]:
         return []
 
     payload = {"query": "malwareinfo", "malware": family, "limit": limit}
-    try:
-        data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
-    except Exception as exc:
-        log(f"ThreatFox family fetch failed for {family}, continue: {exc}")
-        return []
-
-    rows = data.get("data") if isinstance(data, dict) else []
+    data = http_post_json(THREATFOX_API_URL, payload, headers=threatfox_headers())
+    rows = data.get("data") or []
     if isinstance(rows, dict):
         rows = [rows]
     if not isinstance(rows, list):
