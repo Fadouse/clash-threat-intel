@@ -1,7 +1,7 @@
-# generated: 2026-03-20T17:01:43.913622+00:00
+# generated: 2026-03-20T19:02:26.103415+00:00
 # title: TI loader
-# domains: 2852
-# ips: 114
+# domains: 2875
+# ips: 116
 
 DOMAIN-SUFFIX,00adv0.fabulos.in.net
 DOMAIN-SUFFIX,01001000.world
@@ -224,15 +224,19 @@ DOMAIN-SUFFIX,app-v3-flow.enzymecore.in.net
 DOMAIN-SUFFIX,app-v4-data.schnellerechner.in.net
 DOMAIN-SUFFIX,app-v44-meta.turboflow.in.net
 DOMAIN-SUFFIX,app-v9-data.schnellestat.in.net
+DOMAIN-SUFFIX,app1proc.distributedmatrix.in.net
 DOMAIN-SUFFIX,app1proc.managementgateway.in.net
 DOMAIN-SUFFIX,app1store.telemetryservice.in.net
 DOMAIN-SUFFIX,app2core.managementgateway.in.net
 DOMAIN-SUFFIX,app2data.fluxobase.in.net
 DOMAIN-SUFFIX,app2data.vivaflux.in.net
 DOMAIN-SUFFIX,app2remote.telemetryservice.in.net
+DOMAIN-SUFFIX,app2steel.distributedmatrix.in.net
+DOMAIN-SUFFIX,app3core.distributedmatrix.in.net
 DOMAIN-SUFFIX,app3dev.telemetryservice.in.net
 DOMAIN-SUFFIX,app3ghost.managementgateway.in.net
 DOMAIN-SUFFIX,app4link.telemetryservice.in.net
+DOMAIN-SUFFIX,app4sat.distributedmatrix.in.net
 DOMAIN-SUFFIX,app4view.managementgateway.in.net
 DOMAIN-SUFFIX,appbfs.lol
 DOMAIN-SUFFIX,appgodl.xyz
@@ -641,13 +645,20 @@ DOMAIN-SUFFIX,db-z3-point.medivault.in.net
 DOMAIN-SUFFIX,db4static.flexonode.in.net
 DOMAIN-SUFFIX,db4static.primanode.in.net
 DOMAIN-SUFFIX,dbiecm.easttea.in.net
+DOMAIN-SUFFIX,dc1infra.applicationbuffer.in.net
 DOMAIN-SUFFIX,dc1proc.operationalsystem.in.net
 DOMAIN-SUFFIX,dc1proc.platformendpoint.in.net
 DOMAIN-SUFFIX,dc1sync.analyticspoint.in.net
 DOMAIN-SUFFIX,dc2data.analyticspoint.in.net
+DOMAIN-SUFFIX,dc2point.operationalsystem.in.net
 DOMAIN-SUFFIX,dc2power.platformendpoint.in.net
+DOMAIN-SUFFIX,dc2proxy.applicationbuffer.in.net
+DOMAIN-SUFFIX,dc3data.applicationbuffer.in.net
 DOMAIN-SUFFIX,dc3edge.analyticspoint.in.net
 DOMAIN-SUFFIX,dc3local.platformendpoint.in.net
+DOMAIN-SUFFIX,dc3view.operationalsystem.in.net
+DOMAIN-SUFFIX,dc4path.operationalsystem.in.net
+DOMAIN-SUFFIX,dc4point.applicationbuffer.in.net
 DOMAIN-SUFFIX,dc4static.analyticspoint.in.net
 DOMAIN-SUFFIX,dc4work.platformendpoint.in.net
 DOMAIN-SUFFIX,decodecoo.zecoko.in.net
@@ -685,6 +696,7 @@ DOMAIN-SUFFIX,device-update.imtok.io
 DOMAIN-SUFFIX,dewanmanufacturing.com
 DOMAIN-SUFFIX,dewdog.lol
 DOMAIN-SUFFIX,dflows.net
+DOMAIN-SUFFIX,dgp13ezr.winddev.digital
 DOMAIN-SUFFIX,dicrabrio.lol
 DOMAIN-SUFFIX,digitalmetals.lol
 DOMAIN-SUFFIX,digitaloil.lol
@@ -1175,6 +1187,7 @@ DOMAIN-SUFFIX,k7-sync-v2.fossaflow.in.net
 DOMAIN-SUFFIX,k8s-992-node.fjordpulse.in.net
 DOMAIN-SUFFIX,k9-rim-outer.altasphera.in.net
 DOMAIN-SUFFIX,k97iydxz.gorun.in.net
+DOMAIN-SUFFIX,k9a7tswv.winddev.digital
 DOMAIN-SUFFIX,kamisisterbrofanydodf.com
 DOMAIN-SUFFIX,kashrykkskcjfkkdks.com
 DOMAIN-SUFFIX,kel-forgeum.fabulos.in.net
@@ -1949,6 +1962,8 @@ DOMAIN-SUFFIX,pmprcoin.lol
 DOMAIN-SUFFIX,pmprtoken.lat
 DOMAIN-SUFFIX,pngcoin.lol
 DOMAIN-SUFFIX,pnsoc.com
+DOMAIN-SUFFIX,pnt1meta.infrastructurecloud.in.net
+DOMAIN-SUFFIX,pnt2proc.infrastructurecloud.in.net
 DOMAIN-SUFFIX,pnutsol.lol
 DOMAIN-SUFFIX,point-entry-1.mondoluce.in.net
 DOMAIN-SUFFIX,point-entry-4.grandestat.in.net
@@ -2088,6 +2103,10 @@ DOMAIN-SUFFIX,remote-access-v4.cielonumerique.in.net
 DOMAIN-SUFFIX,rend-velve.commonit.in.net
 DOMAIN-SUFFIX,rentahuman.lol
 DOMAIN-SUFFIX,repsand.runfast.in.net
+DOMAIN-SUFFIX,res1sync.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res2data.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res3edge.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res4static.analyticsprocessing.in.net
 DOMAIN-SUFFIX,resknowbd.org
 DOMAIN-SUFFIX,result-z4-meta.neurosync.in.net
 DOMAIN-SUFFIX,retai-rapid.uptrend.in.net
@@ -2654,11 +2673,15 @@ DOMAIN-SUFFIX,voginc.com
 DOMAIN-SUFFIX,voidstealer.net
 DOMAIN-SUFFIX,vol1infra.diagnosticresource.in.net
 DOMAIN-SUFFIX,vol1meta.infrastructurebase.in.net
+DOMAIN-SUFFIX,vol1proc.connectivitynode.in.net
 DOMAIN-SUFFIX,vol2base.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol2outer.connectivitynode.in.net
 DOMAIN-SUFFIX,vol2proc.infrastructurebase.in.net
+DOMAIN-SUFFIX,vol3field.connectivitynode.in.net
 DOMAIN-SUFFIX,vol3gate.infrastructurebase.in.net
 DOMAIN-SUFFIX,vol3user.diagnosticresource.in.net
 DOMAIN-SUFFIX,vol4link.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol4space.connectivitynode.in.net
 DOMAIN-SUFFIX,vol4sync.infrastructurebase.in.net
 DOMAIN-SUFFIX,volt-layer.zipfolder.in.net
 DOMAIN-SUFFIX,vor-tidea.copyvrok.in.net
@@ -2921,6 +2944,7 @@ IP-CIDR,158.94.208.89/32,no-resolve
 IP-CIDR,158.94.208.144/32,no-resolve
 IP-CIDR,158.94.208.145/32,no-resolve
 IP-CIDR,158.94.208.224/32,no-resolve
+IP-CIDR,158.94.209.33/32,no-resolve
 IP-CIDR,158.94.209.160/32,no-resolve
 IP-CIDR,158.94.209.164/32,no-resolve
 IP-CIDR,158.94.209.166/32,no-resolve
@@ -2953,6 +2977,7 @@ IP-CIDR,173.44.141.89/32,no-resolve
 IP-CIDR,178.16.52.133/32,no-resolve
 IP-CIDR,178.16.52.138/32,no-resolve
 IP-CIDR,178.16.52.201/32,no-resolve
+IP-CIDR,178.16.53.70/32,no-resolve
 IP-CIDR,178.16.53.86/32,no-resolve
 IP-CIDR,178.16.53.88/32,no-resolve
 IP-CIDR,178.16.53.165/32,no-resolve
