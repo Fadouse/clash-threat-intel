@@ -1,6 +1,6 @@
-# generated: 2026-03-20T15:05:39.547241+00:00
+# generated: 2026-03-20T17:01:43.913622+00:00
 # title: TI loader
-# domains: 2831
+# domains: 2852
 # ips: 114
 
 DOMAIN-SUFFIX,00adv0.fabulos.in.net
@@ -224,8 +224,16 @@ DOMAIN-SUFFIX,app-v3-flow.enzymecore.in.net
 DOMAIN-SUFFIX,app-v4-data.schnellerechner.in.net
 DOMAIN-SUFFIX,app-v44-meta.turboflow.in.net
 DOMAIN-SUFFIX,app-v9-data.schnellestat.in.net
+DOMAIN-SUFFIX,app1proc.managementgateway.in.net
+DOMAIN-SUFFIX,app1store.telemetryservice.in.net
+DOMAIN-SUFFIX,app2core.managementgateway.in.net
 DOMAIN-SUFFIX,app2data.fluxobase.in.net
 DOMAIN-SUFFIX,app2data.vivaflux.in.net
+DOMAIN-SUFFIX,app2remote.telemetryservice.in.net
+DOMAIN-SUFFIX,app3dev.telemetryservice.in.net
+DOMAIN-SUFFIX,app3ghost.managementgateway.in.net
+DOMAIN-SUFFIX,app4link.telemetryservice.in.net
+DOMAIN-SUFFIX,app4view.managementgateway.in.net
 DOMAIN-SUFFIX,appbfs.lol
 DOMAIN-SUFFIX,appgodl.xyz
 DOMAIN-SUFFIX,appjm.darkboll.in.net
@@ -633,10 +641,15 @@ DOMAIN-SUFFIX,db-z3-point.medivault.in.net
 DOMAIN-SUFFIX,db4static.flexonode.in.net
 DOMAIN-SUFFIX,db4static.primanode.in.net
 DOMAIN-SUFFIX,dbiecm.easttea.in.net
+DOMAIN-SUFFIX,dc1proc.operationalsystem.in.net
+DOMAIN-SUFFIX,dc1proc.platformendpoint.in.net
 DOMAIN-SUFFIX,dc1sync.analyticspoint.in.net
 DOMAIN-SUFFIX,dc2data.analyticspoint.in.net
+DOMAIN-SUFFIX,dc2power.platformendpoint.in.net
 DOMAIN-SUFFIX,dc3edge.analyticspoint.in.net
+DOMAIN-SUFFIX,dc3local.platformendpoint.in.net
 DOMAIN-SUFFIX,dc4static.analyticspoint.in.net
+DOMAIN-SUFFIX,dc4work.platformendpoint.in.net
 DOMAIN-SUFFIX,decodecoo.zecoko.in.net
 DOMAIN-SUFFIX,deep-pat.yellglass.in.net
 DOMAIN-SUFFIX,deepasset.stabletu.in.net
@@ -2639,6 +2652,14 @@ DOMAIN-SUFFIX,vkl3xfkp2vtpdzk7ohock3w2oiwwtvgnwbwvurrqafh5nhw23h43dbid.onion
 DOMAIN-SUFFIX,vlecktv.checkbro.in.net
 DOMAIN-SUFFIX,voginc.com
 DOMAIN-SUFFIX,voidstealer.net
+DOMAIN-SUFFIX,vol1infra.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol1meta.infrastructurebase.in.net
+DOMAIN-SUFFIX,vol2base.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol2proc.infrastructurebase.in.net
+DOMAIN-SUFFIX,vol3gate.infrastructurebase.in.net
+DOMAIN-SUFFIX,vol3user.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol4link.diagnosticresource.in.net
+DOMAIN-SUFFIX,vol4sync.infrastructurebase.in.net
 DOMAIN-SUFFIX,volt-layer.zipfolder.in.net
 DOMAIN-SUFFIX,vor-tidea.copyvrok.in.net
 DOMAIN-SUFFIX,vorcoreix1.liberalpilka.in.net
