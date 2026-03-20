@@ -1,7 +1,7 @@
-# generated: 2026-03-20T13:08:51.177810+00:00
+# generated: 2026-03-20T15:05:39.550456+00:00
 # title: TI worm
 # domains: 29
-# ips: 39
+# ips: 44
 
 DOMAIN-SUFFIX,1.tcp.vip.cpolar.cn
 DOMAIN-SUFFIX,25.tcp.cpolar.top
@@ -32,7 +32,9 @@ DOMAIN-SUFFIX,xdm434-42444.portmap.host
 DOMAIN-SUFFIX,ycqsf-93-171-240-170.a.free.pinggy.link
 DOMAIN-SUFFIX,yukilotaev-44610.portmap.host
 DOMAIN-SUFFIX,yukilotaev-51407.portmap.host
+IP-CIDR,15.229.150.214/32,no-resolve
 IP-CIDR,34.39.197.251/32,no-resolve
+IP-CIDR,38.247.145.235/32,no-resolve
 IP-CIDR,41.45.156.241/32,no-resolve
 IP-CIDR,45.32.150.97/32,no-resolve
 IP-CIDR,45.32.150.251/32,no-resolve
@@ -51,11 +53,14 @@ IP-CIDR,103.83.87.178/32,no-resolve
 IP-CIDR,104.128.191.108/32,no-resolve
 IP-CIDR,108.61.177.82/32,no-resolve
 IP-CIDR,144.31.12.196/32,no-resolve
+IP-CIDR,146.70.143.166/32,no-resolve
 IP-CIDR,150.241.70.126/32,no-resolve
 IP-CIDR,154.219.104.140/32,no-resolve
 IP-CIDR,157.245.45.38/32,no-resolve
 IP-CIDR,158.94.210.181/32,no-resolve
 IP-CIDR,158.94.211.208/32,no-resolve
+IP-CIDR,167.114.48.166/32,no-resolve
+IP-CIDR,172.93.164.102/32,no-resolve
 IP-CIDR,176.65.139.46/32,no-resolve
 IP-CIDR,185.29.11.70/32,no-resolve
 IP-CIDR,192.3.136.197/32,no-resolve
