@@ -1,10 +1,11 @@
-# generated: 2026-03-20T19:02:26.103415+00:00
+# generated: 2026-03-20T20:47:23.234424+00:00
 # title: TI loader
-# domains: 2875
-# ips: 116
+# domains: 2900
+# ips: 117
 
 DOMAIN-SUFFIX,00adv0.fabulos.in.net
 DOMAIN-SUFFIX,01001000.world
+DOMAIN-SUFFIX,01drive.com
 DOMAIN-SUFFIX,01n680.calloak.in.net
 DOMAIN-SUFFIX,02kbny.inkpit.in.net
 DOMAIN-SUFFIX,04cbe3jm.fastbit.digital
@@ -896,6 +897,8 @@ DOMAIN-SUFFIX,gaganuavtokilometrobusa.com
 DOMAIN-SUFFIX,ganycoin.lol
 DOMAIN-SUFFIX,gard-cano.catflat.in.net
 DOMAIN-SUFFIX,gardeninsp.natneth.in.net
+DOMAIN-SUFFIX,gasangmanual.com
+DOMAIN-SUFFIX,gasangworld.com
 DOMAIN-SUFFIX,gascoinonsol.lat
 DOMAIN-SUFFIX,gastoken.lat
 DOMAIN-SUFFIX,gastroikoliojauiol.com
@@ -1095,6 +1098,7 @@ DOMAIN-SUFFIX,humanverif.cyou
 DOMAIN-SUFFIX,huxukintredert.com
 DOMAIN-SUFFIX,hxfpc.infosafe.in.net
 DOMAIN-SUFFIX,hydrax.live
+DOMAIN-SUFFIX,hylqpinportal.com
 DOMAIN-SUFFIX,hyp3-grid.onelight.in.net
 DOMAIN-SUFFIX,hyp3r8-stream.octagonon.in.net
 DOMAIN-SUFFIX,hyper-guid3.botslap.in.net
@@ -1307,7 +1311,15 @@ DOMAIN-SUFFIX,lobstarsol.lol
 DOMAIN-SUFFIX,lobstartoken.live
 DOMAIN-SUFFIX,lobstartoken.run
 DOMAIN-SUFFIX,lobstercoin.digital
+DOMAIN-SUFFIX,loc1proc.managementresource.in.net
+DOMAIN-SUFFIX,loc1store.telemetryinterface.in.net
+DOMAIN-SUFFIX,loc2core.managementresource.in.net
+DOMAIN-SUFFIX,loc2remote.telemetryinterface.in.net
+DOMAIN-SUFFIX,loc3dev.telemetryinterface.in.net
+DOMAIN-SUFFIX,loc3ghost.managementresource.in.net
 DOMAIN-SUFFIX,loc3net.orbitunit.in.net
+DOMAIN-SUFFIX,loc4link.telemetryinterface.in.net
+DOMAIN-SUFFIX,loc4view.managementresource.in.net
 DOMAIN-SUFFIX,local-hub-01.ondeviva.in.net
 DOMAIN-SUFFIX,local-hub-sec.espacerapide.in.net
 DOMAIN-SUFFIX,local-hub-test.petitbureau.in.net
@@ -1962,8 +1974,14 @@ DOMAIN-SUFFIX,pmprcoin.lol
 DOMAIN-SUFFIX,pmprtoken.lat
 DOMAIN-SUFFIX,pngcoin.lol
 DOMAIN-SUFFIX,pnsoc.com
+DOMAIN-SUFFIX,pnt1infra.diagnosticendpoint.in.net
 DOMAIN-SUFFIX,pnt1meta.infrastructurecloud.in.net
+DOMAIN-SUFFIX,pnt2base.diagnosticendpoint.in.net
 DOMAIN-SUFFIX,pnt2proc.infrastructurecloud.in.net
+DOMAIN-SUFFIX,pnt3gate.infrastructurecloud.in.net
+DOMAIN-SUFFIX,pnt3user.diagnosticendpoint.in.net
+DOMAIN-SUFFIX,pnt4link.diagnosticendpoint.in.net
+DOMAIN-SUFFIX,pnt4sync.infrastructurecloud.in.net
 DOMAIN-SUFFIX,pnutsol.lol
 DOMAIN-SUFFIX,point-entry-1.mondoluce.in.net
 DOMAIN-SUFFIX,point-entry-4.grandestat.in.net
@@ -2095,6 +2113,7 @@ DOMAIN-SUFFIX,reef-dat.doabove.in.net
 DOMAIN-SUFFIX,reel-age.chifdark.in.net
 DOMAIN-SUFFIX,refineterminal.jacksend.in.net
 DOMAIN-SUFFIX,rekr.lowflo.in.net
+DOMAIN-SUFFIX,rememberer.digital
 DOMAIN-SUFFIX,remote-access-0.schnellkraft.in.net
 DOMAIN-SUFFIX,remote-access-2.stillewasser.in.net
 DOMAIN-SUFFIX,remote-access-7.petitreseau.in.net
@@ -2103,10 +2122,16 @@ DOMAIN-SUFFIX,remote-access-v4.cielonumerique.in.net
 DOMAIN-SUFFIX,rend-velve.commonit.in.net
 DOMAIN-SUFFIX,rentahuman.lol
 DOMAIN-SUFFIX,repsand.runfast.in.net
+DOMAIN-SUFFIX,res1proc.operationalgateway.in.net
+DOMAIN-SUFFIX,res1proc.platformcontroller.in.net
 DOMAIN-SUFFIX,res1sync.analyticsprocessing.in.net
 DOMAIN-SUFFIX,res2data.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res2point.operationalgateway.in.net
+DOMAIN-SUFFIX,res2power.platformcontroller.in.net
 DOMAIN-SUFFIX,res3edge.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res3local.platformcontroller.in.net
 DOMAIN-SUFFIX,res4static.analyticsprocessing.in.net
+DOMAIN-SUFFIX,res4work.platformcontroller.in.net
 DOMAIN-SUFFIX,resknowbd.org
 DOMAIN-SUFFIX,result-z4-meta.neurosync.in.net
 DOMAIN-SUFFIX,retai-rapid.uptrend.in.net
@@ -2988,6 +3013,7 @@ IP-CIDR,185.161.251.58/32,no-resolve
 IP-CIDR,185.196.9.183/32,no-resolve
 IP-CIDR,185.242.245.69/32,no-resolve
 IP-CIDR,187.77.174.248/32,no-resolve
+IP-CIDR,192.210.229.56/32,no-resolve
 IP-CIDR,193.105.134.151/32,no-resolve
 IP-CIDR,195.177.94.68/32,no-resolve
 IP-CIDR,217.69.0.159/32,no-resolve
