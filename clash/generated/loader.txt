@@ -1,6 +1,6 @@
-# generated: 2026-03-21T20:40:55.990286+00:00
+# generated: 2026-03-21T22:38:51.208677+00:00
 # title: TI loader
-# domains: 3309
+# domains: 3326
 # ips: 121
 
 DOMAIN-SUFFIX,00adv0.fabulos.in.net
@@ -889,16 +889,20 @@ DOMAIN-SUFFIX,exponentialmc2.xyz
 DOMAIN-SUFFIX,exposedemand.stayflat.in.net
 DOMAIN-SUFFIX,ext1infra.operationalmatrix.in.net
 DOMAIN-SUFFIX,ext1meta.analyticalhubnode.in.net
+DOMAIN-SUFFIX,ext1meta.securityaccessgateway.in.net
 DOMAIN-SUFFIX,ext1proc.coreconnectivity.in.net
 DOMAIN-SUFFIX,ext2base.operationalmatrix.in.net
 DOMAIN-SUFFIX,ext2outer.coreconnectivity.in.net
 DOMAIN-SUFFIX,ext2proc.analyticalhubnode.in.net
+DOMAIN-SUFFIX,ext2proc.securityaccessgateway.in.net
 DOMAIN-SUFFIX,ext3field.coreconnectivity.in.net
 DOMAIN-SUFFIX,ext3gate.analyticalhubnode.in.net
+DOMAIN-SUFFIX,ext3gate.securityaccessgateway.in.net
 DOMAIN-SUFFIX,ext3user.operationalmatrix.in.net
 DOMAIN-SUFFIX,ext4link.operationalmatrix.in.net
 DOMAIN-SUFFIX,ext4space.coreconnectivity.in.net
 DOMAIN-SUFFIX,ext4sync.analyticalhubnode.in.net
+DOMAIN-SUFFIX,ext4sync.securityaccessgateway.in.net
 DOMAIN-SUFFIX,extendbuild.gatedale.in.net
 DOMAIN-SUFFIX,exteneur.windbay.in.net
 DOMAIN-SUFFIX,eyw3w.darkboll.in.net
@@ -1213,6 +1217,10 @@ DOMAIN-SUFFIX,hub-v22-local.prismagrid.cfd
 DOMAIN-SUFFIX,hub-v22-local.starkewolke.in.net
 DOMAIN-SUFFIX,hub-x0-local.starkewand.in.net
 DOMAIN-SUFFIX,hub-z0-local.starkewahl.in.net
+DOMAIN-SUFFIX,hub1sync.terminaldataprocessor.in.net
+DOMAIN-SUFFIX,hub2data.terminaldataprocessor.in.net
+DOMAIN-SUFFIX,hub3edge.terminaldataprocessor.in.net
+DOMAIN-SUFFIX,hub4static.terminaldataprocessor.in.net
 DOMAIN-SUFFIX,hub4sync.fluxobase.in.net
 DOMAIN-SUFFIX,hub4sync.marisnode.in.net
 DOMAIN-SUFFIX,hub4sync.vivaflux.in.net
@@ -1271,11 +1279,14 @@ DOMAIN-SUFFIX,ins0mnia.ru
 DOMAIN-SUFFIX,institutogeraldeprofissoes.site
 DOMAIN-SUFFIX,int1proc.systemicvalidator.in.net
 DOMAIN-SUFFIX,int1proc.virtualgatekeeper.in.net
+DOMAIN-SUFFIX,int1store.networkresourcebuffer.in.net
 DOMAIN-SUFFIX,int1store.securitybackbone.in.net
 DOMAIN-SUFFIX,int2core.virtualgatekeeper.in.net
+DOMAIN-SUFFIX,int2remote.networkresourcebuffer.in.net
 DOMAIN-SUFFIX,int2remote.securitybackbone.in.net
 DOMAIN-SUFFIX,int2steel.systemicvalidator.in.net
 DOMAIN-SUFFIX,int3core.systemicvalidator.in.net
+DOMAIN-SUFFIX,int3dev.networkresourcebuffer.in.net
 DOMAIN-SUFFIX,int3dev.securitybackbone.in.net
 DOMAIN-SUFFIX,int3ghost.virtualgatekeeper.in.net
 DOMAIN-SUFFIX,int4link.securitybackbone.in.net
@@ -1477,6 +1488,7 @@ DOMAIN-SUFFIX,loc1proc.distributednetwork.in.net
 DOMAIN-SUFFIX,loc1proc.managementresource.in.net
 DOMAIN-SUFFIX,loc1proc.networkcontroller.in.net
 DOMAIN-SUFFIX,loc1proc.systemintegration.in.net
+DOMAIN-SUFFIX,loc1store.datacenternode.info
 DOMAIN-SUFFIX,loc1store.telemetryinterface.in.net
 DOMAIN-SUFFIX,loc1sync.streamdatahandler.in.net
 DOMAIN-SUFFIX,loc2core.managementresource.in.net
@@ -1484,16 +1496,19 @@ DOMAIN-SUFFIX,loc2data.streamdatahandler.in.net
 DOMAIN-SUFFIX,loc2point.systemintegration.in.net
 DOMAIN-SUFFIX,loc2power.networkcontroller.in.net
 DOMAIN-SUFFIX,loc2proxy.analyticspipeline.in.net
+DOMAIN-SUFFIX,loc2remote.datacenternode.info
 DOMAIN-SUFFIX,loc2remote.telemetryinterface.in.net
 DOMAIN-SUFFIX,loc2steel.distributednetwork.in.net
 DOMAIN-SUFFIX,loc3core.distributednetwork.in.net
 DOMAIN-SUFFIX,loc3data.analyticspipeline.in.net
+DOMAIN-SUFFIX,loc3dev.datacenternode.info
 DOMAIN-SUFFIX,loc3dev.telemetryinterface.in.net
 DOMAIN-SUFFIX,loc3edge.streamdatahandler.in.net
 DOMAIN-SUFFIX,loc3ghost.managementresource.in.net
 DOMAIN-SUFFIX,loc3local.networkcontroller.in.net
 DOMAIN-SUFFIX,loc3net.orbitunit.in.net
 DOMAIN-SUFFIX,loc3view.systemintegration.in.net
+DOMAIN-SUFFIX,loc4link.datacenternode.info
 DOMAIN-SUFFIX,loc4link.telemetryinterface.in.net
 DOMAIN-SUFFIX,loc4path.systemintegration.in.net
 DOMAIN-SUFFIX,loc4point.analyticspipeline.in.net
@@ -1866,6 +1881,7 @@ DOMAIN-SUFFIX,node3ghost.ventaserv.in.net
 DOMAIN-SUFFIX,node4link.securityframework.in.net
 DOMAIN-SUFFIX,node4sat.remotemanagement.in.net
 DOMAIN-SUFFIX,node4static.networkobserver.in.net
+DOMAIN-SUFFIX,node4sync.systemstatus.info
 DOMAIN-SUFFIX,node4view.databaseintegrity.in.net
 DOMAIN-SUFFIX,nodoublestandards.net
 DOMAIN-SUFFIX,nokcuisine.nokviews.com
@@ -2703,6 +2719,7 @@ DOMAIN-SUFFIX,srv1auth.primanode.in.net
 DOMAIN-SUFFIX,srv1infra.resourcevalidator.in.net
 DOMAIN-SUFFIX,srv1meta.cloudinfrastructure.in.net
 DOMAIN-SUFFIX,srv1node.flexonode.in.net
+DOMAIN-SUFFIX,srv1proc.networksecurity.info
 DOMAIN-SUFFIX,srv1proc.virtualenvironment.in.net
 DOMAIN-SUFFIX,srv1sync.technicalsupport.info
 DOMAIN-SUFFIX,srv2base.resourcevalidator.in.net
