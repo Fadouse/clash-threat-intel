@@ -1,6 +1,6 @@
-# generated: 2026-03-25T01:51:36.910422+00:00
+# generated: 2026-03-25T04:37:05.317633+00:00
 # title: TI loader
-# domains: 4139
+# domains: 4165
 # ips: 128
 
 DOMAIN-SUFFIX,00adv0.fabulos.in.net
@@ -642,6 +642,7 @@ DOMAIN-SUFFIX,cl1proc.bryozoametrics.in.net
 DOMAIN-SUFFIX,cl1proc.kineticmatrixduct.in.net
 DOMAIN-SUFFIX,cl1proc.linearductnode.in.net
 DOMAIN-SUFFIX,cl1proc.logicmetricgate.in.net
+DOMAIN-SUFFIX,cl1proc.obsidianmatrix.in.net
 DOMAIN-SUFFIX,cl1proc.quantumbufferlink.in.net
 DOMAIN-SUFFIX,cl1proc.signalpathfinder.in.net
 DOMAIN-SUFFIX,cl1proc.synchrometrixbox.in.net
@@ -652,6 +653,7 @@ DOMAIN-SUFFIX,cl1store.entropicbuffergate.in.net
 DOMAIN-SUFFIX,cl1store.fluxoverificator.in.net
 DOMAIN-SUFFIX,cl1store.industrialmetric.in.net
 DOMAIN-SUFFIX,cl1store.microflowprocess.in.net
+DOMAIN-SUFFIX,cl1store.sedimentmetrics.in.net
 DOMAIN-SUFFIX,cl1store.spectralunitgate.in.net
 DOMAIN-SUFFIX,cl1store.tensorstorageunit.in.net
 DOMAIN-SUFFIX,cl1sync.inertialstreamhub.in.net
@@ -663,6 +665,7 @@ DOMAIN-SUFFIX,cl2point.binaryintegritynet.in.net
 DOMAIN-SUFFIX,cl2point.bryozoametrics.in.net
 DOMAIN-SUFFIX,cl2point.kineticmatrixduct.in.net
 DOMAIN-SUFFIX,cl2point.logicmetricgate.in.net
+DOMAIN-SUFFIX,cl2point.obsidianmatrix.in.net
 DOMAIN-SUFFIX,cl2point.signalpathfinder.in.net
 DOMAIN-SUFFIX,cl2point.synchrometrixbox.in.net
 DOMAIN-SUFFIX,cl2point.tarsusdatagate.in.net
@@ -672,6 +675,7 @@ DOMAIN-SUFFIX,cl2remote.entropicbuffergate.in.net
 DOMAIN-SUFFIX,cl2remote.fluxoverificator.in.net
 DOMAIN-SUFFIX,cl2remote.industrialmetric.in.net
 DOMAIN-SUFFIX,cl2remote.microflowprocess.in.net
+DOMAIN-SUFFIX,cl2remote.sedimentmetrics.in.net
 DOMAIN-SUFFIX,cl2remote.spectralunitgate.in.net
 DOMAIN-SUFFIX,cl2remote.tensorstorageunit.in.net
 DOMAIN-SUFFIX,cl2steel.linearductnode.in.net
@@ -682,6 +686,7 @@ DOMAIN-SUFFIX,cl3dev.entropicbuffergate.in.net
 DOMAIN-SUFFIX,cl3dev.fluxoverificator.in.net
 DOMAIN-SUFFIX,cl3dev.industrialmetric.in.net
 DOMAIN-SUFFIX,cl3dev.microflowprocess.in.net
+DOMAIN-SUFFIX,cl3dev.sedimentmetrics.in.net
 DOMAIN-SUFFIX,cl3dev.spectralunitgate.in.net
 DOMAIN-SUFFIX,cl3dev.tensorstorageunit.in.net
 DOMAIN-SUFFIX,cl3edge.inertialstreamhub.in.net
@@ -691,6 +696,7 @@ DOMAIN-SUFFIX,cl3view.binaryintegritynet.in.net
 DOMAIN-SUFFIX,cl3view.bryozoametrics.in.net
 DOMAIN-SUFFIX,cl3view.kineticmatrixduct.in.net
 DOMAIN-SUFFIX,cl3view.logicmetricgate.in.net
+DOMAIN-SUFFIX,cl3view.obsidianmatrix.in.net
 DOMAIN-SUFFIX,cl3view.signalpathfinder.in.net
 DOMAIN-SUFFIX,cl3view.synchrometrixbox.in.net
 DOMAIN-SUFFIX,cl3view.tarsusdatagate.in.net
@@ -700,12 +706,14 @@ DOMAIN-SUFFIX,cl4link.entropicbuffergate.in.net
 DOMAIN-SUFFIX,cl4link.fluxoverificator.in.net
 DOMAIN-SUFFIX,cl4link.industrialmetric.in.net
 DOMAIN-SUFFIX,cl4link.microflowprocess.in.net
+DOMAIN-SUFFIX,cl4link.sedimentmetrics.in.net
 DOMAIN-SUFFIX,cl4link.spectralunitgate.in.net
 DOMAIN-SUFFIX,cl4link.tensorstorageunit.in.net
 DOMAIN-SUFFIX,cl4path.binaryintegritynet.in.net
 DOMAIN-SUFFIX,cl4path.bryozoametrics.in.net
 DOMAIN-SUFFIX,cl4path.kineticmatrixduct.in.net
 DOMAIN-SUFFIX,cl4path.logicmetricgate.in.net
+DOMAIN-SUFFIX,cl4path.obsidianmatrix.in.net
 DOMAIN-SUFFIX,cl4path.signalpathfinder.in.net
 DOMAIN-SUFFIX,cl4path.synchrometrixbox.in.net
 DOMAIN-SUFFIX,cl4path.tarsusdatagate.in.net
@@ -948,6 +956,8 @@ DOMAIN-SUFFIX,dev1proc.orbitalvectorhub.in.net
 DOMAIN-SUFFIX,dev1proc.ovipositortrace.in.net
 DOMAIN-SUFFIX,dev1proc.photonicdatanode.in.net
 DOMAIN-SUFFIX,dev1proc.platyhelminth.in.net
+DOMAIN-SUFFIX,dev1proc.pyroxenetrace.in.net
+DOMAIN-SUFFIX,dev1proc.tectonicstream.in.net
 DOMAIN-SUFFIX,dev1proc.tensorvortexlink.in.net
 DOMAIN-SUFFIX,dev1proc.thermalpulserelay.in.net
 DOMAIN-SUFFIX,dev1proc.vectorquantizer.in.net
@@ -962,6 +972,7 @@ DOMAIN-SUFFIX,dev2power.annelidatrace.in.net
 DOMAIN-SUFFIX,dev2power.chromaprocessing.in.net
 DOMAIN-SUFFIX,dev2power.elytrapointnode.in.net
 DOMAIN-SUFFIX,dev2power.photonicdatanode.in.net
+DOMAIN-SUFFIX,dev2power.tectonicstream.in.net
 DOMAIN-SUFFIX,dev2power.tensorvortexlink.in.net
 DOMAIN-SUFFIX,dev2power.thermalpulserelay.in.net
 DOMAIN-SUFFIX,dev2power.vectorquantizer.in.net
@@ -978,6 +989,7 @@ DOMAIN-SUFFIX,dev3local.annelidatrace.in.net
 DOMAIN-SUFFIX,dev3local.chromaprocessing.in.net
 DOMAIN-SUFFIX,dev3local.elytrapointnode.in.net
 DOMAIN-SUFFIX,dev3local.photonicdatanode.in.net
+DOMAIN-SUFFIX,dev3local.tectonicstream.in.net
 DOMAIN-SUFFIX,dev3local.tensorvortexlink.in.net
 DOMAIN-SUFFIX,dev3local.thermalpulserelay.in.net
 DOMAIN-SUFFIX,dev3local.vectorquantizer.in.net
@@ -992,6 +1004,7 @@ DOMAIN-SUFFIX,dev4work.annelidatrace.in.net
 DOMAIN-SUFFIX,dev4work.chromaprocessing.in.net
 DOMAIN-SUFFIX,dev4work.elytrapointnode.in.net
 DOMAIN-SUFFIX,dev4work.photonicdatanode.in.net
+DOMAIN-SUFFIX,dev4work.tectonicstream.in.net
 DOMAIN-SUFFIX,dev4work.tensorvortexlink.in.net
 DOMAIN-SUFFIX,dev4work.thermalpulserelay.in.net
 DOMAIN-SUFFIX,dev4work.vectorquantizer.in.net
@@ -1161,6 +1174,7 @@ DOMAIN-SUFFIX,ext1meta.cartopointgate.in.net
 DOMAIN-SUFFIX,ext1meta.geospatialnode.in.net
 DOMAIN-SUFFIX,ext1meta.hydrofluxstorage.in.net
 DOMAIN-SUFFIX,ext1meta.isotopeflowbridge.in.net
+DOMAIN-SUFFIX,ext1meta.lithosphereduct.in.net
 DOMAIN-SUFFIX,ext1meta.mandibulateflow.in.net
 DOMAIN-SUFFIX,ext1meta.molluskflowlink.in.net
 DOMAIN-SUFFIX,ext1meta.securityaccessgateway.in.net
@@ -1168,6 +1182,7 @@ DOMAIN-SUFFIX,ext1meta.topologygatehub.in.net
 DOMAIN-SUFFIX,ext1meta.wavefrontgateway.in.net
 DOMAIN-SUFFIX,ext1proc.acousticdatabuffer.in.net
 DOMAIN-SUFFIX,ext1proc.coreconnectivity.in.net
+DOMAIN-SUFFIX,ext1proc.feldspargateway.in.net
 DOMAIN-SUFFIX,ext1proc.nebularpointtrace.in.net
 DOMAIN-SUFFIX,ext1proc.poriferabuffer.in.net
 DOMAIN-SUFFIX,ext1proc.remotediagnosticlink.in.net
@@ -1181,6 +1196,7 @@ DOMAIN-SUFFIX,ext2base.operationalmatrix.in.net
 DOMAIN-SUFFIX,ext2base.vectoraltimeter.in.net
 DOMAIN-SUFFIX,ext2base.virtualinterfacenet.in.net
 DOMAIN-SUFFIX,ext2core.acousticdatabuffer.in.net
+DOMAIN-SUFFIX,ext2core.feldspargateway.in.net
 DOMAIN-SUFFIX,ext2core.nebularpointtrace.in.net
 DOMAIN-SUFFIX,ext2core.poriferabuffer.in.net
 DOMAIN-SUFFIX,ext2core.spiraclelinkhub.in.net
@@ -1195,6 +1211,7 @@ DOMAIN-SUFFIX,ext2proc.cartopointgate.in.net
 DOMAIN-SUFFIX,ext2proc.geospatialnode.in.net
 DOMAIN-SUFFIX,ext2proc.hydrofluxstorage.in.net
 DOMAIN-SUFFIX,ext2proc.isotopeflowbridge.in.net
+DOMAIN-SUFFIX,ext2proc.lithosphereduct.in.net
 DOMAIN-SUFFIX,ext2proc.mandibulateflow.in.net
 DOMAIN-SUFFIX,ext2proc.molluskflowlink.in.net
 DOMAIN-SUFFIX,ext2proc.securityaccessgateway.in.net
@@ -1219,6 +1236,7 @@ DOMAIN-SUFFIX,ext3gate.cartopointgate.in.net
 DOMAIN-SUFFIX,ext3gate.geospatialnode.in.net
 DOMAIN-SUFFIX,ext3gate.hydrofluxstorage.in.net
 DOMAIN-SUFFIX,ext3gate.isotopeflowbridge.in.net
+DOMAIN-SUFFIX,ext3gate.lithosphereduct.in.net
 DOMAIN-SUFFIX,ext3gate.mandibulateflow.in.net
 DOMAIN-SUFFIX,ext3gate.molluskflowlink.in.net
 DOMAIN-SUFFIX,ext3gate.securityaccessgateway.in.net
@@ -1226,6 +1244,7 @@ DOMAIN-SUFFIX,ext3gate.topologygatehub.in.net
 DOMAIN-SUFFIX,ext3gate.volumetricproxy.in.net
 DOMAIN-SUFFIX,ext3gate.wavefrontgateway.in.net
 DOMAIN-SUFFIX,ext3ghost.acousticdatabuffer.in.net
+DOMAIN-SUFFIX,ext3ghost.feldspargateway.in.net
 DOMAIN-SUFFIX,ext3ghost.nebularpointtrace.in.net
 DOMAIN-SUFFIX,ext3ghost.poriferabuffer.in.net
 DOMAIN-SUFFIX,ext3ghost.spiraclelinkhub.in.net
@@ -1251,6 +1270,7 @@ DOMAIN-SUFFIX,ext4sync.cartopointgate.in.net
 DOMAIN-SUFFIX,ext4sync.geospatialnode.in.net
 DOMAIN-SUFFIX,ext4sync.hydrofluxstorage.in.net
 DOMAIN-SUFFIX,ext4sync.isotopeflowbridge.in.net
+DOMAIN-SUFFIX,ext4sync.lithosphereduct.in.net
 DOMAIN-SUFFIX,ext4sync.mandibulateflow.in.net
 DOMAIN-SUFFIX,ext4sync.molluskflowlink.in.net
 DOMAIN-SUFFIX,ext4sync.securityaccessgateway.in.net
@@ -1258,6 +1278,7 @@ DOMAIN-SUFFIX,ext4sync.topologygatehub.in.net
 DOMAIN-SUFFIX,ext4sync.volumetricproxy.in.net
 DOMAIN-SUFFIX,ext4sync.wavefrontgateway.in.net
 DOMAIN-SUFFIX,ext4view.acousticdatabuffer.in.net
+DOMAIN-SUFFIX,ext4view.feldspargateway.in.net
 DOMAIN-SUFFIX,ext4view.nebularpointtrace.in.net
 DOMAIN-SUFFIX,ext4view.poriferabuffer.in.net
 DOMAIN-SUFFIX,ext4view.spiraclelinkhub.in.net
@@ -1821,6 +1842,7 @@ DOMAIN-SUFFIX,kimchi-the-doge.lol
 DOMAIN-SUFFIX,kimchicoin.live
 DOMAIN-SUFFIX,kimchitoken.live
 DOMAIN-SUFFIX,kindred.center
+DOMAIN-SUFFIX,kiyona.in
 DOMAIN-SUFFIX,kk54.joksserver.in.net
 DOMAIN-SUFFIX,kk8z.onfloor.in.net
 DOMAIN-SUFFIX,kl0ub3sc.goldbox.digital
@@ -3395,6 +3417,7 @@ DOMAIN-SUFFIX,svc1infra.arthropodameta.in.net
 DOMAIN-SUFFIX,svc1infra.binaryflowbuffer.in.net
 DOMAIN-SUFFIX,svc1infra.coherentmetricunit.in.net
 DOMAIN-SUFFIX,svc1infra.dynamicshubpoint.in.net
+DOMAIN-SUFFIX,svc1infra.magmaticbuffer.in.net
 DOMAIN-SUFFIX,svc1infra.scutellummatrix.in.net
 DOMAIN-SUFFIX,svc1infra.spectralgateway.in.net
 DOMAIN-SUFFIX,svc1infra.systemictracebox.in.net
@@ -3420,6 +3443,7 @@ DOMAIN-SUFFIX,svc2base.arthropodameta.in.net
 DOMAIN-SUFFIX,svc2base.binaryflowbuffer.in.net
 DOMAIN-SUFFIX,svc2base.coherentmetricunit.in.net
 DOMAIN-SUFFIX,svc2base.dynamicshubpoint.in.net
+DOMAIN-SUFFIX,svc2base.magmaticbuffer.in.net
 DOMAIN-SUFFIX,svc2base.scutellummatrix.in.net
 DOMAIN-SUFFIX,svc2base.spectralgateway.in.net
 DOMAIN-SUFFIX,svc2base.systemictracebox.in.net
@@ -3464,6 +3488,7 @@ DOMAIN-SUFFIX,svc3user.arthropodameta.in.net
 DOMAIN-SUFFIX,svc3user.binaryflowbuffer.in.net
 DOMAIN-SUFFIX,svc3user.coherentmetricunit.in.net
 DOMAIN-SUFFIX,svc3user.dynamicshubpoint.in.net
+DOMAIN-SUFFIX,svc3user.magmaticbuffer.in.net
 DOMAIN-SUFFIX,svc3user.scutellummatrix.in.net
 DOMAIN-SUFFIX,svc3user.spectralgateway.in.net
 DOMAIN-SUFFIX,svc3user.systemictracebox.in.net
@@ -3472,6 +3497,7 @@ DOMAIN-SUFFIX,svc4link.arthropodameta.in.net
 DOMAIN-SUFFIX,svc4link.binaryflowbuffer.in.net
 DOMAIN-SUFFIX,svc4link.coherentmetricunit.in.net
 DOMAIN-SUFFIX,svc4link.dynamicshubpoint.in.net
+DOMAIN-SUFFIX,svc4link.magmaticbuffer.in.net
 DOMAIN-SUFFIX,svc4link.scutellummatrix.in.net
 DOMAIN-SUFFIX,svc4link.spectralgateway.in.net
 DOMAIN-SUFFIX,svc4link.systemictracebox.in.net
