@@ -1,13 +1,14 @@
-# generated: 2026-03-25T04:37:05.321099+00:00
+# generated: 2026-03-25T07:18:08.635275+00:00
 # title: TI worm
-# domains: 60
-# ips: 57
+# domains: 61
+# ips: 58
 
 DOMAIN-SUFFIX,1.tcp.vip.cpolar.cn
 DOMAIN-SUFFIX,12.tcp.vip.cpolar.cn
 DOMAIN-SUFFIX,24.tcp.cpolar.top
 DOMAIN-SUFFIX,25.tcp.cpolar.top
 DOMAIN-SUFFIX,8.tcp.vip.cpolar.cn
+DOMAIN-SUFFIX,adfg.exfrp.sbs
 DOMAIN-SUFFIX,aliowiasidaids-62178.portmap.host
 DOMAIN-SUFFIX,asd.exfrp.sbs
 DOMAIN-SUFFIX,asdafsdafdfa-63185.portmap.host
@@ -67,6 +68,7 @@ IP-CIDR,15.229.150.214/32,no-resolve
 IP-CIDR,34.39.197.251/32,no-resolve
 IP-CIDR,38.247.145.235/32,no-resolve
 IP-CIDR,41.45.156.241/32,no-resolve
+IP-CIDR,41.104.161.128/32,no-resolve
 IP-CIDR,45.32.150.97/32,no-resolve
 IP-CIDR,45.32.150.251/32,no-resolve
 IP-CIDR,45.32.151.157/32,no-resolve
