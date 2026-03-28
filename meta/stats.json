@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-28T18:31:17.541787+00:00",
+  "generated_utc": "2026-03-28T20:22:21.465008+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 593,
+    "malwarebazaar_recent_sha256": 610,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,18 +81,18 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 14869,
-      "ips": 25088,
-      "urls_for_yara": 84973,
-      "retained_domains": 5377,
-      "retained_ips": 4883,
-      "retained_urls": 13775
+      "domains": 14891,
+      "ips": 25099,
+      "urls_for_yara": 85015,
+      "retained_domains": 5383,
+      "retained_ips": 4902,
+      "retained_urls": 13798
     },
     "stealer": {
       "domains": 1015,
       "ips": 516,
       "urls_for_yara": 657,
-      "retained_domains": 668,
+      "retained_domains": 669,
       "retained_ips": 216,
       "retained_urls": 402
     },
@@ -108,8 +108,8 @@
       "domains": 1408,
       "ips": 2329,
       "urls_for_yara": 282,
-      "retained_domains": 1191,
-      "retained_ips": 1670,
+      "retained_domains": 1198,
+      "retained_ips": 1680,
       "retained_urls": 254
     },
     "rat": {
@@ -124,8 +124,8 @@
       "domains": 1808,
       "ips": 2347,
       "urls_for_yara": 466,
-      "retained_domains": 1146,
-      "retained_ips": 1721,
+      "retained_domains": 1153,
+      "retained_ips": 1733,
       "retained_urls": 288
     },
     "backdoor": {
@@ -145,12 +145,12 @@
       "retained_urls": 0
     },
     "loader": {
-      "domains": 5207,
-      "ips": 150,
+      "domains": 5229,
+      "ips": 151,
       "urls_for_yara": 1082,
-      "retained_domains": 4191,
+      "retained_domains": 4212,
       "retained_ips": 67,
-      "retained_urls": 891
+      "retained_urls": 894
     },
     "banker": {
       "domains": 3,
@@ -197,7 +197,7 @@
       "ips": 5,
       "urls_for_yara": 0,
       "retained_domains": 0,
-      "retained_ips": 3,
+      "retained_ips": 4,
       "retained_urls": 0
     }
   }
