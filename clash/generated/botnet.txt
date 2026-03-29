@@ -1,7 +1,7 @@
-# generated: 2026-03-29T10:52:23.082871+00:00
+# generated: 2026-03-29T13:03:00.465159+00:00
 # title: TI botnet
-# domains: 1833
-# ips: 2396
+# domains: 1835
+# ips: 2400
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -1035,6 +1035,7 @@ DOMAIN-SUFFIX,malware.rrb.uk.com
 DOMAIN-SUFFIX,malware.textileaffairs.com
 DOMAIN-SUFFIX,malware.xoilac365xi.tv
 DOMAIN-SUFFIX,malware.xoilac86i.tv
+DOMAIN-SUFFIX,malware.xoilac86kb.tv
 DOMAIN-SUFFIX,malware.xoilacxyh.tv
 DOMAIN-SUFFIX,malware.xoilacz.ai
 DOMAIN-SUFFIX,malware.xoilaczzzg.tv
@@ -1748,6 +1749,7 @@ DOMAIN-SUFFIX,xn--ecki5cf2dj3upa.jp.net
 DOMAIN-SUFFIX,xn--eckybaxbw6bypoc.jpn.com
 DOMAIN-SUFFIX,xn--pck2b0fk.jpn.com
 DOMAIN-SUFFIX,xn--zdkza7cw06yb4nlg4aflb.jpn.com
+DOMAIN-SUFFIX,xoilac86kb.tv
 DOMAIN-SUFFIX,xoilac86xb.tv
 DOMAIN-SUFFIX,xoilacxyh.tv
 DOMAIN-SUFFIX,xoilaczzzpt.tv
@@ -2653,6 +2655,7 @@ IP-CIDR,86.123.55.0/32,no-resolve
 IP-CIDR,86.125.210.26/32,no-resolve
 IP-CIDR,87.106.142.201/32,no-resolve
 IP-CIDR,87.120.107.33/32,no-resolve
+IP-CIDR,87.120.117.209/32,no-resolve
 IP-CIDR,87.120.120.15/32,no-resolve
 IP-CIDR,87.120.187.0/32,no-resolve
 IP-CIDR,87.120.191.29/32,no-resolve
@@ -3939,6 +3942,7 @@ IP-CIDR,185.196.10.188/32,no-resolve
 IP-CIDR,185.198.234.245/32,no-resolve
 IP-CIDR,185.199.225.156/32,no-resolve
 IP-CIDR,185.208.156.57/32,no-resolve
+IP-CIDR,185.208.156.151/32,no-resolve
 IP-CIDR,185.209.162.226/32,no-resolve
 IP-CIDR,185.215.227.107/32,no-resolve
 IP-CIDR,185.220.67.52/32,no-resolve
@@ -4053,6 +4057,7 @@ IP-CIDR,193.221.200.80/32,no-resolve
 IP-CIDR,193.221.201.166/32,no-resolve
 IP-CIDR,193.222.99.18/32,no-resolve
 IP-CIDR,193.233.19.68/32,no-resolve
+IP-CIDR,193.233.19.97/32,no-resolve
 IP-CIDR,193.233.19.233/32,no-resolve
 IP-CIDR,193.233.112.28/32,no-resolve
 IP-CIDR,193.233.113.146/32,no-resolve
@@ -4072,6 +4077,7 @@ IP-CIDR,194.116.236.27/32,no-resolve
 IP-CIDR,194.163.168.11/32,no-resolve
 IP-CIDR,194.163.175.135/32,no-resolve
 IP-CIDR,194.182.64.133/32,no-resolve
+IP-CIDR,195.3.223.218/32,no-resolve
 IP-CIDR,195.7.12.8/32,no-resolve
 IP-CIDR,195.10.205.247/32,no-resolve
 IP-CIDR,195.26.227.103/32,no-resolve
