@@ -1,7 +1,7 @@
-# generated: 2026-04-04T09:01:17.781438+00:00
+# generated: 2026-04-07T13:29:38.372769+00:00
 # title: TI ransomware
-# domains: 124
-# ips: 230
+# domains: 131
+# ips: 232
 
 DOMAIN-SUFFIX,22g3uiuyqqa4txxuyvzmlyvlou4crrgfvgnvodrv3wrxcedtvjgx6aid.onion
 DOMAIN-SUFFIX,3kt5ouf4qxdkuzsct6zp3jxsqmtaqjsun3uvfdwbeuo2yizjp73ripyd.onion
@@ -70,14 +70,21 @@ DOMAIN-SUFFIX,lockbitabmbzz652qeqd7yztgugcihpy4s4f6zuqi3jx32rzjylsn7ad.onion
 DOMAIN-SUFFIX,lockbitapt.uz
 DOMAIN-SUFFIX,lockbitapt2d73krlbewgv27tquljgxr33xbwwsp6rkyieto7u4ncead.onion
 DOMAIN-SUFFIX,lockbitapt2yfbt7lchxejug47kmqvqqxvvjpqkmevv4l3azl3gy6pyd.onion
+DOMAIN-SUFFIX,lockbitapt2yfbt7lchxejug47kmqvqqxvvjpqkmevv4l3azl3gy6pyd.onion.ly
 DOMAIN-SUFFIX,lockbitapt34kvrip6xojylohhxrwsvpzdffgs5z4pbbsywnzsbdguqd.onion
+DOMAIN-SUFFIX,lockbitapt34kvrip6xojylohhxrwsvpzdffgs5z4pbbsywnzsbdguqd.onion.ly
 DOMAIN-SUFFIX,lockbitapt5x4zkjbcqmz6frdhecqqgadevyiwqxukksspnlidyvd7qd.onion
+DOMAIN-SUFFIX,lockbitapt5x4zkjbcqmz6frdhecqqgadevyiwqxukksspnlidyvd7qd.onion.ly
 DOMAIN-SUFFIX,lockbitapt67g6rwzjbcxnww5efpg4qok6vpfeth7wx3okj52ks4wtad.onion
 DOMAIN-SUFFIX,lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion
+DOMAIN-SUFFIX,lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion.ly
 DOMAIN-SUFFIX,lockbitapt72iw55njgnqpymggskg5yp75ry7rirtdg4m7i42artsbqd.onion
 DOMAIN-SUFFIX,lockbitaptawjl6udhpd323uehekiyatj6ftcxmkwe5sezs4fqgpjpid.onion
 DOMAIN-SUFFIX,lockbitaptbdiajqtplcrigzgdjprwugkkut63nbvy2d5r4w2agyekqd.onion
 DOMAIN-SUFFIX,lockbitaptc2iq4atewz2ise62q63wfktyrl4qtwuk5qax262kgtzjqd.onion
+DOMAIN-SUFFIX,lockbitaptc2iq4atewz2ise62q63wfktyrl4qtwuk5qax262kgtzjqd.onion.ly
+DOMAIN-SUFFIX,lockbitaptjpikdqjynvgozhgc6bgetgucdk5xjacozeaawihmoio6yd.onion.ly
+DOMAIN-SUFFIX,lockbitaptoofrpignlz6dt2wqqc5z3a4evjevoa3eqdfcntxad5lmyd.onion
 DOMAIN-SUFFIX,lockbitaptoofrpignlz6dt2wqqc5z3a4evjevoa3eqdfcntxad5lmyd.onion.ly
 DOMAIN-SUFFIX,lockbitaptq7ephv2oigdncfhtwhpqgwmqojnxqdyhprxxfpcllqdxad.onion.ly
 DOMAIN-SUFFIX,lockbitaptstzf3er2lz6ku3xuifafq2yh5lmiqj5ncur6rtlmkteiqd.onion.ly
@@ -188,6 +195,7 @@ IP-CIDR,47.97.178.157/32,no-resolve
 IP-CIDR,47.108.160.69/32,no-resolve
 IP-CIDR,47.108.221.225/32,no-resolve
 IP-CIDR,47.108.249.44/32,no-resolve
+IP-CIDR,47.109.40.109/32,no-resolve
 IP-CIDR,47.109.102.38/32,no-resolve
 IP-CIDR,47.109.141.139/32,no-resolve
 IP-CIDR,47.109.187.144/32,no-resolve
@@ -272,6 +280,7 @@ IP-CIDR,118.184.187.174/32,no-resolve
 IP-CIDR,119.96.197.86/32,no-resolve
 IP-CIDR,120.26.48.72/32,no-resolve
 IP-CIDR,120.27.209.132/32,no-resolve
+IP-CIDR,121.9.235.20/32,no-resolve
 IP-CIDR,121.9.235.32/32,no-resolve
 IP-CIDR,121.41.30.139/32,no-resolve
 IP-CIDR,121.127.34.125/32,no-resolve
