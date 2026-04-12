@@ -1,7 +1,7 @@
-# generated: 2026-04-12T14:59:24.830880+00:00
+# generated: 2026-04-12T16:54:21.083548+00:00
 # title: TI phishing
-# domains: 8
-# ips: 6
+# domains: 9
+# ips: 7
 
 DOMAIN-SUFFIX,blz.is
 DOMAIN-SUFFIX,bsc-testnet-rpc.publicnode.com
@@ -10,8 +10,10 @@ DOMAIN-SUFFIX,easytrueforce.shop
 DOMAIN-SUFFIX,elizabethquinncmclibrary.com
 DOMAIN-SUFFIX,eqp.is
 DOMAIN-SUFFIX,escofiringbijou.com
+DOMAIN-SUFFIX,fundsf.com
 DOMAIN-SUFFIX,trueforceteam.ru
 IP-CIDR,4.204.210.128/32,no-resolve
+IP-CIDR,38.97.254.221/32,no-resolve
 IP-CIDR,45.150.34.158/32,no-resolve
 IP-CIDR,51.250.114.26/32,no-resolve
 IP-CIDR,63.33.129.31/32,no-resolve
