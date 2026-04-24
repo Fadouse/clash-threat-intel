@@ -1,7 +1,7 @@
-# generated: 2026-04-24T02:27:44.422583+00:00
+# generated: 2026-04-24T06:32:13.521649+00:00
 # title: TI botnet
-# domains: 3440
-# ips: 3598
+# domains: 3441
+# ips: 3603
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -34,6 +34,7 @@ DOMAIN-SUFFIX,15l40sforv167mt.top
 DOMAIN-SUFFIX,15np8a6wpqon1pj5.org
 DOMAIN-SUFFIX,168c168.com
 DOMAIN-SUFFIX,16kg9xzz3yt30xc4.org
+DOMAIN-SUFFIX,176.65.148.212.ptr.pfcloud.network
 DOMAIN-SUFFIX,176.65.148.31.ptr.pfcloud.network
 DOMAIN-SUFFIX,176.65.148.52.ptr.pfcloud.network
 DOMAIN-SUFFIX,17prosnowmeprona.za.com
@@ -3566,6 +3567,7 @@ IP-CIDR,8.148.21.148/32,no-resolve
 IP-CIDR,8.148.24.181/32,no-resolve
 IP-CIDR,8.148.64.76/32,no-resolve
 IP-CIDR,8.148.66.80/32,no-resolve
+IP-CIDR,8.148.70.23/32,no-resolve
 IP-CIDR,8.148.194.157/32,no-resolve
 IP-CIDR,8.148.247.172/32,no-resolve
 IP-CIDR,8.149.142.195/32,no-resolve
@@ -4036,10 +4038,12 @@ IP-CIDR,45.95.146.23/32,no-resolve
 IP-CIDR,45.128.119.160/32,no-resolve
 IP-CIDR,45.130.60.32/32,no-resolve
 IP-CIDR,45.131.46.14/32,no-resolve
+IP-CIDR,45.131.108.107/32,no-resolve
 IP-CIDR,45.131.214.233/32,no-resolve
 IP-CIDR,45.133.251.211/32,no-resolve
 IP-CIDR,45.134.26.131/32,no-resolve
 IP-CIDR,45.134.181.222/32,no-resolve
+IP-CIDR,45.135.193.118/32,no-resolve
 IP-CIDR,45.135.194.23/32,no-resolve
 IP-CIDR,45.136.13.247/32,no-resolve
 IP-CIDR,45.136.15.98/32,no-resolve
@@ -6395,6 +6399,7 @@ IP-CIDR,176.65.144.60/32,no-resolve
 IP-CIDR,176.65.144.110/32,no-resolve
 IP-CIDR,176.65.148.31/32,no-resolve
 IP-CIDR,176.65.148.52/32,no-resolve
+IP-CIDR,176.65.148.212/32,no-resolve
 IP-CIDR,176.65.150.63/32,no-resolve
 IP-CIDR,176.82.221.56/32,no-resolve
 IP-CIDR,176.96.227.21/32,no-resolve
@@ -7040,4 +7045,5 @@ IP-CIDR,220.147.247.145/32,no-resolve
 IP-CIDR,220.200.249.48/32,no-resolve
 IP-CIDR,222.186.168.72/32,no-resolve
 IP-CIDR,222.190.151.53/32,no-resolve
+IP-CIDR,223.26.62.116/32,no-resolve
 IP-CIDR,223.135.30.189/32,no-resolve
