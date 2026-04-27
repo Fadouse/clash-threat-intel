@@ -1,7 +1,7 @@
-# generated: 2026-04-27T17:46:04.574858+00:00
+# generated: 2026-04-27T19:35:28.119378+00:00
 # title: TI botnet
-# domains: 3496
-# ips: 3700
+# domains: 3497
+# ips: 3707
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -1799,6 +1799,7 @@ DOMAIN-SUFFIX,m.daga-sv368.com
 DOMAIN-SUFFIX,m4rrefmo0pemjgio.org
 DOMAIN-SUFFIX,m6ybn2a9c2upn2pw.org
 DOMAIN-SUFFIX,ma8t9n3yzo0jbi9.top
+DOMAIN-SUFFIX,macarona.autos
 DOMAIN-SUFFIX,maestroload.it.com
 DOMAIN-SUFFIX,magento.cn.com
 DOMAIN-SUFFIX,magnet.sa.com
@@ -4405,8 +4406,12 @@ IP-CIDR,64.83.33.237/32,no-resolve
 IP-CIDR,64.89.160.127/32,no-resolve
 IP-CIDR,64.89.160.146/32,no-resolve
 IP-CIDR,64.89.160.214/32,no-resolve
+IP-CIDR,64.89.160.215/32,no-resolve
+IP-CIDR,64.89.160.216/32,no-resolve
 IP-CIDR,64.89.161.70/32,no-resolve
+IP-CIDR,64.89.161.71/32,no-resolve
 IP-CIDR,64.89.161.72/32,no-resolve
+IP-CIDR,64.89.161.74/32,no-resolve
 IP-CIDR,64.89.161.92/32,no-resolve
 IP-CIDR,64.89.161.130/32,no-resolve
 IP-CIDR,64.89.163.109/32,no-resolve
@@ -5643,6 +5648,7 @@ IP-CIDR,142.93.119.202/32,no-resolve
 IP-CIDR,142.93.128.30/32,no-resolve
 IP-CIDR,142.93.129.148/32,no-resolve
 IP-CIDR,142.93.133.223/32,no-resolve
+IP-CIDR,142.93.135.177/32,no-resolve
 IP-CIDR,142.93.140.183/32,no-resolve
 IP-CIDR,142.93.144.53/32,no-resolve
 IP-CIDR,142.93.150.151/32,no-resolve
@@ -6167,6 +6173,7 @@ IP-CIDR,159.223.67.25/32,no-resolve
 IP-CIDR,159.223.161.159/32,no-resolve
 IP-CIDR,159.223.212.160/32,no-resolve
 IP-CIDR,159.223.218.168/32,no-resolve
+IP-CIDR,159.223.235.96/32,no-resolve
 IP-CIDR,159.253.120.110/32,no-resolve
 IP-CIDR,160.30.159.104/32,no-resolve
 IP-CIDR,160.187.210.154/32,no-resolve
@@ -6217,6 +6224,7 @@ IP-CIDR,165.22.97.111/32,no-resolve
 IP-CIDR,165.22.202.17/32,no-resolve
 IP-CIDR,165.22.202.222/32,no-resolve
 IP-CIDR,165.22.203.62/32,no-resolve
+IP-CIDR,165.22.207.128/32,no-resolve
 IP-CIDR,165.22.220.235/32,no-resolve
 IP-CIDR,165.22.228.153/32,no-resolve
 IP-CIDR,165.22.240.193/32,no-resolve
