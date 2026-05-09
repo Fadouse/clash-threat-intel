@@ -1,7 +1,7 @@
-# generated: 2026-05-09T17:09:45.834225+00:00
+# generated: 2026-05-09T19:15:18.894108+00:00
 # title: TI botnet
 # domains: 3730
-# ips: 4026
+# ips: 4037
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -3817,6 +3817,7 @@ IP-CIDR,5.101.86.50/32,no-resolve
 IP-CIDR,5.101.86.63/32,no-resolve
 IP-CIDR,5.101.86.72/32,no-resolve
 IP-CIDR,5.101.86.74/32,no-resolve
+IP-CIDR,5.102.97.149/32,no-resolve
 IP-CIDR,5.104.86.108/32,no-resolve
 IP-CIDR,5.175.215.42/32,no-resolve
 IP-CIDR,5.180.24.16/32,no-resolve
@@ -6910,6 +6911,8 @@ IP-CIDR,172.233.39.195/32,no-resolve
 IP-CIDR,172.233.39.198/32,no-resolve
 IP-CIDR,172.233.39.241/32,no-resolve
 IP-CIDR,172.233.45.233/32,no-resolve
+IP-CIDR,172.233.46.13/32,no-resolve
+IP-CIDR,172.233.46.59/32,no-resolve
 IP-CIDR,172.233.46.84/32,no-resolve
 IP-CIDR,172.233.47.36/32,no-resolve
 IP-CIDR,172.233.47.73/32,no-resolve
@@ -6931,6 +6934,8 @@ IP-CIDR,172.233.54.223/32,no-resolve
 IP-CIDR,172.233.54.228/32,no-resolve
 IP-CIDR,172.233.59.32/32,no-resolve
 IP-CIDR,172.235.160.79/32,no-resolve
+IP-CIDR,172.235.160.166/32,no-resolve
+IP-CIDR,172.235.160.185/32,no-resolve
 IP-CIDR,172.235.163.71/32,no-resolve
 IP-CIDR,172.235.163.83/32,no-resolve
 IP-CIDR,172.235.163.86/32,no-resolve
@@ -6986,6 +6991,12 @@ IP-CIDR,172.235.189.70/32,no-resolve
 IP-CIDR,172.236.172.130/32,no-resolve
 IP-CIDR,172.237.136.134/32,no-resolve
 IP-CIDR,172.238.111.131/32,no-resolve
+IP-CIDR,172.239.238.87/32,no-resolve
+IP-CIDR,172.239.238.115/32,no-resolve
+IP-CIDR,172.239.238.125/32,no-resolve
+IP-CIDR,172.239.238.148/32,no-resolve
+IP-CIDR,172.239.238.152/32,no-resolve
+IP-CIDR,172.239.238.254/32,no-resolve
 IP-CIDR,172.245.4.226/32,no-resolve
 IP-CIDR,172.245.23.162/32,no-resolve
 IP-CIDR,172.245.119.75/32,no-resolve
