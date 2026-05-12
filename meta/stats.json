@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-12T02:27:36.418870+00:00",
+  "generated_utc": "2026-05-12T06:34:18.720430+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 556,
+    "malwarebazaar_recent_sha256": 530,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,18 +81,18 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 33796,
-      "ips": 34902,
-      "urls_for_yara": 128210,
-      "retained_domains": 14386,
-      "retained_ips": 16463,
-      "retained_urls": 49572
+      "domains": 33804,
+      "ips": 34930,
+      "urls_for_yara": 128276,
+      "retained_domains": 14402,
+      "retained_ips": 16485,
+      "retained_urls": 49629
     },
     "stealer": {
       "domains": 4980,
       "ips": 845,
       "urls_for_yara": 3289,
-      "retained_domains": 4235,
+      "retained_domains": 4236,
       "retained_ips": 606,
       "retained_urls": 3068
     },
@@ -109,15 +109,15 @@
       "ips": 4172,
       "urls_for_yara": 1077,
       "retained_domains": 3318,
-      "retained_ips": 3589,
+      "retained_ips": 3590,
       "retained_urls": 1042
     },
     "rat": {
-      "domains": 2338,
+      "domains": 2340,
       "ips": 1618,
       "urls_for_yara": 118,
       "retained_domains": 1838,
-      "retained_ips": 1095,
+      "retained_ips": 1097,
       "retained_urls": 41
     },
     "botnet": {
@@ -125,7 +125,7 @@
       "ips": 4139,
       "urls_for_yara": 1240,
       "retained_domains": 3272,
-      "retained_ips": 3549,
+      "retained_ips": 3550,
       "retained_urls": 1055
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 9
     },
     "loader": {
-      "domains": 19503,
+      "domains": 19509,
       "ips": 244,
       "urls_for_yara": 3200,
-      "retained_domains": 17960,
+      "retained_domains": 18063,
       "retained_ips": 185,
       "retained_urls": 3088
     },
