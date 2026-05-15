@@ -1,7 +1,7 @@
-# generated: 2026-05-15T02:57:20.964169+00:00
+# generated: 2026-05-15T07:16:42.976805+00:00
 # title: TI botnet
 # domains: 3803
-# ips: 4399
+# ips: 4415
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -4136,6 +4136,7 @@ IP-CIDR,31.57.216.218/32,no-resolve
 IP-CIDR,31.57.219.227/32,no-resolve
 IP-CIDR,31.76.251.143/32,no-resolve
 IP-CIDR,31.97.61.212/32,no-resolve
+IP-CIDR,31.207.39.174/32,no-resolve
 IP-CIDR,31.215.13.86/32,no-resolve
 IP-CIDR,31.220.57.50/32,no-resolve
 IP-CIDR,32.192.248.174/32,no-resolve
@@ -8005,6 +8006,7 @@ IP-CIDR,205.196.123.189/32,no-resolve
 IP-CIDR,206.82.6.110/32,no-resolve
 IP-CIDR,206.119.0.226/32,no-resolve
 IP-CIDR,206.119.0.227/32,no-resolve
+IP-CIDR,206.119.0.228/32,no-resolve
 IP-CIDR,206.119.0.231/32,no-resolve
 IP-CIDR,206.119.0.237/32,no-resolve
 IP-CIDR,206.119.0.238/32,no-resolve
@@ -8016,15 +8018,27 @@ IP-CIDR,206.119.0.243/32,no-resolve
 IP-CIDR,206.119.0.244/32,no-resolve
 IP-CIDR,206.119.0.245/32,no-resolve
 IP-CIDR,206.119.0.246/32,no-resolve
+IP-CIDR,206.119.0.247/32,no-resolve
 IP-CIDR,206.119.0.248/32,no-resolve
 IP-CIDR,206.119.0.249/32,no-resolve
 IP-CIDR,206.119.0.250/32,no-resolve
 IP-CIDR,206.119.0.251/32,no-resolve
 IP-CIDR,206.119.0.252/32,no-resolve
 IP-CIDR,206.119.0.253/32,no-resolve
+IP-CIDR,206.119.1.227/32,no-resolve
+IP-CIDR,206.119.1.230/32,no-resolve
+IP-CIDR,206.119.1.232/32,no-resolve
 IP-CIDR,206.119.1.234/32,no-resolve
 IP-CIDR,206.119.1.236/32,no-resolve
+IP-CIDR,206.119.1.239/32,no-resolve
 IP-CIDR,206.119.1.242/32,no-resolve
+IP-CIDR,206.119.1.243/32,no-resolve
+IP-CIDR,206.119.1.245/32,no-resolve
+IP-CIDR,206.119.1.247/32,no-resolve
+IP-CIDR,206.119.1.250/32,no-resolve
+IP-CIDR,206.119.1.251/32,no-resolve
+IP-CIDR,206.119.1.253/32,no-resolve
+IP-CIDR,206.119.2.229/32,no-resolve
 IP-CIDR,206.119.3.239/32,no-resolve
 IP-CIDR,206.119.7.233/32,no-resolve
 IP-CIDR,206.119.7.236/32,no-resolve
@@ -8032,8 +8046,10 @@ IP-CIDR,206.119.7.239/32,no-resolve
 IP-CIDR,206.119.7.243/32,no-resolve
 IP-CIDR,206.119.7.245/32,no-resolve
 IP-CIDR,206.119.7.247/32,no-resolve
+IP-CIDR,206.119.7.249/32,no-resolve
 IP-CIDR,206.119.7.250/32,no-resolve
 IP-CIDR,206.119.7.252/32,no-resolve
+IP-CIDR,206.119.7.254/32,no-resolve
 IP-CIDR,206.119.167.239/32,no-resolve
 IP-CIDR,206.119.172.224/32,no-resolve
 IP-CIDR,206.119.179.80/32,no-resolve
