@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-21T19:48:14.503492+00:00",
+  "generated_utc": "2026-05-21T21:24:44.849457+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 3693,
+    "malwarebazaar_recent_sha256": 3629,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 35301,
-      "ips": 37361,
-      "urls_for_yara": 134886,
-      "retained_domains": 16583,
-      "retained_ips": 19232,
-      "retained_urls": 56276
+      "domains": 35306,
+      "ips": 37376,
+      "urls_for_yara": 134911,
+      "retained_domains": 16589,
+      "retained_ips": 19241,
+      "retained_urls": 56289
     },
     "stealer": {
       "domains": 5149,
@@ -106,7 +106,7 @@
     },
     "c2": {
       "domains": 3604,
-      "ips": 5088,
+      "ips": 5091,
       "urls_for_yara": 1201,
       "retained_domains": 3465,
       "retained_ips": 4471,
@@ -114,15 +114,15 @@
     },
     "rat": {
       "domains": 2444,
-      "ips": 1738,
+      "ips": 1739,
       "urls_for_yara": 120,
-      "retained_domains": 1972,
-      "retained_ips": 1166,
+      "retained_domains": 1977,
+      "retained_ips": 1163,
       "retained_urls": 62
     },
     "botnet": {
       "domains": 3954,
-      "ips": 4958,
+      "ips": 4962,
       "urls_for_yara": 1380,
       "retained_domains": 3420,
       "retained_ips": 4323,
@@ -145,10 +145,10 @@
       "retained_urls": 9
     },
     "loader": {
-      "domains": 20549,
+      "domains": 20553,
       "ips": 273,
       "urls_for_yara": 3383,
-      "retained_domains": 20127,
+      "retained_domains": 20135,
       "retained_ips": 223,
       "retained_urls": 3307
     },
@@ -193,7 +193,7 @@
       "retained_urls": 4
     },
     "phishing": {
-      "domains": 110,
+      "domains": 111,
       "ips": 8,
       "urls_for_yara": 4,
       "retained_domains": 110,
