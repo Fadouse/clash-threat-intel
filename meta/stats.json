@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-28T13:12:48.786766+00:00",
+  "generated_utc": "2026-05-28T15:08:47.355727+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 963,
+    "malwarebazaar_recent_sha256": 1075,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,15 +81,15 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 36558,
-      "ips": 38555,
-      "urls_for_yara": 138533,
-      "retained_domains": 17626,
-      "retained_ips": 21146,
-      "retained_urls": 61633
+      "domains": 36572,
+      "ips": 38570,
+      "urls_for_yara": 138583,
+      "retained_domains": 17681,
+      "retained_ips": 21247,
+      "retained_urls": 62972
     },
     "stealer": {
-      "domains": 5374,
+      "domains": 5375,
       "ips": 907,
       "urls_for_yara": 3501,
       "retained_domains": 5068,
@@ -105,11 +105,11 @@
       "retained_urls": 34
     },
     "c2": {
-      "domains": 3922,
-      "ips": 5360,
+      "domains": 3925,
+      "ips": 5361,
       "urls_for_yara": 1343,
-      "retained_domains": 3753,
-      "retained_ips": 4842,
+      "retained_domains": 3754,
+      "retained_ips": 4845,
       "retained_urls": 1286
     },
     "rat": {
@@ -121,11 +121,11 @@
       "retained_urls": 62
     },
     "botnet": {
-      "domains": 4268,
-      "ips": 5190,
+      "domains": 4271,
+      "ips": 5191,
       "urls_for_yara": 1566,
-      "retained_domains": 3706,
-      "retained_ips": 4668,
+      "retained_domains": 3707,
+      "retained_ips": 4671,
       "retained_urls": 1315
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 14
     },
     "loader": {
-      "domains": 21405,
-      "ips": 297,
+      "domains": 21416,
+      "ips": 298,
       "urls_for_yara": 3530,
-      "retained_domains": 20826,
+      "retained_domains": 20839,
       "retained_ips": 251,
       "retained_urls": 3400
     },
