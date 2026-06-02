@@ -1,7 +1,7 @@
-# generated: 2026-06-02T11:56:49.510125+00:00
+# generated: 2026-06-02T13:39:28.893711+00:00
 # title: TI botnet
 # domains: 4352
-# ips: 5408
+# ips: 5417
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -7594,9 +7594,17 @@ IP-CIDR,154.88.96.46/32,no-resolve
 IP-CIDR,154.88.99.37/32,no-resolve
 IP-CIDR,154.88.99.60/32,no-resolve
 IP-CIDR,154.88.100.45/32,no-resolve
+IP-CIDR,154.88.100.49/32,no-resolve
+IP-CIDR,154.88.100.50/32,no-resolve
+IP-CIDR,154.88.100.51/32,no-resolve
 IP-CIDR,154.88.100.52/32,no-resolve
 IP-CIDR,154.88.100.53/32,no-resolve
+IP-CIDR,154.88.101.49/32,no-resolve
+IP-CIDR,154.88.101.50/32,no-resolve
+IP-CIDR,154.88.101.51/32,no-resolve
+IP-CIDR,154.88.101.52/32,no-resolve
 IP-CIDR,154.88.101.53/32,no-resolve
+IP-CIDR,154.88.101.54/32,no-resolve
 IP-CIDR,154.88.101.55/32,no-resolve
 IP-CIDR,154.88.101.56/32,no-resolve
 IP-CIDR,154.88.101.57/32,no-resolve
@@ -7607,6 +7615,7 @@ IP-CIDR,154.88.101.61/32,no-resolve
 IP-CIDR,154.88.101.62/32,no-resolve
 IP-CIDR,154.88.102.33/32,no-resolve
 IP-CIDR,154.88.102.34/32,no-resolve
+IP-CIDR,154.88.102.35/32,no-resolve
 IP-CIDR,154.88.102.36/32,no-resolve
 IP-CIDR,154.88.102.37/32,no-resolve
 IP-CIDR,154.88.103.35/32,no-resolve
