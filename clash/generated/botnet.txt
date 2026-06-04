@@ -1,7 +1,7 @@
-# generated: 2026-06-03T23:05:44.812082+00:00
+# generated: 2026-06-04T01:09:04.015554+00:00
 # title: TI botnet
 # domains: 4386
-# ips: 5523
+# ips: 5530
 
 DOMAIN-SUFFIX,0520t5z82ua3rkpl.org
 DOMAIN-SUFFIX,08c7t4gox9e77iss.org
@@ -5406,6 +5406,7 @@ IP-CIDR,47.95.211.75/32,no-resolve
 IP-CIDR,47.95.239.240/32,no-resolve
 IP-CIDR,47.95.245.204/32,no-resolve
 IP-CIDR,47.95.255.110/32,no-resolve
+IP-CIDR,47.96.12.245/32,no-resolve
 IP-CIDR,47.96.87.75/32,no-resolve
 IP-CIDR,47.97.192.163/32,no-resolve
 IP-CIDR,47.97.197.89/32,no-resolve
@@ -6737,6 +6738,8 @@ IP-CIDR,106.13.201.122/32,no-resolve
 IP-CIDR,106.14.126.40/32,no-resolve
 IP-CIDR,106.14.134.136/32,no-resolve
 IP-CIDR,106.15.62.81/32,no-resolve
+IP-CIDR,106.15.74.29/32,no-resolve
+IP-CIDR,106.52.166.133/32,no-resolve
 IP-CIDR,106.53.75.203/32,no-resolve
 IP-CIDR,106.54.55.251/32,no-resolve
 IP-CIDR,106.54.219.219/32,no-resolve
@@ -7673,6 +7676,7 @@ IP-CIDR,154.88.100.50/32,no-resolve
 IP-CIDR,154.88.100.51/32,no-resolve
 IP-CIDR,154.88.100.52/32,no-resolve
 IP-CIDR,154.88.100.53/32,no-resolve
+IP-CIDR,154.88.100.60/32,no-resolve
 IP-CIDR,154.88.100.61/32,no-resolve
 IP-CIDR,154.88.100.62/32,no-resolve
 IP-CIDR,154.88.101.33/32,no-resolve
@@ -7680,6 +7684,7 @@ IP-CIDR,154.88.101.34/32,no-resolve
 IP-CIDR,154.88.101.35/32,no-resolve
 IP-CIDR,154.88.101.36/32,no-resolve
 IP-CIDR,154.88.101.37/32,no-resolve
+IP-CIDR,154.88.101.38/32,no-resolve
 IP-CIDR,154.88.101.39/32,no-resolve
 IP-CIDR,154.88.101.40/32,no-resolve
 IP-CIDR,154.88.101.41/32,no-resolve
@@ -7687,6 +7692,7 @@ IP-CIDR,154.88.101.42/32,no-resolve
 IP-CIDR,154.88.101.43/32,no-resolve
 IP-CIDR,154.88.101.44/32,no-resolve
 IP-CIDR,154.88.101.45/32,no-resolve
+IP-CIDR,154.88.101.46/32,no-resolve
 IP-CIDR,154.88.101.47/32,no-resolve
 IP-CIDR,154.88.101.48/32,no-resolve
 IP-CIDR,154.88.101.49/32,no-resolve
@@ -7725,6 +7731,7 @@ IP-CIDR,154.88.102.52/32,no-resolve
 IP-CIDR,154.88.102.53/32,no-resolve
 IP-CIDR,154.88.102.54/32,no-resolve
 IP-CIDR,154.88.102.55/32,no-resolve
+IP-CIDR,154.88.102.56/32,no-resolve
 IP-CIDR,154.88.102.57/32,no-resolve
 IP-CIDR,154.88.102.58/32,no-resolve
 IP-CIDR,154.88.102.60/32,no-resolve
