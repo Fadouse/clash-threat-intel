@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T15:03:04.732362+00:00",
+  "generated_utc": "2026-06-05T16:50:38.010323+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 783,
+    "malwarebazaar_recent_sha256": 794,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,15 +81,15 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 38012,
-      "ips": 40404,
-      "urls_for_yara": 143409,
-      "retained_domains": 19416,
-      "retained_ips": 23011,
-      "retained_urls": 66610
+      "domains": 38019,
+      "ips": 40419,
+      "urls_for_yara": 143433,
+      "retained_domains": 19431,
+      "retained_ips": 23025,
+      "retained_urls": 66651
     },
     "stealer": {
-      "domains": 5485,
+      "domains": 5486,
       "ips": 939,
       "urls_for_yara": 3586,
       "retained_domains": 5224,
@@ -106,11 +106,11 @@
     },
     "c2": {
       "domains": 4147,
-      "ips": 5955,
+      "ips": 5959,
       "urls_for_yara": 1449,
-      "retained_domains": 3980,
-      "retained_ips": 5274,
-      "retained_urls": 1398
+      "retained_domains": 3981,
+      "retained_ips": 5283,
+      "retained_urls": 1399
     },
     "rat": {
       "domains": 2645,
@@ -122,11 +122,11 @@
     },
     "botnet": {
       "domains": 4496,
-      "ips": 5685,
+      "ips": 5689,
       "urls_for_yara": 1696,
-      "retained_domains": 3945,
-      "retained_ips": 5028,
-      "retained_urls": 1434
+      "retained_domains": 3946,
+      "retained_ips": 5037,
+      "retained_urls": 1435
     },
     "backdoor": {
       "domains": 31,
@@ -145,10 +145,10 @@
       "retained_urls": 22
     },
     "loader": {
-      "domains": 22329,
+      "domains": 22336,
       "ips": 329,
-      "urls_for_yara": 3592,
-      "retained_domains": 21947,
+      "urls_for_yara": 3595,
+      "retained_domains": 21949,
       "retained_ips": 278,
       "retained_urls": 3539
     },
