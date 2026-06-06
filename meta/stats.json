@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-06T20:27:28.177411+00:00",
+  "generated_utc": "2026-06-06T22:25:20.865834+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 873,
+    "malwarebazaar_recent_sha256": 888,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,18 +81,18 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 38294,
-      "ips": 40742,
-      "urls_for_yara": 144020,
-      "retained_domains": 19854,
-      "retained_ips": 23378,
-      "retained_urls": 67708
+      "domains": 38301,
+      "ips": 40751,
+      "urls_for_yara": 144044,
+      "retained_domains": 19876,
+      "retained_ips": 23392,
+      "retained_urls": 67788
     },
     "stealer": {
       "domains": 5555,
       "ips": 943,
       "urls_for_yara": 3606,
-      "retained_domains": 5268,
+      "retained_domains": 5269,
       "retained_ips": 794,
       "retained_urls": 3356
     },
@@ -106,11 +106,11 @@
     },
     "c2": {
       "domains": 4273,
-      "ips": 6067,
+      "ips": 6068,
       "urls_for_yara": 1458,
-      "retained_domains": 4083,
+      "retained_domains": 4085,
       "retained_ips": 5381,
-      "retained_urls": 1426
+      "retained_urls": 1428
     },
     "rat": {
       "domains": 2651,
@@ -122,11 +122,11 @@
     },
     "botnet": {
       "domains": 4620,
-      "ips": 5806,
+      "ips": 5807,
       "urls_for_yara": 1707,
-      "retained_domains": 4049,
+      "retained_domains": 4051,
       "retained_ips": 5131,
-      "retained_urls": 1471
+      "retained_urls": 1473
     },
     "backdoor": {
       "domains": 31,
@@ -145,10 +145,10 @@
       "retained_urls": 22
     },
     "loader": {
-      "domains": 22461,
+      "domains": 22468,
       "ips": 386,
       "urls_for_yara": 3602,
-      "retained_domains": 22045,
+      "retained_domains": 22055,
       "retained_ips": 342,
       "retained_urls": 3552
     },
