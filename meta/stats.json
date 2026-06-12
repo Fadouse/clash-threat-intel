@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-12T00:45:54.116741+00:00",
+  "generated_utc": "2026-06-12T03:09:22.073917+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 987,
+    "malwarebazaar_recent_sha256": 970,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,19 +81,19 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 39601,
-      "ips": 41857,
-      "urls_for_yara": 147791,
-      "retained_domains": 21314,
-      "retained_ips": 24652,
-      "retained_urls": 70986
+      "domains": 39616,
+      "ips": 41869,
+      "urls_for_yara": 147835,
+      "retained_domains": 21338,
+      "retained_ips": 24655,
+      "retained_urls": 71005
     },
     "stealer": {
       "domains": 5738,
       "ips": 960,
       "urls_for_yara": 3678,
       "retained_domains": 5376,
-      "retained_ips": 838,
+      "retained_ips": 839,
       "retained_urls": 3464
     },
     "ransomware": {
@@ -106,10 +106,10 @@
     },
     "c2": {
       "domains": 4703,
-      "ips": 6295,
+      "ips": 6297,
       "urls_for_yara": 1530,
       "retained_domains": 4599,
-      "retained_ips": 5757,
+      "retained_ips": 5752,
       "retained_urls": 1493
     },
     "rat": {
@@ -121,11 +121,11 @@
       "retained_urls": 89
     },
     "botnet": {
-      "domains": 5048,
-      "ips": 6052,
-      "urls_for_yara": 1784,
+      "domains": 5050,
+      "ips": 6055,
+      "urls_for_yara": 1785,
       "retained_domains": 4557,
-      "retained_ips": 5506,
+      "retained_ips": 5509,
       "retained_urls": 1605
     },
     "backdoor": {
@@ -145,11 +145,11 @@
       "retained_urls": 22
     },
     "loader": {
-      "domains": 23237,
+      "domains": 23245,
       "ips": 467,
       "urls_for_yara": 3686,
-      "retained_domains": 22749,
-      "retained_ips": 443,
+      "retained_domains": 22761,
+      "retained_ips": 444,
       "retained_urls": 3616
     },
     "banker": {
