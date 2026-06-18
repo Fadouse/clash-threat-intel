@@ -1,7 +1,7 @@
-# generated: 2026-06-18T08:01:34.057033+00:00
+# generated: 2026-06-18T09:55:05.218260+00:00
 # title: TI botnet
 # domains: 5154
-# ips: 6266
+# ips: 6271
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -5467,6 +5467,7 @@ IP-CIDR,20.115.57.167/32,no-resolve
 IP-CIDR,20.166.18.164/32,no-resolve
 IP-CIDR,20.201.125.142/32,no-resolve
 IP-CIDR,20.207.205.234/32,no-resolve
+IP-CIDR,20.217.83.155/32,no-resolve
 IP-CIDR,20.236.7.186/32,no-resolve
 IP-CIDR,20.251.153.103/32,no-resolve
 IP-CIDR,20.255.154.56/32,no-resolve
@@ -6846,6 +6847,7 @@ IP-CIDR,76.121.199.225/32,no-resolve
 IP-CIDR,76.164.11.132/32,no-resolve
 IP-CIDR,76.168.54.203/32,no-resolve
 IP-CIDR,76.175.162.101/32,no-resolve
+IP-CIDR,77.42.32.108/32,no-resolve
 IP-CIDR,77.42.48.96/32,no-resolve
 IP-CIDR,77.42.48.97/32,no-resolve
 IP-CIDR,77.42.48.100/32,no-resolve
@@ -9678,6 +9680,8 @@ IP-CIDR,167.179.66.31/32,no-resolve
 IP-CIDR,167.233.39.81/32,no-resolve
 IP-CIDR,167.233.40.16/32,no-resolve
 IP-CIDR,167.233.60.161/32,no-resolve
+IP-CIDR,167.233.67.224/32,no-resolve
+IP-CIDR,167.233.133.99/32,no-resolve
 IP-CIDR,167.235.253.218/32,no-resolve
 IP-CIDR,167.253.156.34/32,no-resolve
 IP-CIDR,168.93.224.183/32,no-resolve
@@ -10497,6 +10501,7 @@ IP-CIDR,185.232.182.218/32,no-resolve
 IP-CIDR,185.237.165.218/32,no-resolve
 IP-CIDR,185.241.208.20/32,no-resolve
 IP-CIDR,185.241.208.147/32,no-resolve
+IP-CIDR,185.241.211.26/32,no-resolve
 IP-CIDR,185.242.3.83/32,no-resolve
 IP-CIDR,185.242.245.27/32,no-resolve
 IP-CIDR,185.244.31.212/32,no-resolve
