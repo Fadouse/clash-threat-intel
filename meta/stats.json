@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-18T17:08:19.182079+00:00",
+  "generated_utc": "2026-06-18T18:50:01.053054+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 803,
+    "malwarebazaar_recent_sha256": 806,
     "ads": {
       "domains": 154520,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 41032,
-      "ips": 43081,
-      "urls_for_yara": 151851,
-      "retained_domains": 23371,
-      "retained_ips": 26049,
-      "retained_urls": 76531
+      "domains": 41038,
+      "ips": 43088,
+      "urls_for_yara": 151864,
+      "retained_domains": 23382,
+      "retained_ips": 26053,
+      "retained_urls": 76561
     },
     "stealer": {
       "domains": 6244,
@@ -105,10 +105,10 @@
       "retained_urls": 36
     },
     "c2": {
-      "domains": 4810,
-      "ips": 6536,
+      "domains": 4813,
+      "ips": 6538,
       "urls_for_yara": 1593,
-      "retained_domains": 4754,
+      "retained_domains": 4755,
       "retained_ips": 5998,
       "retained_urls": 1569
     },
@@ -116,15 +116,15 @@
       "domains": 2732,
       "ips": 2146,
       "urls_for_yara": 128,
-      "retained_domains": 2358,
-      "retained_ips": 1588,
+      "retained_domains": 2359,
+      "retained_ips": 1587,
       "retained_urls": 108
     },
     "botnet": {
-      "domains": 5157,
-      "ips": 6281,
+      "domains": 5160,
+      "ips": 6283,
       "urls_for_yara": 1850,
-      "retained_domains": 4760,
+      "retained_domains": 4761,
       "retained_ips": 5735,
       "retained_urls": 1718
     },
@@ -145,10 +145,10 @@
       "retained_urls": 23
     },
     "loader": {
-      "domains": 24253,
+      "domains": 24256,
       "ips": 485,
-      "urls_for_yara": 3869,
-      "retained_domains": 23640,
+      "urls_for_yara": 3871,
+      "retained_domains": 23645,
       "retained_ips": 462,
       "retained_urls": 3694
     },
