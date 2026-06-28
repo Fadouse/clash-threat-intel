@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-28T10:47:48.359224+00:00",
+  "generated_utc": "2026-06-28T12:30:53.495050+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 530,
+    "malwarebazaar_recent_sha256": 528,
     "ads": {
       "domains": 154563,
       "ips": 0,
@@ -81,20 +81,20 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 42048,
-      "ips": 44911,
-      "urls_for_yara": 162593,
-      "retained_domains": 26682,
-      "retained_ips": 28015,
-      "retained_urls": 84806
+      "domains": 42053,
+      "ips": 44918,
+      "urls_for_yara": 162612,
+      "retained_domains": 26705,
+      "retained_ips": 28043,
+      "retained_urls": 84867
     },
     "stealer": {
-      "domains": 6403,
+      "domains": 6405,
       "ips": 1055,
-      "urls_for_yara": 3882,
-      "retained_domains": 6103,
+      "urls_for_yara": 3884,
+      "retained_domains": 6111,
       "retained_ips": 933,
-      "retained_urls": 3723
+      "retained_urls": 3728
     },
     "ransomware": {
       "domains": 184,
@@ -108,8 +108,8 @@
       "domains": 5000,
       "ips": 6867,
       "urls_for_yara": 1662,
-      "retained_domains": 4937,
-      "retained_ips": 6301,
+      "retained_domains": 4943,
+      "retained_ips": 6309,
       "retained_urls": 1649
     },
     "rat": {
@@ -124,8 +124,8 @@
       "domains": 5343,
       "ips": 6601,
       "urls_for_yara": 1928,
-      "retained_domains": 4942,
-      "retained_ips": 6049,
+      "retained_domains": 4948,
+      "retained_ips": 6056,
       "retained_urls": 1798
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 24
     },
     "loader": {
-      "domains": 24779,
+      "domains": 24781,
       "ips": 499,
       "urls_for_yara": 4131,
-      "retained_domains": 24590,
+      "retained_domains": 24592,
       "retained_ips": 483,
       "retained_urls": 4076
     },
