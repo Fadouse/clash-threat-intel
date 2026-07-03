@@ -1,7 +1,7 @@
-# generated: 2026-07-03T00:56:50.924580+00:00
+# generated: 2026-07-03T03:28:06.760355+00:00
 # title: TI botnet
 # domains: 5953
-# ips: 6837
+# ips: 6841
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -10319,7 +10319,10 @@ IP-CIDR,154.220.122.105/32,no-resolve
 IP-CIDR,154.220.122.106/32,no-resolve
 IP-CIDR,154.220.122.107/32,no-resolve
 IP-CIDR,154.220.122.108/32,no-resolve
+IP-CIDR,154.220.122.113/32,no-resolve
 IP-CIDR,154.220.122.114/32,no-resolve
+IP-CIDR,154.220.122.115/32,no-resolve
+IP-CIDR,154.220.122.116/32,no-resolve
 IP-CIDR,154.220.122.124/32,no-resolve
 IP-CIDR,154.220.122.126/32,no-resolve
 IP-CIDR,154.220.123.165/32,no-resolve
@@ -10721,6 +10724,7 @@ IP-CIDR,161.248.239.240/32,no-resolve
 IP-CIDR,161.248.239.247/32,no-resolve
 IP-CIDR,162.14.99.178/32,no-resolve
 IP-CIDR,162.33.179.91/32,no-resolve
+IP-CIDR,162.35.167.8/32,no-resolve
 IP-CIDR,162.55.1.86/32,no-resolve
 IP-CIDR,162.55.89.244/32,no-resolve
 IP-CIDR,162.55.174.169/32,no-resolve
