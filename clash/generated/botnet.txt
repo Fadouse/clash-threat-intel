@@ -1,7 +1,7 @@
-# generated: 2026-07-04T11:07:50.263201+00:00
+# generated: 2026-07-04T12:52:53.101284+00:00
 # title: TI botnet
 # domains: 5983
-# ips: 6978
+# ips: 6986
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -6337,6 +6337,7 @@ IP-CIDR,23.20.229.225/32,no-resolve
 IP-CIDR,23.26.129.38/32,no-resolve
 IP-CIDR,23.27.0.84/32,no-resolve
 IP-CIDR,23.27.28.133/32,no-resolve
+IP-CIDR,23.27.52.106/32,no-resolve
 IP-CIDR,23.27.143.170/32,no-resolve
 IP-CIDR,23.81.42.177/32,no-resolve
 IP-CIDR,23.88.6.234/32,no-resolve
@@ -6608,6 +6609,7 @@ IP-CIDR,38.55.177.51/32,no-resolve
 IP-CIDR,38.55.194.135/32,no-resolve
 IP-CIDR,38.55.200.183/32,no-resolve
 IP-CIDR,38.60.134.155/32,no-resolve
+IP-CIDR,38.60.163.248/32,no-resolve
 IP-CIDR,38.60.198.112/32,no-resolve
 IP-CIDR,38.60.212.74/32,no-resolve
 IP-CIDR,38.60.220.73/32,no-resolve
@@ -7029,6 +7031,7 @@ IP-CIDR,45.138.16.182/32,no-resolve
 IP-CIDR,45.138.16.218/32,no-resolve
 IP-CIDR,45.138.25.150/32,no-resolve
 IP-CIDR,45.138.26.93/32,no-resolve
+IP-CIDR,45.138.70.138/32,no-resolve
 IP-CIDR,45.138.135.27/32,no-resolve
 IP-CIDR,45.138.180.205/32,no-resolve
 IP-CIDR,45.140.213.6/32,no-resolve
@@ -8879,6 +8882,7 @@ IP-CIDR,106.15.62.81/32,no-resolve
 IP-CIDR,106.15.74.29/32,no-resolve
 IP-CIDR,106.52.59.233/32,no-resolve
 IP-CIDR,106.52.91.14/32,no-resolve
+IP-CIDR,106.52.158.137/32,no-resolve
 IP-CIDR,106.52.166.133/32,no-resolve
 IP-CIDR,106.53.75.203/32,no-resolve
 IP-CIDR,106.53.172.234/32,no-resolve
@@ -9318,6 +9322,7 @@ IP-CIDR,123.156.62.67/32,no-resolve
 IP-CIDR,123.216.134.52/32,no-resolve
 IP-CIDR,124.41.215.226/32,no-resolve
 IP-CIDR,124.70.133.212/32,no-resolve
+IP-CIDR,124.70.151.248/32,no-resolve
 IP-CIDR,124.70.184.106/32,no-resolve
 IP-CIDR,124.70.215.164/32,no-resolve
 IP-CIDR,124.71.25.92/32,no-resolve
@@ -9937,6 +9942,7 @@ IP-CIDR,151.242.30.234/32,no-resolve
 IP-CIDR,151.242.63.2/32,no-resolve
 IP-CIDR,151.242.125.234/32,no-resolve
 IP-CIDR,151.242.152.131/32,no-resolve
+IP-CIDR,151.242.188.114/32,no-resolve
 IP-CIDR,151.243.18.28/32,no-resolve
 IP-CIDR,151.243.109.36/32,no-resolve
 IP-CIDR,151.243.109.77/32,no-resolve
@@ -10806,11 +10812,13 @@ IP-CIDR,159.69.15.196/32,no-resolve
 IP-CIDR,159.69.23.17/32,no-resolve
 IP-CIDR,159.69.77.223/32,no-resolve
 IP-CIDR,159.69.221.162/32,no-resolve
+IP-CIDR,159.75.40.43/32,no-resolve
 IP-CIDR,159.75.76.236/32,no-resolve
 IP-CIDR,159.75.152.237/32,no-resolve
 IP-CIDR,159.75.161.182/32,no-resolve
 IP-CIDR,159.75.176.189/32,no-resolve
 IP-CIDR,159.75.177.25/32,no-resolve
+IP-CIDR,159.75.195.231/32,no-resolve
 IP-CIDR,159.89.20.198/32,no-resolve
 IP-CIDR,159.89.99.190/32,no-resolve
 IP-CIDR,159.89.200.122/32,no-resolve
