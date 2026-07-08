@@ -1,7 +1,7 @@
-# generated: 2026-07-08T18:55:10.990122+00:00
+# generated: 2026-07-08T20:53:49.623323+00:00
 # title: TI rat
 # domains: 2794
-# ips: 2431
+# ips: 2436
 
 DOMAIN-SUFFIX,0028.duckdns.org
 DOMAIN-SUFFIX,00283643bbm.duckdns.org
@@ -3204,6 +3204,8 @@ IP-CIDR,45.74.7.169/32,no-resolve
 IP-CIDR,45.74.7.170/32,no-resolve
 IP-CIDR,45.74.7.172/32,no-resolve
 IP-CIDR,45.74.7.173/32,no-resolve
+IP-CIDR,45.74.7.192/32,no-resolve
+IP-CIDR,45.74.7.193/32,no-resolve
 IP-CIDR,45.74.8.75/32,no-resolve
 IP-CIDR,45.74.34.32/32,no-resolve
 IP-CIDR,45.74.34.167/32,no-resolve
@@ -3661,6 +3663,7 @@ IP-CIDR,89.106.83.74/32,no-resolve
 IP-CIDR,89.106.83.75/32,no-resolve
 IP-CIDR,89.106.83.79/32,no-resolve
 IP-CIDR,89.106.83.80/32,no-resolve
+IP-CIDR,89.106.83.84/32,no-resolve
 IP-CIDR,89.117.76.41/32,no-resolve
 IP-CIDR,89.124.121.249/32,no-resolve
 IP-CIDR,89.149.243.170/32,no-resolve
@@ -3919,6 +3922,7 @@ IP-CIDR,104.168.0.29/32,no-resolve
 IP-CIDR,104.168.0.147/32,no-resolve
 IP-CIDR,104.168.5.18/32,no-resolve
 IP-CIDR,104.168.5.25/32,no-resolve
+IP-CIDR,104.168.7.195/32,no-resolve
 IP-CIDR,104.168.7.208/32,no-resolve
 IP-CIDR,104.168.7.219/32,no-resolve
 IP-CIDR,104.168.7.222/32,no-resolve
@@ -5188,6 +5192,7 @@ IP-CIDR,213.208.152.205/32,no-resolve
 IP-CIDR,213.209.159.91/32,no-resolve
 IP-CIDR,213.227.129.32/32,no-resolve
 IP-CIDR,213.232.236.4/32,no-resolve
+IP-CIDR,216.9.225.38/32,no-resolve
 IP-CIDR,216.9.225.133/32,no-resolve
 IP-CIDR,216.22.5.138/32,no-resolve
 IP-CIDR,216.126.224.83/32,no-resolve
