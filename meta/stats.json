@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-12T05:08:24.055592+00:00",
+  "generated_utc": "2026-07-12T06:56:55.804133+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 481,
+    "malwarebazaar_recent_sha256": 487,
     "ads": {
       "domains": 234165,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 47605,
-      "ips": 47456,
-      "urls_for_yara": 170443,
-      "retained_domains": 33106,
-      "retained_ips": 30782,
-      "retained_urls": 94739
+      "domains": 47615,
+      "ips": 47461,
+      "urls_for_yara": 170459,
+      "retained_domains": 33143,
+      "retained_ips": 30813,
+      "retained_urls": 94931
     },
     "stealer": {
       "domains": 7118,
@@ -105,12 +105,12 @@
       "retained_urls": 67
     },
     "c2": {
-      "domains": 5933,
+      "domains": 5934,
       "ips": 7607,
       "urls_for_yara": 1810,
-      "retained_domains": 5816,
-      "retained_ips": 6953,
-      "retained_urls": 1777
+      "retained_domains": 5821,
+      "retained_ips": 6951,
+      "retained_urls": 1781
     },
     "rat": {
       "domains": 2809,
@@ -121,12 +121,12 @@
       "retained_urls": 123
     },
     "botnet": {
-      "domains": 6264,
+      "domains": 6265,
       "ips": 7304,
       "urls_for_yara": 2067,
-      "retained_domains": 5801,
-      "retained_ips": 6655,
-      "retained_urls": 1924
+      "retained_domains": 5808,
+      "retained_ips": 6656,
+      "retained_urls": 1928
     },
     "backdoor": {
       "domains": 32,
@@ -145,12 +145,12 @@
       "retained_urls": 34
     },
     "loader": {
-      "domains": 29442,
+      "domains": 29451,
       "ips": 521,
       "urls_for_yara": 4403,
-      "retained_domains": 28312,
+      "retained_domains": 28351,
       "retained_ips": 502,
-      "retained_urls": 4292
+      "retained_urls": 4326
     },
     "banker": {
       "domains": 9,
