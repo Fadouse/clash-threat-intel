@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-19T20:22:02.213718+00:00",
+  "generated_utc": "2026-07-19T22:22:47.188035+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 652,
+    "malwarebazaar_recent_sha256": 670,
     "ads": {
       "domains": 234165,
       "ips": 0,
@@ -81,16 +81,16 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 50181,
-      "ips": 48655,
-      "urls_for_yara": 175265,
-      "retained_domains": 37488,
-      "retained_ips": 32676,
-      "retained_urls": 104755
+      "domains": 50200,
+      "ips": 48670,
+      "urls_for_yara": 175326,
+      "retained_domains": 37514,
+      "retained_ips": 32680,
+      "retained_urls": 104764
     },
     "stealer": {
-      "domains": 8282,
-      "ips": 1148,
+      "domains": 8283,
+      "ips": 1149,
       "urls_for_yara": 4184,
       "retained_domains": 7861,
       "retained_ips": 1051,
@@ -105,11 +105,11 @@
       "retained_urls": 68
     },
     "c2": {
-      "domains": 7163,
-      "ips": 7883,
+      "domains": 7168,
+      "ips": 7885,
       "urls_for_yara": 1888,
-      "retained_domains": 7098,
-      "retained_ips": 7339,
+      "retained_domains": 7097,
+      "retained_ips": 7333,
       "retained_urls": 1868
     },
     "rat": {
@@ -121,11 +121,11 @@
       "retained_urls": 123
     },
     "botnet": {
-      "domains": 7495,
-      "ips": 7596,
+      "domains": 7500,
+      "ips": 7599,
       "urls_for_yara": 2163,
       "retained_domains": 7101,
-      "retained_ips": 7046,
+      "retained_ips": 7047,
       "retained_urls": 2030
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 36
     },
     "loader": {
-      "domains": 30633,
+      "domains": 30646,
       "ips": 532,
-      "urls_for_yara": 4793,
-      "retained_domains": 30062,
+      "urls_for_yara": 4807,
+      "retained_domains": 30070,
       "retained_ips": 514,
       "retained_urls": 4502
     },
