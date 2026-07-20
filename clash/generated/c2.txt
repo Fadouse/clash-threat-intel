@@ -1,7 +1,7 @@
-# generated: 2026-07-20T15:13:41.998203+00:00
+# generated: 2026-07-20T16:56:57.205582+00:00
 # title: TI c2
-# domains: 7213
-# ips: 7924
+# domains: 7214
+# ips: 7934
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -5588,6 +5588,7 @@ DOMAIN-SUFFIX,smackit.lat
 DOMAIN-SUFFIX,smar-ric.zom7lirex.in.net
 DOMAIN-SUFFIX,smart.abuse.st
 DOMAIN-SUFFIX,smart.mymedhospital.com
+DOMAIN-SUFFIX,smartmeshsys2.petalune.garden
 DOMAIN-SUFFIX,smartpeoplework.info
 DOMAIN-SUFFIX,smcgodda.in.net
 DOMAIN-SUFFIX,smdh7.surf
@@ -9311,6 +9312,7 @@ IP-CIDR,64.225.77.25/32,no-resolve
 IP-CIDR,64.225.78.190/32,no-resolve
 IP-CIDR,64.226.105.95/32,no-resolve
 IP-CIDR,64.227.67.145/32,no-resolve
+IP-CIDR,64.227.69.17/32,no-resolve
 IP-CIDR,64.227.70.132/32,no-resolve
 IP-CIDR,64.227.70.229/32,no-resolve
 IP-CIDR,64.227.71.238/32,no-resolve
@@ -9397,6 +9399,7 @@ IP-CIDR,68.64.176.34/32,no-resolve
 IP-CIDR,68.64.178.130/32,no-resolve
 IP-CIDR,68.64.178.223/32,no-resolve
 IP-CIDR,68.64.180.15/32,no-resolve
+IP-CIDR,68.183.0.134/32,no-resolve
 IP-CIDR,68.183.1.7/32,no-resolve
 IP-CIDR,68.183.5.166/32,no-resolve
 IP-CIDR,68.183.6.224/32,no-resolve
@@ -11186,6 +11189,7 @@ IP-CIDR,134.65.51.39/32,no-resolve
 IP-CIDR,134.122.6.193/32,no-resolve
 IP-CIDR,134.122.31.17/32,no-resolve
 IP-CIDR,134.122.48.21/32,no-resolve
+IP-CIDR,134.122.48.179/32,no-resolve
 IP-CIDR,134.122.49.151/32,no-resolve
 IP-CIDR,134.122.49.182/32,no-resolve
 IP-CIDR,134.122.53.54/32,no-resolve
@@ -11229,6 +11233,7 @@ IP-CIDR,134.209.87.103/32,no-resolve
 IP-CIDR,134.209.89.238/32,no-resolve
 IP-CIDR,134.209.92.242/32,no-resolve
 IP-CIDR,134.209.93.191/32,no-resolve
+IP-CIDR,134.209.93.215/32,no-resolve
 IP-CIDR,134.209.100.183/32,no-resolve
 IP-CIDR,134.209.200.130/32,no-resolve
 IP-CIDR,134.209.207.120/32,no-resolve
@@ -12732,6 +12737,7 @@ IP-CIDR,157.245.65.67/32,no-resolve
 IP-CIDR,157.245.71.64/32,no-resolve
 IP-CIDR,157.245.71.216/32,no-resolve
 IP-CIDR,157.245.74.9/32,no-resolve
+IP-CIDR,157.245.77.63/32,no-resolve
 IP-CIDR,157.245.79.104/32,no-resolve
 IP-CIDR,157.245.79.245/32,no-resolve
 IP-CIDR,157.245.101.92/32,no-resolve
@@ -12975,6 +12981,7 @@ IP-CIDR,164.92.146.175/32,no-resolve
 IP-CIDR,164.92.146.200/32,no-resolve
 IP-CIDR,164.92.151.15/32,no-resolve
 IP-CIDR,164.92.151.197/32,no-resolve
+IP-CIDR,164.92.153.43/32,no-resolve
 IP-CIDR,164.92.153.50/32,no-resolve
 IP-CIDR,164.92.154.242/32,no-resolve
 IP-CIDR,164.92.157.113/32,no-resolve
@@ -13045,6 +13052,7 @@ IP-CIDR,165.232.33.94/32,no-resolve
 IP-CIDR,165.232.71.140/32,no-resolve
 IP-CIDR,165.232.81.57/32,no-resolve
 IP-CIDR,165.232.84.84/32,no-resolve
+IP-CIDR,165.232.88.245/32,no-resolve
 IP-CIDR,165.232.90.27/32,no-resolve
 IP-CIDR,165.232.91.237/32,no-resolve
 IP-CIDR,165.232.92.26/32,no-resolve
@@ -14169,6 +14177,7 @@ IP-CIDR,188.166.24.139/32,no-resolve
 IP-CIDR,188.166.34.177/32,no-resolve
 IP-CIDR,188.166.37.105/32,no-resolve
 IP-CIDR,188.166.58.100/32,no-resolve
+IP-CIDR,188.166.58.104/32,no-resolve
 IP-CIDR,188.166.63.49/32,no-resolve
 IP-CIDR,188.166.69.11/32,no-resolve
 IP-CIDR,188.166.69.57/32,no-resolve
@@ -14188,6 +14197,7 @@ IP-CIDR,188.166.113.135/32,no-resolve
 IP-CIDR,188.166.114.27/32,no-resolve
 IP-CIDR,188.166.115.96/32,no-resolve
 IP-CIDR,188.166.118.143/32,no-resolve
+IP-CIDR,188.166.121.223/32,no-resolve
 IP-CIDR,188.166.146.39/32,no-resolve
 IP-CIDR,188.166.160.90/32,no-resolve
 IP-CIDR,188.166.167.159/32,no-resolve
@@ -14961,6 +14971,7 @@ IP-CIDR,209.38.83.234/32,no-resolve
 IP-CIDR,209.38.86.139/32,no-resolve
 IP-CIDR,209.38.90.188/32,no-resolve
 IP-CIDR,209.38.98.242/32,no-resolve
+IP-CIDR,209.38.99.84/32,no-resolve
 IP-CIDR,209.38.106.41/32,no-resolve
 IP-CIDR,209.38.109.16/32,no-resolve
 IP-CIDR,209.38.109.250/32,no-resolve
