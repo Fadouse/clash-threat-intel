@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-23T22:26:15.940463+00:00",
+  "generated_utc": "2026-07-24T00:30:51.367910+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 793,
+    "malwarebazaar_recent_sha256": 767,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 51373,
-      "ips": 49286,
-      "urls_for_yara": 177601,
-      "retained_domains": 38961,
-      "retained_ips": 33720,
-      "retained_urls": 108616
+      "domains": 51394,
+      "ips": 49293,
+      "urls_for_yara": 177621,
+      "retained_domains": 38983,
+      "retained_ips": 33735,
+      "retained_urls": 108790
     },
     "stealer": {
       "domains": 8350,
@@ -105,11 +105,11 @@
       "retained_urls": 68
     },
     "c2": {
-      "domains": 7320,
-      "ips": 8020,
+      "domains": 7330,
+      "ips": 8022,
       "urls_for_yara": 1962,
-      "retained_domains": 7203,
-      "retained_ips": 7469,
+      "retained_domains": 7204,
+      "retained_ips": 7468,
       "retained_urls": 1927
     },
     "rat": {
@@ -117,15 +117,15 @@
       "ips": 2623,
       "urls_for_yara": 133,
       "retained_domains": 2617,
-      "retained_ips": 2106,
+      "retained_ips": 2107,
       "retained_urls": 123
     },
     "botnet": {
-      "domains": 7650,
-      "ips": 7747,
+      "domains": 7660,
+      "ips": 7749,
       "urls_for_yara": 2241,
       "retained_domains": 7221,
-      "retained_ips": 7196,
+      "retained_ips": 7198,
       "retained_urls": 2090
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 36
     },
     "loader": {
-      "domains": 31338,
+      "domains": 31350,
       "ips": 535,
-      "urls_for_yara": 4960,
-      "retained_domains": 30719,
+      "urls_for_yara": 4963,
+      "retained_domains": 30731,
       "retained_ips": 523,
       "retained_urls": 4786
     },
