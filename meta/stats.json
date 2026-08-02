@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-01T22:24:34.677241+00:00",
+  "generated_utc": "2026-08-02T00:35:20.171705+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 631,
+    "malwarebazaar_recent_sha256": 641,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 55575,
-      "ips": 51217,
-      "urls_for_yara": 182316,
-      "retained_domains": 43822,
-      "retained_ips": 36029,
-      "retained_urls": 116394
+      "domains": 55691,
+      "ips": 51229,
+      "urls_for_yara": 182330,
+      "retained_domains": 43850,
+      "retained_ips": 36032,
+      "retained_urls": 116410
     },
     "stealer": {
       "domains": 8464,
@@ -105,11 +105,11 @@
       "retained_urls": 68
     },
     "c2": {
-      "domains": 8272,
-      "ips": 8485,
+      "domains": 8273,
+      "ips": 8488,
       "urls_for_yara": 2016,
       "retained_domains": 7654,
-      "retained_ips": 7921,
+      "retained_ips": 7922,
       "retained_urls": 1988
     },
     "rat": {
@@ -117,15 +117,15 @@
       "ips": 2744,
       "urls_for_yara": 133,
       "retained_domains": 2695,
-      "retained_ips": 2225,
+      "retained_ips": 2222,
       "retained_urls": 129
     },
     "botnet": {
       "domains": 8049,
-      "ips": 8113,
+      "ips": 8115,
       "urls_for_yara": 2295,
       "retained_domains": 7788,
-      "retained_ips": 7554,
+      "retained_ips": 7553,
       "retained_urls": 2155
     },
     "backdoor": {
@@ -145,12 +145,12 @@
       "retained_urls": 37
     },
     "loader": {
-      "domains": 35038,
+      "domains": 35153,
       "ips": 543,
       "urls_for_yara": 5189,
-      "retained_domains": 33057,
+      "retained_domains": 33071,
       "retained_ips": 532,
-      "retained_urls": 5143
+      "retained_urls": 5144
     },
     "banker": {
       "domains": 9,
