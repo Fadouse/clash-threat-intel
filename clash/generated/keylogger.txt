@@ -1,7 +1,7 @@
-# generated: 2026-08-12T07:01:25.263556+00:00
+# generated: 2026-08-12T09:05:39.153303+00:00
 # title: TI keylogger
-# domains: 250
-# ips: 2
+# domains: 251
+# ips: 3
 
 DOMAIN-SUFFIX,api.telegram.org
 DOMAIN-SUFFIX,etvidanueva.com
@@ -34,6 +34,7 @@ DOMAIN-SUFFIX,ftp.piovau.com
 DOMAIN-SUFFIX,ftp.raxclopent.info
 DOMAIN-SUFFIX,ftp.sanchezamador.com.mx
 DOMAIN-SUFFIX,ftp.telewatte-pe.com
+DOMAIN-SUFFIX,ftp.ulfl.co.in
 DOMAIN-SUFFIX,ftp.vilimorin.com
 DOMAIN-SUFFIX,ftp.zetrocom.my
 DOMAIN-SUFFIX,gl1g7tts-5500.euw.devtunnels.ms
@@ -254,4 +255,5 @@ DOMAIN-SUFFIX,www.yinboxops.co
 DOMAIN-SUFFIX,www.yinmen-luxeron.com
 DOMAIN-SUFFIX,www.zavixaro.shop
 IP-CIDR,45.153.34.90/32,no-resolve
+IP-CIDR,68.65.123.172/32,no-resolve
 IP-CIDR,195.250.27.46/32,no-resolve
