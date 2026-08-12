@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-12T16:26:41.860707+00:00",
+  "generated_utc": "2026-08-12T18:25:24.706669+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 1712,
+    "malwarebazaar_recent_sha256": 1700,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,20 +81,20 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 58266,
-      "ips": 53435,
-      "urls_for_yara": 190358,
-      "retained_domains": 50612,
-      "retained_ips": 38110,
-      "retained_urls": 125507
+      "domains": 58296,
+      "ips": 53441,
+      "urls_for_yara": 190375,
+      "retained_domains": 50621,
+      "retained_ips": 38122,
+      "retained_urls": 125568
     },
     "stealer": {
       "domains": 8658,
-      "ips": 1270,
-      "urls_for_yara": 4597,
+      "ips": 1271,
+      "urls_for_yara": 4598,
       "retained_domains": 8255,
-      "retained_ips": 1176,
-      "retained_urls": 4393
+      "retained_ips": 1181,
+      "retained_urls": 4397
     },
     "ransomware": {
       "domains": 228,
@@ -106,7 +106,7 @@
     },
     "c2": {
       "domains": 8604,
-      "ips": 8928,
+      "ips": 8929,
       "urls_for_yara": 2316,
       "retained_domains": 8449,
       "retained_ips": 8388,
@@ -122,10 +122,10 @@
     },
     "botnet": {
       "domains": 8377,
-      "ips": 8553,
+      "ips": 8554,
       "urls_for_yara": 2601,
       "retained_domains": 8035,
-      "retained_ips": 8007,
+      "retained_ips": 8008,
       "retained_urls": 2373
     },
     "backdoor": {
@@ -145,11 +145,11 @@
       "retained_urls": 41
     },
     "loader": {
-      "domains": 37250,
+      "domains": 37280,
       "ips": 607,
-      "urls_for_yara": 5318,
-      "retained_domains": 36568,
-      "retained_ips": 554,
+      "urls_for_yara": 5321,
+      "retained_domains": 36577,
+      "retained_ips": 555,
       "retained_urls": 5204
     },
     "banker": {
