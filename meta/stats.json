@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-15T10:11:50.246738+00:00",
+  "generated_utc": "2026-08-15T12:11:42.564268+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 990,
+    "malwarebazaar_recent_sha256": 987,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,17 +81,17 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 60264,
-      "ips": 53985,
-      "urls_for_yara": 191659,
-      "retained_domains": 51445,
-      "retained_ips": 38701,
-      "retained_urls": 127621
+      "domains": 60294,
+      "ips": 53990,
+      "urls_for_yara": 191669,
+      "retained_domains": 51483,
+      "retained_ips": 38711,
+      "retained_urls": 127637
     },
     "stealer": {
-      "domains": 8720,
-      "ips": 1288,
-      "urls_for_yara": 4677,
+      "domains": 8722,
+      "ips": 1289,
+      "urls_for_yara": 4680,
       "retained_domains": 8321,
       "retained_ips": 1214,
       "retained_urls": 4499
@@ -105,27 +105,27 @@
       "retained_urls": 69
     },
     "c2": {
-      "domains": 8732,
-      "ips": 9080,
-      "urls_for_yara": 2395,
+      "domains": 8734,
+      "ips": 9082,
+      "urls_for_yara": 2398,
       "retained_domains": 8569,
-      "retained_ips": 8500,
+      "retained_ips": 8502,
       "retained_urls": 2304
     },
     "rat": {
       "domains": 2913,
       "ips": 2948,
       "urls_for_yara": 139,
-      "retained_domains": 2729,
-      "retained_ips": 2438,
+      "retained_domains": 2730,
+      "retained_ips": 2439,
       "retained_urls": 133
     },
     "botnet": {
-      "domains": 8506,
-      "ips": 8694,
-      "urls_for_yara": 2682,
+      "domains": 8508,
+      "ips": 8697,
+      "urls_for_yara": 2685,
       "retained_domains": 8147,
-      "retained_ips": 8125,
+      "retained_ips": 8128,
       "retained_urls": 2493
     },
     "backdoor": {
@@ -145,12 +145,12 @@
       "retained_urls": 41
     },
     "loader": {
-      "domains": 39137,
-      "ips": 620,
-      "urls_for_yara": 5404,
-      "retained_domains": 37099,
+      "domains": 39165,
+      "ips": 621,
+      "urls_for_yara": 5405,
+      "retained_domains": 37129,
       "retained_ips": 587,
-      "retained_urls": 5253
+      "retained_urls": 5255
     },
     "banker": {
       "domains": 12,
