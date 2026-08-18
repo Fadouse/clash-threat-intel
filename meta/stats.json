@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-17T22:17:59.481130+00:00",
+  "generated_utc": "2026-08-18T00:17:29.209404+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 731,
+    "malwarebazaar_recent_sha256": 736,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,20 +81,20 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 61541,
-      "ips": 54415,
-      "urls_for_yara": 192867,
-      "retained_domains": 53669,
-      "retained_ips": 39195,
-      "retained_urls": 129507
+      "domains": 61581,
+      "ips": 54422,
+      "urls_for_yara": 192889,
+      "retained_domains": 53679,
+      "retained_ips": 39203,
+      "retained_urls": 129537
     },
     "stealer": {
-      "domains": 8745,
+      "domains": 8746,
       "ips": 1295,
       "urls_for_yara": 4722,
       "retained_domains": 8361,
       "retained_ips": 1226,
-      "retained_urls": 4569
+      "retained_urls": 4568
     },
     "ransomware": {
       "domains": 231,
@@ -105,9 +105,9 @@
       "retained_urls": 69
     },
     "c2": {
-      "domains": 8878,
+      "domains": 8881,
       "ips": 9179,
-      "urls_for_yara": 2471,
+      "urls_for_yara": 2473,
       "retained_domains": 8695,
       "retained_ips": 8653,
       "retained_urls": 2385
@@ -121,9 +121,9 @@
       "retained_urls": 133
     },
     "botnet": {
-      "domains": 8649,
+      "domains": 8652,
       "ips": 8764,
-      "urls_for_yara": 2758,
+      "urls_for_yara": 2760,
       "retained_domains": 8264,
       "retained_ips": 8242,
       "retained_urls": 2581
@@ -145,10 +145,10 @@
       "retained_urls": 41
     },
     "loader": {
-      "domains": 40195,
+      "domains": 40232,
       "ips": 623,
-      "urls_for_yara": 5538,
-      "retained_domains": 39024,
+      "urls_for_yara": 5541,
+      "retained_domains": 39032,
       "retained_ips": 608,
       "retained_urls": 5360
     },
