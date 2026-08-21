@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-20T22:11:30.169253+00:00",
+  "generated_utc": "2026-08-21T00:16:15.407957+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 1171,
+    "malwarebazaar_recent_sha256": 1175,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 62908,
-      "ips": 55182,
-      "urls_for_yara": 194430,
-      "retained_domains": 55225,
-      "retained_ips": 40013,
-      "retained_urls": 131152
+      "domains": 62919,
+      "ips": 55194,
+      "urls_for_yara": 194449,
+      "retained_domains": 55270,
+      "retained_ips": 40023,
+      "retained_urls": 131173
     },
     "stealer": {
       "domains": 8819,
@@ -105,12 +105,12 @@
       "retained_urls": 69
     },
     "c2": {
-      "domains": 9045,
-      "ips": 9468,
+      "domains": 9046,
+      "ips": 9471,
       "urls_for_yara": 2553,
-      "retained_domains": 8860,
-      "retained_ips": 8918,
-      "retained_urls": 2460
+      "retained_domains": 8862,
+      "retained_ips": 8915,
+      "retained_urls": 2462
     },
     "rat": {
       "domains": 2963,
@@ -121,12 +121,12 @@
       "retained_urls": 135
     },
     "botnet": {
-      "domains": 8809,
-      "ips": 8879,
+      "domains": 8810,
+      "ips": 8881,
       "urls_for_yara": 2841,
-      "retained_domains": 8424,
-      "retained_ips": 8334,
-      "retained_urls": 2652
+      "retained_domains": 8426,
+      "retained_ips": 8333,
+      "retained_urls": 2654
     },
     "backdoor": {
       "domains": 35,
@@ -145,10 +145,10 @@
       "retained_urls": 41
     },
     "loader": {
-      "domains": 41313,
+      "domains": 41323,
       "ips": 630,
-      "urls_for_yara": 5710,
-      "retained_domains": 40144,
+      "urls_for_yara": 5711,
+      "retained_domains": 40180,
       "retained_ips": 614,
       "retained_urls": 5503
     },
