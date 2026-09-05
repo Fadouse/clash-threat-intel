@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05T20:13:11.530611+00:00",
+  "generated_utc": "2026-09-05T22:12:44.721114+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 742,
+    "malwarebazaar_recent_sha256": 741,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 66967,
-      "ips": 58586,
-      "urls_for_yara": 201706,
-      "retained_domains": 60939,
-      "retained_ips": 43269,
-      "retained_urls": 141106
+      "domains": 66980,
+      "ips": 58592,
+      "urls_for_yara": 201718,
+      "retained_domains": 60957,
+      "retained_ips": 43297,
+      "retained_urls": 141095
     },
     "stealer": {
       "domains": 9052,
@@ -106,26 +106,26 @@
     },
     "c2": {
       "domains": 9756,
-      "ips": 10504,
+      "ips": 10506,
       "urls_for_yara": 2927,
-      "retained_domains": 9648,
-      "retained_ips": 9866,
-      "retained_urls": 2883
+      "retained_domains": 9654,
+      "retained_ips": 9872,
+      "retained_urls": 2884
     },
     "rat": {
       "domains": 3009,
       "ips": 3401,
       "urls_for_yara": 163,
       "retained_domains": 2902,
-      "retained_ips": 2809,
+      "retained_ips": 2807,
       "retained_urls": 150
     },
     "botnet": {
       "domains": 9510,
-      "ips": 9716,
+      "ips": 9719,
       "urls_for_yara": 3232,
-      "retained_domains": 9200,
-      "retained_ips": 9097,
+      "retained_domains": 9205,
+      "retained_ips": 9096,
       "retained_urls": 3076
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 42
     },
     "loader": {
-      "domains": 44500,
+      "domains": 44513,
       "ips": 674,
-      "urls_for_yara": 6185,
-      "retained_domains": 44096,
+      "urls_for_yara": 6186,
+      "retained_domains": 44107,
       "retained_ips": 657,
       "retained_urls": 6052
     },
