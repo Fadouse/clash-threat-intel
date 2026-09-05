@@ -1,7 +1,7 @@
-# generated: 2026-09-04T22:35:24.009474+00:00
+# generated: 2026-09-05T00:47:08.568653+00:00
 # title: TI botnet
-# domains: 9498
-# ips: 9632
+# domains: 9500
+# ips: 9642
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -532,6 +532,8 @@ DOMAIN-SUFFIX,admiration-noble.sbs
 DOMAIN-SUFFIX,adobeacrobat.portal-nota.sbs
 DOMAIN-SUFFIX,adobeartsia.com
 DOMAIN-SUFFIX,adsgroupsac.com
+DOMAIN-SUFFIX,adtbastard.hopto.org
+DOMAIN-SUFFIX,adtbastard.opik.net
 DOMAIN-SUFFIX,adult-empire.com
 DOMAIN-SUFFIX,advanceslibrary.com
 DOMAIN-SUFFIX,advd-api.horecaculinarystudio.com
@@ -10071,6 +10073,7 @@ IP-CIDR,23.224.69.108/32,no-resolve
 IP-CIDR,23.224.69.109/32,no-resolve
 IP-CIDR,23.224.69.110/32,no-resolve
 IP-CIDR,23.226.57.45/32,no-resolve
+IP-CIDR,23.226.68.58/32,no-resolve
 IP-CIDR,23.227.199.61/32,no-resolve
 IP-CIDR,23.227.199.67/32,no-resolve
 IP-CIDR,23.227.203.71/32,no-resolve
@@ -15537,6 +15540,7 @@ IP-CIDR,154.91.58.99/32,no-resolve
 IP-CIDR,154.91.58.100/32,no-resolve
 IP-CIDR,154.91.58.101/32,no-resolve
 IP-CIDR,154.91.58.104/32,no-resolve
+IP-CIDR,154.91.58.108/32,no-resolve
 IP-CIDR,154.91.58.110/32,no-resolve
 IP-CIDR,154.91.58.111/32,no-resolve
 IP-CIDR,154.91.58.114/32,no-resolve
@@ -15570,8 +15574,15 @@ IP-CIDR,154.91.60.119/32,no-resolve
 IP-CIDR,154.91.60.120/32,no-resolve
 IP-CIDR,154.91.62.98/32,no-resolve
 IP-CIDR,154.91.62.100/32,no-resolve
+IP-CIDR,154.91.62.102/32,no-resolve
+IP-CIDR,154.91.62.104/32,no-resolve
 IP-CIDR,154.91.62.105/32,no-resolve
 IP-CIDR,154.91.62.106/32,no-resolve
+IP-CIDR,154.91.62.111/32,no-resolve
+IP-CIDR,154.91.62.112/32,no-resolve
+IP-CIDR,154.91.62.113/32,no-resolve
+IP-CIDR,154.91.62.114/32,no-resolve
+IP-CIDR,154.91.62.115/32,no-resolve
 IP-CIDR,154.91.62.116/32,no-resolve
 IP-CIDR,154.91.62.117/32,no-resolve
 IP-CIDR,154.91.62.118/32,no-resolve
@@ -16326,6 +16337,7 @@ IP-CIDR,160.20.109.16/32,no-resolve
 IP-CIDR,160.20.109.29/32,no-resolve
 IP-CIDR,160.20.109.33/32,no-resolve
 IP-CIDR,160.20.109.47/32,no-resolve
+IP-CIDR,160.20.109.59/32,no-resolve
 IP-CIDR,160.20.109.75/32,no-resolve
 IP-CIDR,160.20.109.90/32,no-resolve
 IP-CIDR,160.25.134.148/32,no-resolve
