@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-12T08:14:01.572506+00:00",
+  "generated_utc": "2026-09-12T10:13:25.732891+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 821,
+    "malwarebazaar_recent_sha256": 826,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 70968,
-      "ips": 59860,
-      "urls_for_yara": 204699,
-      "retained_domains": 64101,
-      "retained_ips": 44720,
-      "retained_urls": 147130
+      "domains": 70975,
+      "ips": 59927,
+      "urls_for_yara": 204844,
+      "retained_domains": 64192,
+      "retained_ips": 44639,
+      "retained_urls": 147204
     },
     "stealer": {
       "domains": 9197,
@@ -109,15 +109,15 @@
       "ips": 10822,
       "urls_for_yara": 3004,
       "retained_domains": 9804,
-      "retained_ips": 10119,
+      "retained_ips": 10115,
       "retained_urls": 2978
     },
     "rat": {
       "domains": 3045,
-      "ips": 3518,
+      "ips": 3521,
       "urls_for_yara": 165,
       "retained_domains": 2953,
-      "retained_ips": 3008,
+      "retained_ips": 2932,
       "retained_urls": 161
     },
     "botnet": {
@@ -125,7 +125,7 @@
       "ips": 10005,
       "urls_for_yara": 3315,
       "retained_domains": 9365,
-      "retained_ips": 9449,
+      "retained_ips": 9447,
       "retained_urls": 3180
     },
     "backdoor": {
@@ -145,16 +145,16 @@
       "retained_urls": 42
     },
     "loader": {
-      "domains": 48296,
+      "domains": 48303,
       "ips": 694,
-      "urls_for_yara": 6379,
-      "retained_domains": 46351,
+      "urls_for_yara": 6381,
+      "retained_domains": 46435,
       "retained_ips": 670,
       "retained_urls": 6263
     },
     "banker": {
       "domains": 16,
-      "ips": 85,
+      "ips": 86,
       "urls_for_yara": 4,
       "retained_domains": 12,
       "retained_ips": 20,
