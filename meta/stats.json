@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-20T20:14:50.478804+00:00",
+  "generated_utc": "2026-09-20T22:12:37.422487+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 1686,
+    "malwarebazaar_recent_sha256": 1698,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,12 +81,12 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 73042,
-      "ips": 61866,
-      "urls_for_yara": 209068,
-      "retained_domains": 68225,
-      "retained_ips": 46670,
-      "retained_urls": 153001
+      "domains": 73051,
+      "ips": 61874,
+      "urls_for_yara": 209081,
+      "retained_domains": 68230,
+      "retained_ips": 46691,
+      "retained_urls": 153017
     },
     "stealer": {
       "domains": 9359,
@@ -106,10 +106,10 @@
     },
     "c2": {
       "domains": 10376,
-      "ips": 11399,
+      "ips": 11400,
       "urls_for_yara": 3164,
-      "retained_domains": 10284,
-      "retained_ips": 10758,
+      "retained_domains": 10305,
+      "retained_ips": 10774,
       "retained_urls": 3129
     },
     "rat": {
@@ -122,10 +122,10 @@
     },
     "botnet": {
       "domains": 10130,
-      "ips": 10522,
+      "ips": 10523,
       "urls_for_yara": 3494,
-      "retained_domains": 9854,
-      "retained_ips": 10025,
+      "retained_domains": 9875,
+      "retained_ips": 10042,
       "retained_urls": 3358
     },
     "backdoor": {
@@ -145,10 +145,10 @@
       "retained_urls": 53
     },
     "loader": {
-      "domains": 49733,
+      "domains": 49742,
       "ips": 738,
       "urls_for_yara": 6682,
-      "retained_domains": 49455,
+      "retained_domains": 49459,
       "retained_ips": 701,
       "retained_urls": 6527
     },
@@ -180,8 +180,8 @@
       "domains": 187,
       "ips": 149,
       "urls_for_yara": 118,
-      "retained_domains": 174,
-      "retained_ips": 138,
+      "retained_domains": 180,
+      "retained_ips": 144,
       "retained_urls": 118
     },
     "exploit": {
