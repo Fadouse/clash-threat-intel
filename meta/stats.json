@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-28T16:18:16.135955+00:00",
+  "generated_utc": "2026-09-28T18:18:38.991091+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -55,7 +55,7 @@
     ]
   },
   "counts": {
-    "malwarebazaar_recent_sha256": 1353,
+    "malwarebazaar_recent_sha256": 1302,
     "ads": {
       "domains": 236041,
       "ips": 0,
@@ -81,17 +81,17 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 76323,
-      "ips": 64136,
-      "urls_for_yara": 217315,
-      "retained_domains": 71237,
-      "retained_ips": 48422,
-      "retained_urls": 157534
+      "domains": 76329,
+      "ips": 64154,
+      "urls_for_yara": 217350,
+      "retained_domains": 71285,
+      "retained_ips": 48417,
+      "retained_urls": 159778
     },
     "stealer": {
       "domains": 9474,
       "ips": 1552,
-      "urls_for_yara": 5546,
+      "urls_for_yara": 5547,
       "retained_domains": 9068,
       "retained_ips": 1439,
       "retained_urls": 5313
@@ -107,14 +107,14 @@
     "c2": {
       "domains": 10601,
       "ips": 11813,
-      "urls_for_yara": 3355,
+      "urls_for_yara": 3356,
       "retained_domains": 10494,
       "retained_ips": 11306,
       "retained_urls": 3270
     },
     "rat": {
       "domains": 3483,
-      "ips": 3801,
+      "ips": 3803,
       "urls_for_yara": 181,
       "retained_domains": 3361,
       "retained_ips": 3351,
@@ -123,7 +123,7 @@
     "botnet": {
       "domains": 10343,
       "ips": 10872,
-      "urls_for_yara": 3676,
+      "urls_for_yara": 3677,
       "retained_domains": 10166,
       "retained_ips": 10634,
       "retained_urls": 3519
@@ -145,12 +145,12 @@
       "retained_urls": 53
     },
     "loader": {
-      "domains": 52713,
+      "domains": 52720,
       "ips": 826,
-      "urls_for_yara": 7288,
-      "retained_domains": 51813,
+      "urls_for_yara": 7289,
+      "retained_domains": 51860,
       "retained_ips": 770,
-      "retained_urls": 6981
+      "retained_urls": 7019
     },
     "banker": {
       "domains": 17,
