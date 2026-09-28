@@ -1,7 +1,7 @@
-# generated: 2026-09-28T08:27:37.867687+00:00
+# generated: 2026-09-28T10:17:40.311553+00:00
 # title: TI backdoor
 # domains: 37
-# ips: 58
+# ips: 65
 
 DOMAIN-SUFFIX,435123332155.com
 DOMAIN-SUFFIX,64-176-59-232.ipv4.staticdns3.io
@@ -40,6 +40,7 @@ DOMAIN-SUFFIX,www.kasperskysecure.com
 DOMAIN-SUFFIX,www.micheeasodh.top
 DOMAIN-SUFFIX,www.paloaltonetworkhelp.com
 DOMAIN-SUFFIX,www.sapress.help
+IP-CIDR,3.19.1.60/32,no-resolve
 IP-CIDR,3.219.38.25/32,no-resolve
 IP-CIDR,5.252.178.38/32,no-resolve
 IP-CIDR,8.218.244.117/32,no-resolve
@@ -65,16 +66,21 @@ IP-CIDR,102.212.61.41/32,no-resolve
 IP-CIDR,104.238.148.158/32,no-resolve
 IP-CIDR,106.52.128.236/32,no-resolve
 IP-CIDR,106.52.243.150/32,no-resolve
+IP-CIDR,111.230.253.13/32,no-resolve
 IP-CIDR,112.95.159.90/32,no-resolve
 IP-CIDR,113.98.238.83/32,no-resolve
+IP-CIDR,117.50.118.106/32,no-resolve
 IP-CIDR,117.240.155.245/32,no-resolve
 IP-CIDR,119.29.8.235/32,no-resolve
 IP-CIDR,119.29.73.94/32,no-resolve
 IP-CIDR,119.29.143.243/32,no-resolve
 IP-CIDR,119.29.165.74/32,no-resolve
 IP-CIDR,119.29.249.227/32,no-resolve
+IP-CIDR,119.91.36.172/32,no-resolve
+IP-CIDR,122.114.8.224/32,no-resolve
 IP-CIDR,122.114.12.82/32,no-resolve
 IP-CIDR,122.114.166.126/32,no-resolve
+IP-CIDR,122.114.252.72/32,no-resolve
 IP-CIDR,122.114.252.115/32,no-resolve
 IP-CIDR,123.207.16.103/32,no-resolve
 IP-CIDR,123.207.18.157/32,no-resolve
@@ -92,6 +98,7 @@ IP-CIDR,149.104.104.76/32,no-resolve
 IP-CIDR,155.248.216.246/32,no-resolve
 IP-CIDR,163.61.102.245/32,no-resolve
 IP-CIDR,165.22.97.111/32,no-resolve
+IP-CIDR,166.88.7.116/32,no-resolve
 IP-CIDR,168.100.11.82/32,no-resolve
 IP-CIDR,193.143.1.186/32,no-resolve
 IP-CIDR,193.200.16.184/32,no-resolve
