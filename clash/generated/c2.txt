@@ -1,7 +1,7 @@
-# generated: 2026-10-02T18:20:13.330607+00:00
+# generated: 2026-10-02T20:21:54.032135+00:00
 # title: TI c2
 # domains: 10867
-# ips: 12136
+# ips: 12141
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -14537,6 +14537,7 @@ IP-CIDR,78.111.111.236/32,no-resolve
 IP-CIDR,78.128.113.150/32,no-resolve
 IP-CIDR,78.153.136.8/32,no-resolve
 IP-CIDR,78.153.136.26/32,no-resolve
+IP-CIDR,78.153.155.29/32,no-resolve
 IP-CIDR,78.153.155.171/32,no-resolve
 IP-CIDR,78.155.221.66/32,no-resolve
 IP-CIDR,78.155.221.67/32,no-resolve
@@ -14921,6 +14922,7 @@ IP-CIDR,89.19.223.49/32,no-resolve
 IP-CIDR,89.19.223.68/32,no-resolve
 IP-CIDR,89.19.223.170/32,no-resolve
 IP-CIDR,89.22.234.92/32,no-resolve
+IP-CIDR,89.23.113.104/32,no-resolve
 IP-CIDR,89.34.90.99/32,no-resolve
 IP-CIDR,89.34.90.139/32,no-resolve
 IP-CIDR,89.34.227.72/32,no-resolve
@@ -17947,6 +17949,8 @@ IP-CIDR,147.45.67.91/32,no-resolve
 IP-CIDR,147.45.67.96/32,no-resolve
 IP-CIDR,147.45.67.154/32,no-resolve
 IP-CIDR,147.45.72.199/32,no-resolve
+IP-CIDR,147.45.116.124/32,no-resolve
+IP-CIDR,147.45.116.125/32,no-resolve
 IP-CIDR,147.45.179.14/32,no-resolve
 IP-CIDR,147.45.179.72/32,no-resolve
 IP-CIDR,147.45.179.125/32,no-resolve
@@ -18811,6 +18815,7 @@ IP-CIDR,154.91.180.246/32,no-resolve
 IP-CIDR,154.92.14.179/32,no-resolve
 IP-CIDR,154.92.110.153/32,no-resolve
 IP-CIDR,154.92.252.58/32,no-resolve
+IP-CIDR,154.92.252.59/32,no-resolve
 IP-CIDR,154.92.252.60/32,no-resolve
 IP-CIDR,154.92.252.61/32,no-resolve
 IP-CIDR,154.92.252.62/32,no-resolve
