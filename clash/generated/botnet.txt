@@ -1,7 +1,7 @@
-# generated: 2026-10-30T16:21:12.932631+00:00
+# generated: 2026-10-30T18:16:57.393626+00:00
 # title: TI botnet
 # domains: 12915
-# ips: 13331
+# ips: 13342
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -13463,6 +13463,7 @@ IP-CIDR,12.202.180.133/32,no-resolve
 IP-CIDR,13.32.241.67/32,no-resolve
 IP-CIDR,13.40.224.32/32,no-resolve
 IP-CIDR,13.48.253.1/32,no-resolve
+IP-CIDR,13.49.66.51/32,no-resolve
 IP-CIDR,13.51.79.99/32,no-resolve
 IP-CIDR,13.53.117.235/32,no-resolve
 IP-CIDR,13.53.130.204/32,no-resolve
@@ -21174,6 +21175,9 @@ IP-CIDR,154.91.48.183/32,no-resolve
 IP-CIDR,154.91.48.184/32,no-resolve
 IP-CIDR,154.91.48.185/32,no-resolve
 IP-CIDR,154.91.48.186/32,no-resolve
+IP-CIDR,154.91.48.187/32,no-resolve
+IP-CIDR,154.91.49.163/32,no-resolve
+IP-CIDR,154.91.49.164/32,no-resolve
 IP-CIDR,154.91.49.165/32,no-resolve
 IP-CIDR,154.91.49.166/32,no-resolve
 IP-CIDR,154.91.49.167/32,no-resolve
@@ -21186,9 +21190,13 @@ IP-CIDR,154.91.49.181/32,no-resolve
 IP-CIDR,154.91.49.182/32,no-resolve
 IP-CIDR,154.91.49.183/32,no-resolve
 IP-CIDR,154.91.49.184/32,no-resolve
+IP-CIDR,154.91.49.185/32,no-resolve
+IP-CIDR,154.91.49.186/32,no-resolve
 IP-CIDR,154.91.49.188/32,no-resolve
 IP-CIDR,154.91.49.189/32,no-resolve
+IP-CIDR,154.91.49.190/32,no-resolve
 IP-CIDR,154.91.50.162/32,no-resolve
+IP-CIDR,154.91.50.163/32,no-resolve
 IP-CIDR,154.91.50.165/32,no-resolve
 IP-CIDR,154.91.50.168/32,no-resolve
 IP-CIDR,154.91.50.170/32,no-resolve
@@ -21206,6 +21214,8 @@ IP-CIDR,154.91.51.168/32,no-resolve
 IP-CIDR,154.91.51.171/32,no-resolve
 IP-CIDR,154.91.51.173/32,no-resolve
 IP-CIDR,154.91.51.178/32,no-resolve
+IP-CIDR,154.91.51.179/32,no-resolve
+IP-CIDR,154.91.51.180/32,no-resolve
 IP-CIDR,154.91.51.190/32,no-resolve
 IP-CIDR,154.91.52.162/32,no-resolve
 IP-CIDR,154.91.52.164/32,no-resolve
@@ -25893,6 +25903,7 @@ IP-CIDR,209.38.82.28/32,no-resolve
 IP-CIDR,209.38.82.72/32,no-resolve
 IP-CIDR,209.38.82.85/32,no-resolve
 IP-CIDR,209.38.83.234/32,no-resolve
+IP-CIDR,209.38.84.233/32,no-resolve
 IP-CIDR,209.38.86.139/32,no-resolve
 IP-CIDR,209.38.90.188/32,no-resolve
 IP-CIDR,209.38.98.242/32,no-resolve
