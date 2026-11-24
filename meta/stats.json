@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-24T16:18:35.379358+00:00",
+  "generated_utc": "2026-11-24T18:23:34.441752+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -75,15 +75,15 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 94754,
-      "ips": 75301,
-      "urls_for_yara": 259478,
-      "retained_domains": 93495,
+      "domains": 94777,
+      "ips": 75304,
+      "urls_for_yara": 259479,
+      "retained_domains": 93498,
       "retained_ips": 73607,
       "retained_urls": 259104
     },
     "stealer": {
-      "domains": 13242,
+      "domains": 13244,
       "ips": 1838,
       "urls_for_yara": 14266,
       "retained_domains": 12754,
@@ -91,7 +91,7 @@
       "retained_urls": 14140
     },
     "ransomware": {
-      "domains": 354,
+      "domains": 367,
       "ips": 353,
       "urls_for_yara": 76,
       "retained_domains": 328,
@@ -99,25 +99,25 @@
       "retained_urls": 73
     },
     "c2": {
-      "domains": 15099,
-      "ips": 17700,
-      "urls_for_yara": 12332,
+      "domains": 15114,
+      "ips": 17703,
+      "urls_for_yara": 12333,
       "retained_domains": 14855,
       "retained_ips": 16854,
       "retained_urls": 12298
     },
     "rat": {
       "domains": 4634,
-      "ips": 4715,
+      "ips": 4716,
       "urls_for_yara": 213,
       "retained_domains": 4469,
       "retained_ips": 4376,
       "retained_urls": 200
     },
     "botnet": {
-      "domains": 14833,
-      "ips": 16304,
-      "urls_for_yara": 12911,
+      "domains": 14848,
+      "ips": 16307,
+      "urls_for_yara": 12912,
       "retained_domains": 14523,
       "retained_ips": 15731,
       "retained_urls": 12809
@@ -139,10 +139,10 @@
       "retained_urls": 113
     },
     "loader": {
-      "domains": 66308,
+      "domains": 66316,
       "ips": 1112,
       "urls_for_yara": 12808,
-      "retained_domains": 65977,
+      "retained_domains": 65980,
       "retained_ips": 1099,
       "retained_urls": 12704
     },
