@@ -1,6 +1,10 @@
-# generated: 2026-11-24T00:27:43.036325+00:00
+# generated: 2026-11-24T02:26:01.946581+00:00
 # title: TI rootkit
-# domains: 0
-# ips: 1
+# domains: 3
+# ips: 2
 
+DOMAIN-SUFFIX,c.alibaba-cloud.cloud
+DOMAIN-SUFFIX,frassirishiproc.com
+DOMAIN-SUFFIX,heikickgn.com
+IP-CIDR,8.149.128.10/32,no-resolve
 IP-CIDR,109.206.236.18/32,no-resolve
