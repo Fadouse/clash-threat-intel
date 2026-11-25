@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-25T02:17:01.574756+00:00",
+  "generated_utc": "2026-11-25T04:24:18.584533+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -75,18 +75,18 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 94839,
-      "ips": 75323,
-      "urls_for_yara": 259500,
-      "retained_domains": 93535,
-      "retained_ips": 73773,
+      "domains": 94851,
+      "ips": 75329,
+      "urls_for_yara": 259501,
+      "retained_domains": 93548,
+      "retained_ips": 73775,
       "retained_urls": 259098
     },
     "stealer": {
-      "domains": 13274,
+      "domains": 13283,
       "ips": 1846,
       "urls_for_yara": 14286,
-      "retained_domains": 12757,
+      "retained_domains": 12758,
       "retained_ips": 1763,
       "retained_urls": 14140
     },
@@ -99,26 +99,26 @@
       "retained_urls": 73
     },
     "c2": {
-      "domains": 15140,
-      "ips": 17717,
+      "domains": 15149,
+      "ips": 17723,
       "urls_for_yara": 12339,
-      "retained_domains": 14858,
-      "retained_ips": 17017,
+      "retained_domains": 14859,
+      "retained_ips": 17019,
       "retained_urls": 12298
     },
     "rat": {
       "domains": 4634,
-      "ips": 4720,
+      "ips": 4722,
       "urls_for_yara": 213,
       "retained_domains": 4474,
       "retained_ips": 4381,
       "retained_urls": 200
     },
     "botnet": {
-      "domains": 14875,
-      "ips": 16323,
+      "domains": 14884,
+      "ips": 16329,
       "urls_for_yara": 12924,
-      "retained_domains": 14526,
+      "retained_domains": 14527,
       "retained_ips": 15893,
       "retained_urls": 12809
     },
@@ -139,10 +139,10 @@
       "retained_urls": 113
     },
     "loader": {
-      "domains": 66352,
+      "domains": 66355,
       "ips": 1115,
-      "urls_for_yara": 12830,
-      "retained_domains": 66009,
+      "urls_for_yara": 12831,
+      "retained_domains": 66021,
       "retained_ips": 1099,
       "retained_urls": 12705
     },
