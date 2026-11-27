@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T02:24:07.089702+00:00",
+  "generated_utc": "2026-11-27T04:20:25.468950+00:00",
   "sources": {
     "ads": [
       "https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt"
@@ -75,18 +75,18 @@
       "retained_urls": 0
     },
     "malware": {
-      "domains": 95505,
-      "ips": 75758,
-      "urls_for_yara": 259748,
-      "retained_domains": 93855,
-      "retained_ips": 74059,
+      "domains": 95514,
+      "ips": 75764,
+      "urls_for_yara": 259753,
+      "retained_domains": 93864,
+      "retained_ips": 74067,
       "retained_urls": 259139
     },
     "stealer": {
-      "domains": 13406,
+      "domains": 13410,
       "ips": 1868,
       "urls_for_yara": 14309,
-      "retained_domains": 12853,
+      "retained_domains": 12857,
       "retained_ips": 1782,
       "retained_urls": 14141
     },
@@ -99,11 +99,11 @@
       "retained_urls": 73
     },
     "c2": {
-      "domains": 15278,
-      "ips": 18079,
-      "urls_for_yara": 12346,
-      "retained_domains": 15039,
-      "retained_ips": 17308,
+      "domains": 15284,
+      "ips": 18085,
+      "urls_for_yara": 12348,
+      "retained_domains": 15043,
+      "retained_ips": 17316,
       "retained_urls": 12308
     },
     "rat": {
@@ -115,11 +115,11 @@
       "retained_urls": 200
     },
     "botnet": {
-      "domains": 15013,
-      "ips": 16710,
-      "urls_for_yara": 13001,
-      "retained_domains": 14705,
-      "retained_ips": 16147,
+      "domains": 15019,
+      "ips": 16716,
+      "urls_for_yara": 13003,
+      "retained_domains": 14709,
+      "retained_ips": 16155,
       "retained_urls": 12843
     },
     "backdoor": {
@@ -139,10 +139,10 @@
       "retained_urls": 114
     },
     "loader": {
-      "domains": 66873,
-      "ips": 1125,
-      "urls_for_yara": 13001,
-      "retained_domains": 66139,
+      "domains": 66876,
+      "ips": 1126,
+      "urls_for_yara": 13004,
+      "retained_domains": 66144,
       "retained_ips": 1106,
       "retained_urls": 12754
     },
