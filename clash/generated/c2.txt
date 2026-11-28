@@ -1,7 +1,7 @@
-# generated: 2026-11-28T08:20:33.148454+00:00
+# generated: 2026-11-28T10:16:16.599584+00:00
 # title: TI c2
 # domains: 15355
-# ips: 18174
+# ips: 18182
 
 DOMAIN-SUFFIX,000.hikvision-cctv.su
 DOMAIN-SUFFIX,000.nvms9000.su
@@ -16010,6 +16010,7 @@ IP-CIDR,8.149.139.253/32,no-resolve
 IP-CIDR,8.149.142.195/32,no-resolve
 IP-CIDR,8.152.2.86/32,no-resolve
 IP-CIDR,8.152.201.69/32,no-resolve
+IP-CIDR,8.152.204.130/32,no-resolve
 IP-CIDR,8.152.212.104/32,no-resolve
 IP-CIDR,8.153.163.254/32,no-resolve
 IP-CIDR,8.155.163.165/32,no-resolve
@@ -25621,6 +25622,7 @@ IP-CIDR,139.155.157.79/32,no-resolve
 IP-CIDR,139.159.243.20/32,no-resolve
 IP-CIDR,139.162.1.199/32,no-resolve
 IP-CIDR,139.162.8.51/32,no-resolve
+IP-CIDR,139.162.23.215/32,no-resolve
 IP-CIDR,139.162.30.17/32,no-resolve
 IP-CIDR,139.162.31.215/32,no-resolve
 IP-CIDR,139.162.38.41/32,no-resolve
@@ -29944,9 +29946,12 @@ IP-CIDR,172.203.32.240/32,no-resolve
 IP-CIDR,172.216.44.212/32,no-resolve
 IP-CIDR,172.216.54.73/32,no-resolve
 IP-CIDR,172.216.116.64/32,no-resolve
+IP-CIDR,172.232.46.87/32,no-resolve
 IP-CIDR,172.232.97.189/32,no-resolve
+IP-CIDR,172.232.114.205/32,no-resolve
 IP-CIDR,172.232.132.117/32,no-resolve
 IP-CIDR,172.232.240.110/32,no-resolve
+IP-CIDR,172.233.0.253/32,no-resolve
 IP-CIDR,172.233.1.13/32,no-resolve
 IP-CIDR,172.233.12.93/32,no-resolve
 IP-CIDR,172.233.14.93/32,no-resolve
@@ -30150,7 +30155,9 @@ IP-CIDR,172.235.191.18/32,no-resolve
 IP-CIDR,172.235.191.111/32,no-resolve
 IP-CIDR,172.235.191.229/32,no-resolve
 IP-CIDR,172.235.191.232/32,no-resolve
+IP-CIDR,172.235.196.12/32,no-resolve
 IP-CIDR,172.235.245.49/32,no-resolve
+IP-CIDR,172.235.255.8/32,no-resolve
 IP-CIDR,172.235.255.195/32,no-resolve
 IP-CIDR,172.236.10.230/32,no-resolve
 IP-CIDR,172.236.10.250/32,no-resolve
@@ -31585,6 +31592,7 @@ IP-CIDR,192.46.238.206/32,no-resolve
 IP-CIDR,192.52.167.193/32,no-resolve
 IP-CIDR,192.53.121.159/32,no-resolve
 IP-CIDR,192.53.122.216/32,no-resolve
+IP-CIDR,192.53.123.23/32,no-resolve
 IP-CIDR,192.69.210.253/32,no-resolve
 IP-CIDR,192.71.211.184/32,no-resolve
 IP-CIDR,192.71.227.243/32,no-resolve
